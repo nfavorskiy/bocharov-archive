@@ -30,6 +30,7 @@
     .portrait-placeholder {
         aspect-ratio: 3/4;
         background-color: #eee;
+        color: black;
         display: flex;
         align-items: center;
         justify-content: center;
