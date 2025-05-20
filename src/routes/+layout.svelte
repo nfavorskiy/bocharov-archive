@@ -28,7 +28,7 @@
             sans-serif;
     }
     main {
-        max-width: 1200px;
+        max-width: 90%;
         margin: 0 auto;
     }
 </style>
