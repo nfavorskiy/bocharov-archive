@@ -4,9 +4,13 @@
 
 <nav>
     <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/blog">Blog</a></li>
-        <li><a href="/projects">Projects</a></li>
+        <li><a href="/">Главная</a></li>
+        <li><a href="/research">Наука</a></li>
+        <li><a href="/projects">Проекты</a></li>
+        <li><a href="/graphics">Графика</a></li>
+        <li><a href="/reviews">Друзья и Коллеги о Юрии Петровиче</a></li>
+        <li><a href="/biography">Биография</a></li>
+        <li><a href="/intreviews">Люди и Встречи</a></li>
         <li><ThemeToggle /></li>
     </ul>
 </nav>

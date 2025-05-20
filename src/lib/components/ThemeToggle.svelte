@@ -6,7 +6,7 @@
     }
 </script>
 
-<button on:click={toggleTheme} style="padding: 8px; border-radius: 4px; background: #404040;">
+<button on:click={toggleTheme}>
     {$theme === 'dark' ? '🌙' : '☀️'}
 </button>
 
@@ -14,6 +14,9 @@
     button {
         border: none;
         cursor: pointer;
+        padding: 8px; 
+        border-radius: 4px;
+        background-color: var(--button-bg);
     }
     button:hover {
         opacity: 0.8;
