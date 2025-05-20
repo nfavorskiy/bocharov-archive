@@ -14,8 +14,7 @@
 <style>
 
     nav {
-        background-color: #333;
-        padding: 0.5rem;
+        padding: 1rem;
     }
     
     ul {
@@ -33,7 +32,7 @@
     }
     
     a {
-        color: white;
+        color: var(--text-color);
         text-decoration: none;
         
     }

@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
     import { theme } from '$lib/stores/theme';
 
     function toggleTheme() {
@@ -18,4 +18,4 @@
     button:hover {
         opacity: 0.8;
     }
-</style>
+</style> -->

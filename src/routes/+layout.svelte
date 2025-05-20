@@ -12,7 +12,7 @@
 <style>
     :global(body) {
         margin: 0;
-        padding: 20px;
+        padding: 0;
         transition: background-color 0.3s, color 0.3s;
         font-family:
             -apple-system, 
