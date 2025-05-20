@@ -1,0 +1,1 @@
+export const prerender = false; // this disables prerender for all pages affected by the layout
