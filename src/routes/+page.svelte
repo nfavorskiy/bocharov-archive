@@ -25,6 +25,9 @@
     .portrait-column {
         padding-inline: 4rem;
         padding-top: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .portrait-placeholder {
@@ -35,6 +38,6 @@
         align-items: center;
         justify-content: center;
         border-radius: 4px;
-        max-height: 80vh;
+        height: 80vh;
     }
 </style>
