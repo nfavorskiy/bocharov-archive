@@ -2,7 +2,11 @@
 <div class="container">
     <div class="portrait-column">
         <!-- Add your portrait image here -->
-        <div class="portrait-placeholder">Portrait</div>
+        <img 
+            src="/photo_2025-05-22_21-27-56.jpg" 
+            alt="Юрий Петрович Бочаров"
+            class="portrait-image"
+        />
     </div>
     <div class="text-column">
         <h1>Юрий Петрович БОЧАРОВ</h1>
@@ -30,10 +34,7 @@
         justify-content: center;
     }
 
-    .portrait-placeholder {
-        aspect-ratio: 3/4;
-        background-color: #eee;
-        color: black;
+    .portrait-image {
         display: flex;
         align-items: center;
         justify-content: center;
