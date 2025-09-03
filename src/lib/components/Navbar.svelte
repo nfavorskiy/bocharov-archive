@@ -10,9 +10,13 @@
             title: 'Биография',
             path: '/biography',
             dropdown: [
-                // { title: 'Родители', path: '/biography/parents' },
-                // { title: 'Семья', path: '/biography/family' },
-                // { title: 'Письма разных лет', path: '/biography/letters' }
+                { title: 'Основные даты', path: '/biography/main-dates' },
+                { title: 'Биографические заметки', path: '/biography/biographical-notes' },
+                { title: 'Начало жизненного пути', path: '/biography/first-steps' },
+                { title: 'Награды и дипломы', path: '/biography/awards-and-diplomas' },
+                { title: 'Семья', path: '/biography/family' },
+                { title: 'Письма', path: '/biography/letters' },
+                { title: 'Из записных книжек', path: '/biography/notebooks' }
             ]
         },
         {
@@ -31,43 +35,44 @@
             path: '/projects',
             dropdown: [
                 { title: 'Список проектных работ', path: '/projects/projects-list' },
-                { title: 'Дипломная работа 1951 г.', path: '/projects/diploma-1951' },
-                { title: 'Избранные проекты', path: '/projects/starred-projects' }
+                { title: 'Избранные проекты', path: '/projects/starred-projects' },
+                { title: 'Дипломная работа 1951 г.', path: '/projects/diploma-1951' }
             ]
         },
         {
-            title: 'Графика',
-            path: '/graphics',
+            title: 'Акварели и Графика',
+            path: '/watercolors-and-graphics',
             dropdown: [
-                // { title: 'Открыть все', path: '/graphics/open-all' },
-                // { title: 'Акварели', path: '/graphics/watercolors' },
-                // { title: 'Карандаш / пастель', path: '/graphics/pencil&pastel' }
+                { title: 'Акварели 1940-1970-е', path: '/watercolors-and-graphics/watercolors' },
+                { title: 'Акварели 1980-2010-е', path: '/watercolors-and-graphics/watercolors' },
+                { title: 'Карандаш / пастель / фломастер', path: '/watercolors-and-graphics/pencil&pastel&marker' },
+                { title: 'Зарисовки', path: '/watercolors-and-graphics/sketches' }
             ]
         },
         {
             title: 'Друзья и Коллеги о Юрии Петровиче',
             path: '/reviews',
             dropdown: [
-                // { title: 'А.В. Кузьмин', path: '/reviews/0' },
-                // { title: 'М.Я. Блинкин', path: '/reviews/1' },
-                // { title: 'И.А. Бондаренко', path: '/reviews/2' },
-                // { title: 'В. Вучик и Р. Вучик', path: '/reviews/3' },
-                // { title: 'Н.Р. Фрезинская', path: '/reviews/4' },
-                // { title: 'А.Г. Рапппапорт', path: '/reviews/5' },
-                // { title: 'Н.Ю. Григорьева', path: '/reviews/6' },
-                // { title: 'М.А. Белоногова (Моргун)', path: '/reviews/7' },
-                // { title: 'Т.Ф. Давидич', path: '/reviews/8' },
-                // { title: 'С.Б. Мержанов', path: '/reviews/9' },
-                // { title: 'А.Г. Толстихина', path: '/reviews/10' },
-                // { title: 'Г.А. Лебединская', path: '/reviews/11' },
-                // { title: 'Н.Н. Жеблиенок', path: '/reviews/12' },
-                // { title: 'Е.Л. Беляева', path: '/reviews/13' },
-                // { title: 'Р.Ш. Авазов', path: '/reviews/14' },
-                // { title: 'О.С. Глозман', path: '/reviews/15' },
-                // { title: 'А.В. Кафтанов', path: '/reviews/16' },
-                // { title: 'Э.А. Сиренко', path: '/reviews/17' },
-                // { title: 'Л.Ф. Страшнова и Ю.Г. Страшнова', path: '/reviews/18' }
-
+                { title: 'А.В. Кузьмин', path: '/reviews/0' },
+                { title: 'М.В. Шубенков', path: '/reviews/1' },
+                { title: 'М.Я. Блинкин', path: '/reviews/2' },
+                { title: 'И.А. Бондаренко', path: '/reviews/3' },
+                { title: 'В. Вучик', path: '/reviews/4' },
+                { title: 'Н.Р. Фрезинская', path: '/reviews/5' },
+                { title: 'А.Г. Рапппапорт', path: '/reviews/6' },
+                { title: 'Г.А. Лебединская', path: '/reviews/7' },
+                { title: 'С.Б. Мержанов', path: '/reviews/8' },
+                { title: 'Н.Ю. Григорьева', path: '/reviews/9' },
+                { title: 'М.Н. Гурари', path: '/reviews/10' },
+                { title: 'М.А. Белоногова (Моргун)', path: '/reviews/11' },
+                { title: 'А.Г. Толстихина', path: '/reviews/12' },
+                { title: 'Д.Ю. Ломакина', path: '/reviews/13' },
+                { title: 'О.С. Глозман', path: '/reviews/14' },
+                { title: 'Э.А. Сиренко', path: '/reviews/15' },
+                { title: 'Р.Ш. Авазов', path: '/reviews/16' },
+                { title: 'Ю.Г. Страшнова', path: '/reviews/17' },
+                { title: 'Самарская академия архитектуры', path: '/reviews/18' },
+                { title: 'Самарское отделение Союза архитекторов', path: '/reviews/19' }
             ]
         },
         {
@@ -103,13 +108,26 @@
             >
                 <a href={item.path}>{item.title}</a>
                 {#if item.dropdown && item.dropdown.length > 0 && activeDropdown === index}
-                    <ul class="dropdown">
-                        {#each item.dropdown as dropItem}
-                            <li>
-                                <a href={dropItem.path}>{dropItem.title}</a>
-                            </li>
-                        {/each}
-                    </ul>
+                    {#if item.title === 'Друзья и Коллеги о Юрии Петровиче'}
+                        <div class="dropdown reviews-dropdown">
+                            <div class="reviews-columns">
+                                {#each item.dropdown.slice(0, -2) as dropItem}
+                                    <a href={dropItem.path} class="dropdown-item">{dropItem.title}</a>
+                                {/each}
+                            </div>
+                            <div class="reviews-bottom-row">
+                                {#each item.dropdown.slice(-2) as dropItem}
+                                    <a href={dropItem.path} class="dropdown-item">{dropItem.title}</a>
+                                {/each}
+                            </div>
+                        </div>
+                    {:else}
+                        <div class="dropdown" class:multi-column={item.dropdown.length > 6}>
+                            {#each item.dropdown as dropItem}
+                                <a href={dropItem.path} class="dropdown-item">{dropItem.title}</a>
+                            {/each}
+                        </div>
+                    {/if}
                 {/if}
             </li>
         {/each}
@@ -163,19 +181,50 @@
         gap: 0.5rem;
         z-index: 100;
         min-width: 200px;
+        max-width: 1100px;
     }
 
-    .dropdown li {
-        padding: 0;
+    .dropdown.multi-column {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem 1.5rem;
+        padding: 1rem;
+        max-width: 900px;
+        align-content: flex-start;
     }
 
-    .dropdown a {
-        display: block;
-        width: 100%;
+    .reviews-dropdown {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+        max-width: 900px;
+    }
+
+    .reviews-columns {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 0.5rem 2rem;
+        align-items: start;
+    }
+
+    .reviews-bottom-row {
+        display: flex;
+        gap: 1rem;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .dropdown-item {
+        display: inline-block;
         padding: 0.5rem 1rem;
+        color: var(--text-color);
+        text-decoration: none;
+        white-space: nowrap;
+        flex-shrink: 0;
     }
 
-    .dropdown a:hover {
+    .dropdown-item:hover {
         text-decoration: none;
         background-color: var(--button-bg);
         border-radius: 2px;
