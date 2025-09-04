@@ -29,13 +29,13 @@
         padding-top: 2rem;
     }
 
-    @media (min-width: 1401px) {
+    @media (min-aspect-ratio: 4/3) {
         .text-column {
             padding-right: 10rem;
         }
     }
 
-    @media (max-width: 1400px) {
+    @media (max-aspect-ratio: 4/3) {
         .container {
             grid-template-columns: 1fr;
             grid-template-rows: auto auto;
@@ -43,6 +43,7 @@
         
         .text-column {
             order: 2;
+            text-align: center;
             padding-left: 2rem;
             padding-right: 2rem;
         }
