@@ -64,7 +64,7 @@
                 { title: 'С.Б. Мержанов', path: '/reviews/8' },
                 { title: 'Н.Ю. Григорьева', path: '/reviews/9' },
                 { title: 'М.Н. Гурари', path: '/reviews/10' },
-                { title: 'М.А. Белоногова (Моргун)', path: '/reviews/11' },
+                { title: 'М.А. Белоногова', path: '/reviews/11' },
                 { title: 'А.Г. Толстихина', path: '/reviews/12' },
                 { title: 'Д.Ю. Ломакина', path: '/reviews/13' },
                 { title: 'О.С. Глозман', path: '/reviews/14' },
