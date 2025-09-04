@@ -52,17 +52,12 @@
             order: 1;
             padding-inline: 2rem;
         }
-        
-        .portrait-image {
-            height: 60vh;
-        }
     }
 
     .portrait-column {
         padding-inline: 4rem;
         padding-top: 2rem;
         display: flex;
-        align-items: center;
         justify-content: center;
     }
 
