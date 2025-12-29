@@ -26,9 +26,19 @@
             Droid Sans, 
             Helvetica Neue, 
             sans-serif;
+        background-image: url('/background.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
     }
     main {
-        max-width: 90%;
+        max-width: 80%;
         margin: 0 auto;
+        background-color: var(--bg-color);
+        transition: background-color 0.3s, color 0.3s;
+        min-height: 100vh;
+        padding: 2rem;
+        box-sizing: border-box;
     }
 </style>
