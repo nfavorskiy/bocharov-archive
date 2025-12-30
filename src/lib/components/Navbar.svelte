@@ -79,7 +79,7 @@
                 { title: 'М.И. Безчастнов', path: '/reviews/10' },
                 { title: 'М.Н. Гурари', path: '/reviews/11' },
                 { title: 'М.А. Белоногова', path: '/reviews/12' },
-                { title: 'А.Г. Толстихина', path: '/reviews/13' },
+                { title: 'А.О. Толстихина', path: '/reviews/13' },
                 { title: 'Н.Н. Жеблиенок', path: '/reviews/14' },
                 { title: 'О.С. Глозман', path: '/reviews/15' },
                 { title: 'Э.А. Сиренко', path: '/reviews/16' },
@@ -149,6 +149,8 @@
 
 <style>
     nav {
+        position: sticky;
+        top: 0;
         padding: 1rem;
         background-color: var(--bg-color);
         transition: background-color 0.3s, color 0.3s;
