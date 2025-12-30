@@ -25,6 +25,7 @@
     }
 
     .text-column {
+        min-width: 50vh;
         background-color: var(--bg-color);
         transition: background-color 0.3s, color 0.3s;
         padding-inline: 0rem;

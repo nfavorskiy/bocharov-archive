@@ -63,7 +63,7 @@
     }
     
     main {
-        max-width: 80%;
+        max-width: min-content;
         margin: 0 auto;
         background-color: var(--bg-color);
         transition: background-color 0.3s, color 0.3s; 
