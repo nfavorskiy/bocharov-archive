@@ -1,5 +1,5 @@
 <script>
-    import ThemeToggle from '../components/ThemeToggle.svelte';
+    import ThemeToggle from '$lib/components/ThemeToggle.svelte';
 
     const navItems = [
         {
