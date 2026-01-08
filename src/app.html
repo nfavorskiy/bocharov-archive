@@ -1,41 +1,48 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<style>
-			:root[data-theme="light"] {
-				--bg-color: #ffffff;
-				--text-color: #333333;
-				--button-bg: #e0e0e0;
-				--link-color: #0066cc;
-			}
-			:root[data-theme="dark"] {
-				--bg-color: #1a1a1a;
-				--text-color: #ffffff;
-				--button-bg: #404040;
-				--link-color: #66b3ff;
-			}
-			body {
-				background-color: var(--bg-color);
-				color: var(--text-color);
-			}
-			a {
-				color: var(--link-color);
-				text-decoration: none;
-			}
-			a:hover {
-				text-decoration: underline;
-			}
-		</style>
-		<script>
-			const theme = localStorage.getItem('theme') || 'light';
-			document.documentElement.setAttribute('data-theme', theme);
-		</script>
-		%sveltekit.head%
-	</head>
-	<body data-sveltekit-preload-data="hover">
-		<div style="display: contents">%sveltekit.body%</div>
-	</body>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" href="%sveltekit.assets%/favicon.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="preload" href="/background.jpg" as="image" />
+        <link rel="preload" href="/background-dark.jpg" as="image" />
+        <script>
+            const theme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', theme);
+            document.body?.setAttribute('data-theme', theme);
+        </script>
+        <style>
+            :root[data-theme="light"] {
+                --bg-color: #ffffff;
+                --text-color: #333333;
+                --button-bg: #e0e0e0;
+                --link-color: #0066cc;
+            }
+            :root[data-theme="dark"] {
+                --bg-color: #1a1a1a;
+                --text-color: #ffffff;
+                --button-bg: #404040;
+                --link-color: #66b3ff;
+            }
+            body {
+                background-color: var(--bg-color);
+                color: var(--text-color);
+            }
+            a {
+                color: var(--link-color);
+                text-decoration: none;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+        </style>
+        %sveltekit.head%
+    </head>
+    <body data-sveltekit-preload-data="hover">
+        <script>
+            const bodyTheme = localStorage.getItem('theme') || 'light';
+            document.body.setAttribute('data-theme', theme);
+        </script>
+        <div style="display: contents">%sveltekit.body%</div>
+    </body>
 </html>

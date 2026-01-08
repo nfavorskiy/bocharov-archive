@@ -1,5 +1,10 @@
 <script>
+    import { onMount } from 'svelte';
     import Navbar from '$lib/components/Navbar.svelte';
+
+    onMount(() => {
+        document.body.classList.add('transitions-enabled');
+    });
 </script>
 
 <Navbar />
@@ -14,7 +19,6 @@
         margin: 0;
         padding: 0;
         position: relative;
-        transition: background-color 0.3s, color 0.3s;
         font-family:
             -apple-system, 
             BlinkMacSystemFont, 
@@ -27,6 +31,10 @@
             Droid Sans, 
             Helvetica Neue, 
             sans-serif;
+    }
+
+    :global(body.transitions-enabled) {
+        transition: background-color 0.3s, color 0.3s;
     }
     
     :global(body::before),
@@ -41,6 +49,10 @@
         background-position: center;
         background-repeat: no-repeat;
         z-index: -1;
+    }
+
+    :global(body.transitions-enabled::before),
+    :global(body.transitions-enabled::after) {
         transition: opacity 0.3s;
     }
     
@@ -67,9 +79,12 @@
         min-width: 50vh;
         margin: 0 auto;
         background-color: var(--bg-color);
-        transition: background-color 0.3s, color 0.3s; 
         min-height: 10vh;
         padding: 0rem 2rem 2rem 2rem;
         box-sizing: border-box;
+    }
+
+    :global(body.transitions-enabled) main {
+        transition: background-color 0.3s, color 0.3s;
     }
 </style>
