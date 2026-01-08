@@ -64,11 +64,12 @@
     
     main {
         max-width: min-content;
+        min-width: 50vh;
         margin: 0 auto;
         background-color: var(--bg-color);
         transition: background-color 0.3s, color 0.3s; 
-        min-height: 100vh;
-        padding: 2rem;
+        min-height: 10vh;
+        padding: 0rem 2rem 2rem 2rem;
         box-sizing: border-box;
     }
 </style>

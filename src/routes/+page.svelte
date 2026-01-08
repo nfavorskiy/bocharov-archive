@@ -28,8 +28,6 @@
         min-width: 50vh;
         background-color: var(--bg-color);
         transition: background-color 0.3s, color 0.3s;
-        padding-inline: 0rem;
-        padding-top: 1rem;
     }
 
     @media (min-aspect-ratio: 4/3) {
@@ -47,21 +45,16 @@
         .text-column {
             order: 2;
             text-align: center;
-            padding-left: 2rem;
-            padding-right: 0rem;
         }
         
         .portrait-column {
             order: 1;
-            padding-inline: 2rem;
         }
     }
 
     .portrait-column {
         background-color: var(--bg-color);
         transition: background-color 0.3s, color 0.3s;
-        padding-inline: 0rem;
-        padding-top: 1rem;
         display: flex;
         justify-content: center;
     }
@@ -72,5 +65,6 @@
         justify-content: center;
         border-radius: 4px;
         height: 80vh;
+        
     }
 </style>
