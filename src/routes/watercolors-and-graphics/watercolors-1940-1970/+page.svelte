@@ -3,15 +3,23 @@
 
   /** @type {import('./$types').PageData} */
   export let data;
+
+  const galleryItems = data.images.map((img) => ({
+    src: img.src,
+    alt: img.filename,
+    caption: img.filename.replace(/\.[^.]+$/, '')
+  }));
 </script>
 
 <section class="gallery">
-  {#each data.images as image}
+  {#each galleryItems as image, index}
     <ImageBox
       src={image.src}
-      alt={image.filename}
-      caption={image.filename}
+      alt={image.alt}
+      caption={image.caption}
       squareThumb={true}
+      gallery={galleryItems}
+      initialIndex={index}
     />
   {/each}
 </section>

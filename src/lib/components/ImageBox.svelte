@@ -10,15 +10,38 @@
   export let squareThumb = false;
   export let caption = '';
 
+  export let gallery = [];
+  export let initialIndex = 0;
+
   let isOpen = false;
   let previousOverflow = '';
+
+  let currentIndex = 0;
+
+  $: hasGallery = Array.isArray(gallery) && gallery.length > 0;
+  $: currentItem = hasGallery
+  ? gallery[currentIndex] ?? gallery[0]
+  : { src, alt, caption };
 
   function open() {
     if (browser) {
       previousOverflow = document.body.style.overflow;
       document.body.style.overflow = 'hidden';
     }
+    if (hasGallery) {
+      currentIndex = Math.min(Math.max(initialIndex, 0), gallery.length - 1);
+    }
     isOpen = true;
+  }
+
+  function showPrev() {
+    if (!hasGallery || gallery.length < 2) return;
+    currentIndex = (currentIndex - 1 + gallery.length) % gallery.length;
+  }
+
+  function showNext() {
+    if (!hasGallery || gallery.length < 2) return;
+    currentIndex = (currentIndex + 1) % gallery.length;
   }
 
   function close() {
@@ -29,7 +52,11 @@
   }
 
   function onKeydown(event) {
-    if (event.key === 'Escape' && isOpen) close();
+    if (!isOpen) return;
+
+    if (event.key === 'Escape') close();
+    if (event.key === 'ArrowLeft') showPrev();
+    if (event.key === 'ArrowRight') showNext();
   }
 
   function onBackdropClick() {
@@ -50,12 +77,21 @@
 </button>
 
 {#if isOpen}
-  <div class="lightbox" role="dialog" aria-modal="true" aria-label={alt} on:click={onBackdropClick}>
+  <div class="lightbox" role="dialog" aria-modal="true" aria-label={currentItem.alt || alt} on:click={onBackdropClick}>
     <button class="close-button" type="button" on:click={close} aria-label="Close image">×</button>
 
+    {#if hasGallery && gallery.length > 1}
+      <button class="nav-arrow nav-left" type="button" on:click|stopPropagation={showPrev} aria-label="Previous image">
+        ‹
+      </button>
+      <button class="nav-arrow nav-right" type="button" on:click|stopPropagation={showNext} aria-label="Next image">
+        ›
+      </button>
+    {/if}
+
     <div class="lightbox-content" on:click|stopPropagation>
-      <img class="full-image {fullClass}" {src} {alt} />
-      <div class="image-caption">{caption || alt}</div>
+      <img class="full-image {fullClass}" src={currentItem.src} alt={currentItem.alt || alt} />
+      <div class="image-caption">{currentItem.caption || currentItem.alt || alt}</div>
     </div>
   </div>
 {/if}
@@ -139,5 +175,33 @@
 
   .close-button:hover {
     background: #fff;
+  }
+
+  .nav-arrow {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 0;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.65);
+    color: #fff;
+    font-size: 1.8rem;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 1201;
+  }
+
+  .nav-left {
+    left: 1rem;
+  }
+
+  .nav-right {
+    right: 1rem;
+  }
+
+  .nav-arrow:hover {
+    background: rgba(0, 0, 0, 0.85);
   }
 </style>

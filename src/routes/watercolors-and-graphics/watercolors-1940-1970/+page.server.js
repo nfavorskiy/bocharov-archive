@@ -3,10 +3,6 @@ import { readdir } from 'node:fs/promises';
 const DIR = 'static/graphics/watercolors/watercolors-1940-1970';
 const URL_BASE = '/graphics/watercolors/watercolors-1940-1970';
 
-function encodePathSegment(name) {
-  return encodeURIComponent(name).replace(/%2F/g, '/');
-}
-
 /** @type {import('./$types').PageServerLoad} */
 export async function load() {
   const files = await readdir(DIR);
@@ -16,7 +12,7 @@ export async function load() {
     .sort((a, b) => a.localeCompare(b, 'ru'))
     .map((filename) => ({
       filename,
-      src: `${URL_BASE}/${encodePathSegment(filename)}`
+      src: encodeURI(`${URL_BASE}/${filename}`)
     }));
 
   return { images };
