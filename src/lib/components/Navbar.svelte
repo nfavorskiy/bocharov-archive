@@ -28,7 +28,7 @@
                 { title: 'Советское общество урбанистов (1987-1992)', path: '/research/soviet-urbanists' },
                 { title: 'Список аспирантов и соискателей', path: '/research/aspirants&candidates' },
                 { title: 'Имитационная модель развития города', path: '/research/city-development-model' },
-                { title: 'Список интервью и материалов о Ю.П.', path: '/research/interviews&materials' },
+                { title: 'Список интервью и материалов о Юрие Петровиче', path: '/research/interviews&materials' },
                 { title: 'Избранные статьи и интервью Юрия Петровича', path: '/research/starred-articles&interviews' },
                 { title: 'Статьи и материалы о Ю.П. Бочарове', path: '/research/articles&materials' }
             ]
@@ -56,8 +56,8 @@
             title: 'Акварели и Графика',
             path: '/watercolors-and-graphics',
             dropdown: [
-                { title: 'Акварели 1940-1970-е', path: '/watercolors-and-graphics/watercolors' },
-                { title: 'Акварели 1980-2010-е', path: '/watercolors-and-graphics/watercolors' },
+                { title: 'Акварели 1940-1970-е', path: '/watercolors-and-graphics/watercolors-1940-1970' },
+                { title: 'Акварели 1980-2010-е', path: '/watercolors-and-graphics/watercolors-1980-2010' },
                 { title: 'Карандаш / пастель / фломастер', path: '/watercolors-and-graphics/pencil&pastel&marker' },
                 { title: 'Зарисовки', path: '/watercolors-and-graphics/sketches' }
             ]

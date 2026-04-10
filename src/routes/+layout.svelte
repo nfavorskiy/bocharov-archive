@@ -75,12 +75,11 @@
     }
     
     main {
-        max-width: min-content;
+        max-width: 60vw;
         min-width: 50vh;
         margin: 0 auto;
         background-color: var(--bg-color);
         min-height: 10vh;
-        padding: 0rem 2rem 2rem 2rem;
         box-sizing: border-box;
     }
 
