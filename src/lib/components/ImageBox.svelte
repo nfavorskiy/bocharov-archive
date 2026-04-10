@@ -7,6 +7,8 @@
   export let thumbClass = '';
   export let fullClass = '';
   export let closeOnBackdrop = true;
+  export let squareThumb = false;
+  export let caption = '';
 
   let isOpen = false;
   let previousOverflow = '';
@@ -44,18 +46,17 @@
 <svelte:window on:keydown={onKeydown} />
 
 <button class="thumb-button {thumbClass}" type="button" on:click={open} aria-label="Open image">
-  <img class="thumb-image" {src} {alt} loading="lazy" />
+  <img class="thumb-image" class:thumb-square={squareThumb} {src} {alt} loading="lazy" />
 </button>
 
 {#if isOpen}
   <div class="lightbox" role="dialog" aria-modal="true" aria-label={alt} on:click={onBackdropClick}>
     <button class="close-button" type="button" on:click={close} aria-label="Close image">×</button>
-    <img
-      class="full-image {fullClass}"
-      {src}
-      {alt}
-      on:click|stopPropagation
-    />
+
+    <div class="lightbox-content" on:click|stopPropagation>
+      <img class="full-image {fullClass}" {src} {alt} />
+      <div class="image-caption">{caption || alt}</div>
+    </div>
   </div>
 {/if}
 
@@ -65,12 +66,20 @@
     background: transparent;
     padding: 0;
     cursor: zoom-in;
+    width: 100%;
   }
 
   .thumb-image {
     display: block;
     max-width: 100%;
     height: auto;
+  }
+
+  .thumb-square {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center;
   }
 
   .lightbox {
@@ -82,10 +91,29 @@
     place-items: center;
     cursor: zoom-out;
   }
+  .lightbox-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    max-width: min(92vw, 1500px);
+  }
+
+  .image-caption {
+    max-width: 100%;
+    padding: 0.5rem 0.75rem;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.88);
+    color: #f3f3f3;
+    font-size: 0.9rem;
+    line-height: 1.3;
+    text-align: center;
+    word-break: break-word;
+  }
 
   .full-image {
     max-width: min(92vw, 1500px);
-    max-height: 80vh;
+    max-height: 87vh;
     width: auto;
     height: auto;
     object-fit: contain;

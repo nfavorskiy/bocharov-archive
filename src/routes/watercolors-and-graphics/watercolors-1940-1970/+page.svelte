@@ -7,7 +7,12 @@
 
 <section class="gallery">
   {#each data.images as image}
-    <ImageBox src={image.src} alt={image.filename} />
+    <ImageBox
+      src={image.src}
+      alt={image.filename}
+      caption={image.filename}
+      squareThumb={true}
+    />
   {/each}
 </section>
 
