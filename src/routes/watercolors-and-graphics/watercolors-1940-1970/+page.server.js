@@ -9,7 +9,7 @@ export async function load() {
 
   const images = files
     .filter((f) => /\.(jpe?g|png|webp)$/i.test(f))
-    .sort((a, b) => a.localeCompare(b, 'ru'))
+    .sort((a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' }))
     .map((filename) => ({
       filename,
       src: encodeURI(`${URL_BASE}/${filename}`)
