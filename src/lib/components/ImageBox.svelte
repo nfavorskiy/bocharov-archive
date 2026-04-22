@@ -3,6 +3,7 @@
   import { browser } from '$app/environment';
 
   export let src = '';
+  export let thumbSrc = '';
   export let alt = '';
   export let thumbClass = '';
   export let fullClass = '';
@@ -20,8 +21,8 @@
 
   $: hasGallery = Array.isArray(gallery) && gallery.length > 0;
   $: currentItem = hasGallery
-  ? gallery[currentIndex] ?? gallery[0]
-  : { src, alt, caption };
+    ? gallery[currentIndex] ?? gallery[0]
+    : { src, thumbSrc, alt, caption };
 
   function open() {
     if (browser) {
@@ -70,10 +71,8 @@
   });
 </script>
 
-<svelte:window on:keydown={onKeydown} />
-
 <button class="thumb-button {thumbClass}" type="button" on:click={open} aria-label="Open image">
-  <img class="thumb-image" class:thumb-square={squareThumb} {src} {alt} loading="lazy" />
+  <img class="thumb-image" class:thumb-square={squareThumb} src={thumbSrc || src} {alt} loading="lazy" decoding="async" />
 </button>
 
 {#if isOpen}

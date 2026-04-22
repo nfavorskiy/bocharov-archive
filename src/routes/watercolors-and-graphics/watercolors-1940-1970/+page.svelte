@@ -10,10 +10,10 @@
   let sentinel;
   let observer;
 
-  // Keep original index so lightbox arrows stay aligned with full gallery
   const galleryItems = data.images.map((img, index) => ({
     index,
-    src: img.src,
+    thumbSrc: img.thumbSrc,
+    src: img.fullSrc,
     alt: img.filename,
     caption: img.filename.replace(/\.[^.]+$/, '')
   }));
@@ -49,6 +49,7 @@
   {#each visibleItems as image}
     <ImageBox
       src={image.src}
+      thumbSrc={image.thumbSrc}
       alt={image.alt}
       caption={image.caption}
       squareThumb={true}
