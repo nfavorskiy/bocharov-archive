@@ -28,9 +28,9 @@
                 { title: 'Советское общество урбанистов (1987-1992)', path: '/research/soviet-urbanists' },
                 { title: 'Список аспирантов и соискателей', path: '/research/aspirants&candidates' },
                 { title: 'Имитационная модель развития города', path: '/research/city-development-model' },
-                { title: 'Список интервью и материалов о Юрие Петровиче', path: '/research/interviews&materials' },
+                { title: 'Список интервью и материалов о Юрии Петровиче', path: '/research/interviews&materials' },
                 { title: 'Избранные статьи и интервью Юрия Петровича', path: '/research/starred-articles&interviews' },
-                { title: 'Статьи и материалы о Ю.П. Бочарове', path: '/research/articles&materials' }
+                { title: 'Статьи и материалы о Юрии Петровиче', path: '/research/articles&materials' }
             ]
         },
         {
