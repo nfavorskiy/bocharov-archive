@@ -12,7 +12,7 @@ export async function load() {
     .sort((a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' }))
     .map((filename) => ({
       filename,
-      src: encodeURI(`${URL_BASE}/${filename}`)
+      src: URL_BASE + '/' + encodeURIComponent(filename)
     }));
 
   return { images };
