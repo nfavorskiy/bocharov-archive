@@ -13,8 +13,8 @@ export async function load() {
     .sort((a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' }))
     .map((filename) => ({
       filename,
-      thumbSrc: THUMB_URL_BASE + '/' + encodeURIComponent(filename),
-      fullSrc: FULL_URL_BASE + '/' + encodeURIComponent(filename)
+      thumbSrc: THUMB_URL_BASE + '/' + encodeURI(filename),
+      fullSrc: FULL_URL_BASE + '/' + encodeURI(filename)
     }));
 
   return { images };
