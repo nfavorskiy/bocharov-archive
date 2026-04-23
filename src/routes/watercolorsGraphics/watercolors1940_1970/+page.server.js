@@ -1,7 +1,7 @@
 import { buildGalleryImages } from '$lib/galleryServer';
 
 const DIR = 'static/watercolorsGraphics/watercolors/watercolors1940_1970';
-const THUMB_URL_BASE = '/watercolorsGraphics/watercolors-thumbs/watercolors1940_1970';
+const THUMB_URL_BASE = '/thumbnails/watercolors1940_1970';
 const FULL_URL_BASE = '/watercolorsGraphics/watercolors/watercolors1940_1970';
 
 /** @type {import('./$types').PageServerLoad} */
