@@ -17,6 +17,9 @@
         padding: 8px; 
         border-radius: 4px;
         background-color: var(--button-bg);
+        font-family: "Segoe UI", "Noto Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+        font-size: 1rem;
+        line-height: 1.5;
     }
     button:hover {
         opacity: 0.8;

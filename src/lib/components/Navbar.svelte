@@ -1,5 +1,6 @@
 <script>
     import ThemeToggle from '$lib/components/ThemeToggle.svelte';
+    import LangToggle from '$lib/components/LangToggle.svelte';
 
     const navItems = [
         {
@@ -111,7 +112,7 @@
 </script>
 
 <nav>
-    <ul>
+    <ul class="nav-list">
         {#each navItems as item, index}
             <li 
                 on:mouseenter={() => handleMouseEnter(index)}
@@ -143,7 +144,10 @@
                 {/if}
             </li>
         {/each}
+    </ul>
+    <ul class="toggles">
         <li><ThemeToggle /></li>
+        <li><LangToggle /></li>
     </ul>
 </nav>
 
@@ -154,14 +158,25 @@
         padding: 1rem;
         background-color: var(--bg-color);
         transition: background-color 0.3s, color 0.3s;
+        display: flex;
+        justify-content: center;
     }
     
-    ul {
+    ul.nav-list {
         list-style: none;
         margin: 0;
         padding: 0;
         display: flex;
         gap: 2rem;
+        justify-content: center;
+    }
+
+    ul.toggles {
+        list-style: none;
+        margin: 0 0 0 2rem;
+        padding: 0;
+        display: flex;
+        gap: 0.5rem;
         justify-content: center;
     }
 

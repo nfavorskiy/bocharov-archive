@@ -15,22 +15,20 @@
 
 
 <style>
+
+    :global(html) {
+        font-size: 16px;
+        -webkit-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+    }
     :global(body) {
+        font-size: 1rem;
+        line-height: 1.5;
         margin: 0;
         padding: 0;
         position: relative;
-        font-family:
-            -apple-system, 
-            BlinkMacSystemFont, 
-            Segoe UI, 
-            Roboto, 
-            Oxygen, 
-            Ubuntu, 
-            Cantarell,
-            Fira Sans, 
-            Droid Sans, 
-            Helvetica Neue, 
-            sans-serif;
+        font-family: "Segoe UI", "Noto Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+
     }
 
     :global(body.transitions-enabled) {
