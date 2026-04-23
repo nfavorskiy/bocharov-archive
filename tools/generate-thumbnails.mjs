@@ -2,8 +2,9 @@ import { mkdir, readdir } from 'node:fs/promises';
 import { join } from 'node:path';
 import sharp from 'sharp';
 
-const inputDir = 'static/graphics/watercolors/watercolors-1940-1970';
-const outputDir = 'static/graphics/watercolors-thumbs/watercolors-1940-1970';
+const collection = process.argv[2] ?? 'watercolors1940_1970';
+const inputDir = `static/watercolorsGraphics/watercolors/${collection}`;
+const outputDir = `static/watercolorsGraphics/watercolors-thumbs/${collection}`;
 const maxWidth = 420;
 
 await mkdir(outputDir, { recursive: true });
