@@ -1,19 +1,21 @@
+<script>
+  import { t } from '$lib/i18n';
+</script>
 
 <div class="container">
     <div class="portrait-column">
-        <!-- Add your portrait image here -->
-        <img 
-            src="/photo_2025-05-22_21-27-56.jpg" 
-            alt="Юрий Петрович Бочаров"
+        <img
+            src="/photo_2025-05-22_21-27-56.jpg"
+            alt={$t.messages.home.alt}
             class="portrait-image"
         />
     </div>
     <div class="text-column">
-        <h1 style="margin: 0;">Юрий Петрович</h1> 
-        <h1 style="letter-spacing: 4px; margin: 0 0 1rem 0; font-size: 2.5rem;">БОЧАРОВ</h1>
-        <h3 style="margin: 0;">4.05.1926, Харьков – </h3>
-        <h3 style="margin: 0;">1.09.2023, Москва</h3>
-        <p>Советский и российский архитектор, урбанист, академик РААСН, один из крупнейших учёных в области градостроительной науки. Основоположник теории гибкой планировочной структуры новых промышленных городов. Автор генпланов Тольятти и Набережные Челны</p>     
+        <h1 style="margin: 0;">{$t.messages.home.firstName}</h1>
+        <h1 style="letter-spacing: 4px; margin: 0 0 1rem 0; font-size: 2.5rem;">{$t.messages.home.lastName}</h1>
+        <h3 style="margin: 0;">{$t.messages.home.born}</h3>
+        <h3 style="margin: 0;">{$t.messages.home.died}</h3>
+        <p>{$t.messages.home.bio}</p>
     </div>
 </div>
 

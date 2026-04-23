@@ -88,16 +88,6 @@ export const messages = {
         'Советский и российский архитектор, урбанист, академик РААСН, один из крупнейших учёных в области градостроительной науки. Основоположник теории гибкой планировочной структуры новых промышленных городов. Автор генпланов Тольятти и Набережные Челны',
       alt: 'Юрий Петрович Бочаров'
     },
-    gallery: {
-      title: 'Галерея',
-      loading: 'Загрузка изображений...',
-      empty: 'Изображения не найдены',
-      previous: '← Предыдущая',
-      next: 'Следующая →',
-      pageInfo: 'Страница {current} из {total} ({count} изображений)',
-      imageAlt: 'Изображение галереи {n}',
-      enlarged: 'Увеличенный просмотр'
-    },
     imageBox: {
       open: 'Открыть изображение',
       close: 'Закрыть изображение',
@@ -188,21 +178,11 @@ export const messages = {
     home: {
       firstName: 'Yury Petrovich',
       lastName: 'BOCHAROV',
-      born: 'May 4, 1926, Kharkiv -',
-      died: 'Sep 1, 2023, Moscow',
+      born: '4.05.1926, Kharkiv -',
+      died: '1.09.2023, Moscow',
       bio:
         'Soviet and Russian architect, urban planner, Academician of the Russian Academy of Architecture and Building Sciences, one of the leading scholars in urban planning. A founder of the theory of flexible planning structure for new industrial cities. Author of the master plans of Tolyatti and Naberezhnye Chelny',
       alt: 'Yury Petrovich Bocharov'
-    },
-    gallery: {
-      title: 'Gallery',
-      loading: 'Loading images...',
-      empty: 'No images found',
-      previous: '← Previous',
-      next: 'Next →',
-      pageInfo: 'Page {current} of {total} ({count} images)',
-      imageAlt: 'Gallery image {n}',
-      enlarged: 'Enlarged view'
     },
     imageBox: {
       open: 'Open image',
