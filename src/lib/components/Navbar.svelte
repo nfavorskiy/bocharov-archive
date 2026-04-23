@@ -1,101 +1,115 @@
 <script>
     import ThemeToggle from '$lib/components/ThemeToggle.svelte';
     import LangToggle from '$lib/components/LangToggle.svelte';
+    import { t } from '$lib/i18n';
 
     const navItems = [
         {
-            title: 'Главная',
-            path: '/',
+            key: 'home',
+            titleKey: 'home',
+            path: '/'
         },
         {
-            title: 'Биография',
+            key: 'biography',
+            titleKey: 'biography',
             path: '/biography',
+            dropdownGroup: 'biographyDropdown',
             dropdown: [
-                { title: 'Основные даты', path: '/biography/mainDates' },
-                { title: 'Биографические заметки', path: '/biography/biographicalNotes' },
-                { title: 'Начало жизненного пути', path: '/biography/firstSteps' },
-                { title: 'Семья', path: '/biography/family' },
-                { title: 'Письма', path: '/biography/letters' },
-                { title: 'Из записных книжек', path: '/biography/notebooks' },
-                { title: 'Награды и дипломы', path: '/biography/awardsAndDiplomas' }
+                { key: 'mainDates', path: '/biography/main-dates' },
+                { key: 'biographicalNotes', path: '/biography/biographical-notes' },
+                { key: 'firstSteps', path: '/biography/first-steps' },
+                { key: 'family', path: '/biography/family' },
+                { key: 'letters', path: '/biography/letters' },
+                { key: 'notebooks', path: '/biography/notebooks' },
+                { key: 'awardsAndDiplomas', path: '/biography/awards-and-diplomas' }
             ]
         },
         {
-            title: 'Наука',
+            key: 'research',
+            titleKey: 'research',
             path: '/research',
+            dropdownGroup: 'researchDropdown',
             dropdown: [
-                { title: 'Основные направления научной и проектной деятельности ', path: '/research/majorAims' },
-                { title: 'Список печатных трудов', path: '/research/worksList' },
-                { title: 'Советское общество урбанистов (1987-1992)', path: '/research/sovietUrbanists' },
-                { title: 'Список аспирантов и соискателей', path: '/research/aspirantsCandidates' },
-                { title: 'Имитационная модель развития города', path: '/research/cityDevelopmentModel' },
-                { title: 'Список интервью и материалов о Юрии Петровиче', path: '/research/interviewsMaterials' },
-                { title: 'Избранные статьи и интервью Юрия Петровича', path: '/research/starredArticlesInterviews' },
-                { title: 'Статьи и материалы о Юрии Петровиче', path: '/research/articlesMaterials' }
+                { key: 'majorAims', path: '/research/major-aims' },
+                { key: 'worksList', path: '/research/works-list' },
+                { key: 'sovietUrbanists', path: '/research/soviet-urbanists' },
+                { key: 'aspirantsCandidates', path: '/research/aspirants&candidates' },
+                { key: 'cityDevelopmentModel', path: '/research/city-development-model' },
+                { key: 'interviewsMaterials', path: '/research/interviews&materials' },
+                { key: 'starredArticlesInterviews', path: '/research/starred-articles&interviews' },
+                { key: 'articlesMaterials', path: '/research/articles&materials' }
             ]
         },
         {
-            title: 'Проекты',
+            key: 'projects',
+            titleKey: 'projects',
             path: '/projects',
+            dropdownGroup: 'projectsDropdown',
             dropdown: [
-                { title: 'Список проектных работ', path: '/projects/list' },
-                { title: 'Диплом 1951 Дом Советов в Воронеже', path: '/projects/diploma1951' },
-                { title: 'Волгоград 1952-1955', path: '/projects/volgograd' },
-                { title: 'Тольятти 1964-1966', path: '/projects/tolyatti' },
-                { title: 'Набережные Челны 1965-1968', path: '/projects/naberezhnyeChelny' },
-                { title: 'Астана Междунар. конкурс 1998', path: '/projects/astana' },
-                { title: 'ЦДХ Конкурс 2001', path: '/projects/cdh' },
-                { title: 'Площадь Федерации Эскиз-идея 2005', path: '/projects/federationSquare' },
-                { title: 'Мемориальный комплекс на Поклонной горе Конкурс 1986', path: '/projects/memorialComplex' },
-                { title: 'Новое здание РААСН на Волхонке Конкурс 1997', path: '/projects/newRaasnBuilding' },
-                { title: 'Крестьянская застава Конкурс 1998', path: '/projects/residentialComplex' },
-                { title: 'Зарядье Конкурс 2012', path: '/projects/zaradye' },
-                { title: 'Разное', path: '/projects/miscellaneous' }
+                { key: 'list', path: '/projects/projects-list' },
+                { key: 'diploma1951', path: '/projects/diploma-1951' },
+                { key: 'volgograd', path: '/projects/volgograd-1952-1955' },
+                { key: 'tolyatti', path: '/projects/tolyatti-1964-1966' },
+                { key: 'naberezhnyeChelny', path: '/projects/naberezhnye-chelny-1965-1968' },
+                { key: 'astana', path: '/projects/astana-international-competition-1998' },
+                { key: 'cdh', path: '/projects/cdh-competition-2001' },
+                { key: 'federationSquare', path: '/projects/federation-square-sketch-idea-2005' },
+                { key: 'memorialComplex', path: '/projects/memorial-complex-poklonnaya-hill-competition-1986' },
+                { key: 'newRaasnBuilding', path: '/projects/new-raasn-building-volkhonka-competition-1997' },
+                { key: 'residentialComplex', path: '/projects/residential-complex-leninsky-avenue-competition-1998' },
+                { key: 'zaradye', path: '/projects/zaradye-competition-2012' },
+                { key: 'miscellaneous', path: '/projects/miscellaneous' }
             ]
         },
         {
-            title: 'Акварели и Графика',
+            key: 'watercolorsGraphics',
+            titleKey: 'watercolorsGraphics',
             path: '/watercolorsGraphics',
+            dropdownGroup: 'watercolorsGraphicsDropdown',
             dropdown: [
-                { title: 'Акварели 1940-1970-е', path: '/watercolorsGraphics/watercolors1940_1970' },
-                { title: 'Акварели 1980-2010-е', path: '/watercolorsGraphics/watercolors1980_2010' },
-                { title: 'Карандаш / пастель / фломастер', path: '/watercolorsGraphics/pencilPastelMarker' },
-                { title: 'Зарисовки', path: '/watercolorsGraphics/sketches' }
+                { key: 'watercolors1940_1970', path: '/watercolorsGraphics/watercolors1940_1970' },
+                { key: 'watercolors1980_2010', path: '/watercolorsGraphics/watercolors1980_2010' },
+                { key: 'pencilPastelMarker', path: '/watercolorsGraphics/pencilPastelMarker' },
+                { key: 'sketches', path: '/watercolorsGraphics/sketches' }
             ]
         },
         {
-            title: 'Друзья и Коллеги о Юрии Петровиче',
+            key: 'reviews',
+            titleKey: 'reviews',
             path: '/reviews',
+            dropdownGroup: 'reviewsDropdown',
             dropdown: [
-                { title: 'А.В. Кузьмин', path: '/reviews/kuzmin' },
-                { title: 'М.В. Шубенков', path: '/reviews/shubenkov' },
-                { title: 'М.Я. Блинкин', path: '/reviews/blinkin' },
-                { title: 'И.А. Бондаренко', path: '/reviews/bondarenko' },
-                { title: 'Н.Р. Фрезинская', path: '/reviews/frezinskaya' },
-                { title: 'А.Г. Рапппапорт', path: '/reviews/rappaport' },
-                { title: 'Вукан Р. Вучик', path: '/reviews/vuchik' },
-                { title: 'Н.Ю. Григорьева', path: '/reviews/grigoryeva' },
-                { title: 'С.Б. Мержанов', path: '/reviews/merzhanov' },
-                { title: 'Г.А. Лебединская', path: '/reviews/lebedinskaya' },
-                { title: 'М.И. Безчастнов', path: '/reviews/bezchastnov' },
-                { title: 'М.Н. Гурари', path: '/reviews/gurari' },
-                { title: 'М.А. Белоногова', path: '/reviews/belonogova' },
-                { title: 'А.О. Толстихина', path: '/reviews/tolstikhina' },
-                { title: 'Н.Н. Жеблиенок', path: '/reviews/zheblyenok' },
-                { title: 'О.С. Глозман', path: '/reviews/glozman' },
-                { title: 'Э.А. Сиренко', path: '/reviews/sirenko' },
-                { title: 'Р.Ш. Авазов', path: '/reviews/avazov' },
-                { title: 'Самарская академия архитектуры', path: '/reviews/samaraAcademy' },
-                { title: 'Самарское отделение Союза архитекторов', path: '/reviews/samaraUnion' }
+                { key: 'kuzmin', path: '/reviews/0' },
+                { key: 'shubenkov', path: '/reviews/1' },
+                { key: 'blinkin', path: '/reviews/2' },
+                { key: 'bondarenko', path: '/reviews/3' },
+                { key: 'frezinskaya', path: '/reviews/4' },
+                { key: 'rappaport', path: '/reviews/5' },
+                { key: 'vuchik', path: '/reviews/6' },
+                { key: 'grigoryeva', path: '/reviews/7' },
+                { key: 'merzhanov', path: '/reviews/8' },
+                { key: 'lebedinskaya', path: '/reviews/9' },
+                { key: 'bezchastnov', path: '/reviews/10' },
+                { key: 'gurari', path: '/reviews/11' },
+                { key: 'belonogova', path: '/reviews/12' },
+                { key: 'tolstikhina', path: '/reviews/13' },
+                { key: 'zheblyenok', path: '/reviews/14' },
+                { key: 'glozman', path: '/reviews/15' },
+                { key: 'sirenko', path: '/reviews/16' },
+                { key: 'avazov', path: '/reviews/17' },
+                { key: 'samaraAcademy', path: '/reviews/18' },
+                { key: 'samaraUnion', path: '/reviews/19' }
             ]
         },
         {
-            title: 'Фото и Разное',
-            path: '/photoAndVarious',
+            key: 'photoAndVarious',
+            titleKey: 'photoAndVarious',
+            path: '/photo-and-various',
+            dropdownGroup: 'photoAndVariousDropdown',
             dropdown: [
-                { title: 'Поездки и встречи', path: '/photoAndVarious/tripsMeetings' },
-                { title: 'Семейная хроника', path: '/photoAndVarious/familyChronicle' },
-                { title: 'Поздравления, посвящения', path: '/photoAndVarious/congratulations' },
+                { key: 'tripsMeetings', path: '/photo-and-various/trips&meetings' },
+                { key: 'familyChronicle', path: '/photo-and-various/family-chronicle' },
+                { key: 'congratulations', path: '/photo-and-various/congratulations' }
             ]
         }
     ];
@@ -109,35 +123,44 @@
     function handleMouseLeave() {
         activeDropdown = null;
     }
+
+    function navLabel(item) {
+        return $t.messages.nav[item.titleKey] ?? item.titleKey;
+    }
+
+    function dropLabel(item, dropItem) {
+        const group = item.dropdownGroup;
+        return $t.messages.nav[group]?.[dropItem.key] ?? dropItem.key;
+    }
 </script>
 
 <nav>
     <ul class="nav-list">
         {#each navItems as item, index}
-            <li 
+            <li
                 on:mouseenter={() => handleMouseEnter(index)}
                 on:mouseleave={handleMouseLeave}
                 class="nav-item"
             >
-                <a href={item.path}>{item.title}</a>
+                <a href={item.path}>{navLabel(item)}</a>
                 {#if item.dropdown && item.dropdown.length > 0 && activeDropdown === index}
-                    {#if item.title === 'Друзья и Коллеги о Юрии Петровиче'}
+                    {#if item.key === 'reviews'}
                         <div class="dropdown reviews-dropdown">
                             <div class="reviews-columns">
                                 {#each item.dropdown.slice(0, -2) as dropItem}
-                                    <a href={dropItem.path} class="dropdown-item">{dropItem.title}</a>
+                                    <a href={dropItem.path} class="dropdown-item">{dropLabel(item, dropItem)}</a>
                                 {/each}
                             </div>
                             <div class="reviews-bottom-row">
                                 {#each item.dropdown.slice(-2) as dropItem}
-                                    <a href={dropItem.path} class="dropdown-item">{dropItem.title}</a>
+                                    <a href={dropItem.path} class="dropdown-item">{dropLabel(item, dropItem)}</a>
                                 {/each}
                             </div>
                         </div>
                     {:else}
                         <div class="dropdown" class:multi-column={item.dropdown.length > 6}>
                             {#each item.dropdown as dropItem}
-                                <a href={dropItem.path} class="dropdown-item">{dropItem.title}</a>
+                                <a href={dropItem.path} class="dropdown-item">{dropLabel(item, dropItem)}</a>
                             {/each}
                         </div>
                     {/if}
