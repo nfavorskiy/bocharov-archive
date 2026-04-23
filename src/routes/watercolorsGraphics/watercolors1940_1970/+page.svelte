@@ -1,8 +1,8 @@
 <script>
   import { onMount } from 'svelte';
   import ImageBox from '$lib/components/ImageBox.svelte';
+  import { t } from '$lib/i18n';
 
-  /** @type {import('./$types').PageData} */
   export let data;
 
   const PAGE_SIZE = 12;
@@ -10,13 +10,24 @@
   let sentinel;
   let observer;
 
-  const galleryItems = data.images.map((img, index) => ({
-    index,
-    thumbSrc: img.thumbSrc,
-    src: img.fullSrc,
-    alt: img.filename,
-    caption: img.filename.replace(/\.[^.]+$/, '')
-  }));
+  function fallbackCaption(filename) {
+    return filename.replace(/\.[^.]+$/, '');
+  }
+
+  $: galleryItems = data.images.map((img, index) => {
+    const localized =
+      $t.messages.galleries?.watercolors1940_1970?.captions?.[img.filename];
+
+    const caption = localized ?? fallbackCaption(img.filename);
+
+    return {
+      index,
+      thumbSrc: img.thumbSrc,
+      src: img.fullSrc,
+      alt: caption,
+      caption
+    };
+  });
 
   $: visibleItems = galleryItems.slice(0, visibleCount);
   $: hasMore = visibleCount < galleryItems.length;
