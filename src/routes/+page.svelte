@@ -1,5 +1,53 @@
 <script>
-  import { t } from '$lib/i18n';
+    import { browser } from '$app/environment';
+    import { t } from '$lib/i18n';
+
+    function retype(node, params) {
+        let timer;
+
+        function normalize(input) {
+            if (typeof input === 'string') {
+                return { text: input, speed: 22, step: 1 };
+            }
+
+            return {
+                text: String(input?.text ?? ''),
+                speed: Number(input?.speed ?? 22), // ms per tick
+                step: Number(input?.step ?? 1) // chars per tick
+            };
+        }
+
+        function run(input) {
+            clearInterval(timer);
+            const { text, speed, step } = normalize(input);
+
+            if (!browser || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                node.textContent = text;
+                return;
+            }
+
+            const chars = Array.from(text);
+            let i = 0;
+            node.textContent = '';
+
+            timer = setInterval(() => {
+                i += step;
+                node.textContent = chars.slice(0, i).join('');
+                if (i >= chars.length) clearInterval(timer);
+            }, speed);
+        }
+
+        run(params);
+
+        return {
+            update(newParams) {
+                run(newParams);
+            },
+            destroy() {
+                clearInterval(timer);
+            }
+        };
+    }
 </script>
 
 <div class="container">
@@ -11,11 +59,12 @@
         />
     </div>
     <div class="text-column">
-        <h1 style="margin: 0;">{$t.messages.home.firstName}</h1>
-        <h1 style="letter-spacing: 4px; margin: 0 0 1rem 0; font-size: 2.5rem;">{$t.messages.home.lastName}</h1>
-        <h3 style="margin: 0;">{$t.messages.home.born}</h3>
-        <h3 style="margin: 0;">{$t.messages.home.died}</h3>
-        <p>{$t.messages.home.bio}</p>
+        <h1 style="margin: 0;" use:retype={{ text: $t.messages.home.firstName, speed: 16 }}></h1>
+        <h1 style="letter-spacing: 4px; margin: 0 0 1rem 0; font-size: 2.5rem;"
+            use:retype={{ text: $t.messages.home.lastName, speed: 20, step: 2 }}></h1>
+        <h3 style="margin: 0;" use:retype={{ text: $t.messages.home.born, speed: 14 }}></h3>
+        <h3 style="margin: 0;" use:retype={{ text: $t.messages.home.died, speed: 14 }}></h3>
+        <p use:retype={{ text: $t.messages.home.bio, speed: 8, step: 2 }}></p>
     </div>
 </div>
 

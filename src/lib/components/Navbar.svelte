@@ -1,4 +1,5 @@
 <script>
+    import { browser } from '$app/environment'; 
     import ThemeToggle from '$lib/components/ThemeToggle.svelte';
     import LangToggle from '$lib/components/LangToggle.svelte';
     import { t } from '$lib/i18n';
@@ -116,6 +117,76 @@
 
     let activeDropdown = null;
 
+    const NAV_TYPE_DURATION = 700; // ms; every top nav label completes in 700ms
+
+    function retype(node, params) {
+        let rafId = 0;
+
+        function normalize(input) {
+            if (typeof input === 'string') {
+                return { text: input, duration: NAV_TYPE_DURATION };
+            }
+
+            return {
+                text: String(input?.text ?? ''),
+                duration: Math.max(1, Number(input?.duration ?? NAV_TYPE_DURATION))
+            };
+        }
+
+        function run(input) {
+            cancelAnimationFrame(rafId);
+            const { text, duration } = normalize(input);
+
+            if (!browser || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                node.textContent = text;
+                return;
+            }
+
+            const chars = Array.from(text);
+            const total = chars.length;
+
+            if (total === 0) {
+                node.textContent = '';
+                return;
+            }
+
+            node.textContent = '';
+            const startedAt = performance.now();
+
+            const tick = (now) => {
+                const elapsed = now - startedAt;
+                const progress = Math.min(1, elapsed / duration);
+                const count = Math.ceil(total * progress);
+
+                node.textContent = chars.slice(0, count).join('');
+
+                if (progress < 1) {
+                    rafId = requestAnimationFrame(tick);
+                }
+            };
+
+            rafId = requestAnimationFrame(tick);
+        }
+
+        run(params);
+
+        return {
+            update(newParams) {
+                run(newParams);
+            },
+            destroy() {
+                cancelAnimationFrame(rafId);
+            }
+        };
+    }
+
+    function navTyping(item) {
+        return {
+            text: navLabel(item),
+            duration: NAV_TYPE_DURATION
+        };
+    }
+
     function handleMouseEnter(index) {
         activeDropdown = index;
     }
@@ -142,7 +213,9 @@
                 on:mouseleave={handleMouseLeave}
                 class="nav-item"
             >
-                <a href={item.path}>{navLabel(item)}</a>
+                <a href={item.path}>
+                    <span use:retype={navTyping(item)}></span>
+                </a>
                 {#if item.dropdown && item.dropdown.length > 0 && activeDropdown === index}
                     {#if item.key === 'reviews'}
                         <div class="dropdown reviews-dropdown">
