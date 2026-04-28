@@ -8,38 +8,40 @@ export const messages = {
       biography: 'Биография',
       biographyDropdown: {
         mainDates: 'Основные даты',
-        biographicalNotes: 'Биографические заметки',
+        briefBiography: 'Краткая биография',
         firstSteps: 'Начало жизненного пути',
         family: 'Семья',
-        letters: 'Письма',
-        notebooks: 'Из записных книжек',
-        awardsAndDiplomas: 'Награды и дипломы'
+        letters: 'Письма 1955-1957',
+        awardsAndDiplomas: 'Награды и дипломы',
+        notebooks: 'Из записных книжек'
       },
       research: 'Исследования',
       researchDropdown: {
         majorAims: 'Основные направления научной и проектной деятельности',
         worksList: 'Список печатных трудов',
-        sovietUrbanists: 'Советское общество урбанистов (1987-1992)',
+        sovietUrbanists: 'Советское общество урбанистов 1987-1992',
         aspirantsCandidates: 'Список аспирантов и соискателей',
-        cityDevelopmentModel: 'Имитационная модель развития города',
-        interviewsMaterials: 'Список интервью и материалов о Юрии Петровиче',
-        starredArticlesInterviews: 'Избранные статьи и интервью Юрия Петровича',
-        articlesMaterials: 'Статьи и материалы о Юрии Петровиче'
+        cityDevelopmentModel: 'Имитационная модель долгосрочного развития города',
+        interviewsMaterials: 'Список интервью и материалов о Ю.П. Бочарове',
+        starredArticlesInterviews: 'Избранные интервью и статьи Юрия Бочарова',
+        articlesMaterials: 'Материалы о Ю.П. Бочарове',
+        doctoralDissertation: 'Автореферат докторской диссертации 1967',
+        defenseAnnouncement: 'Объявление о защите 1967'
       },
       projects: 'Проекты',
       projectsDropdown: {
         list: 'Список проектных работ',
-        diploma1951: 'Диплом 1951 Дом Советов в Воронеже',
-        volgograd: 'Волгоград 1952-1955',
-        tolyatti: 'Тольятти 1964-1966',
-        naberezhnyeChelny: 'Набережные Челны 1965-1968',
-        astana: 'Астана Междунар. конкурс 1998',
-        cdh: 'ЦДХ Конкурс 2001',
-        federationSquare: 'Площадь Федерации Эскиз-идея 2005',
-        memorialComplex: 'Мемориальный комплекс на Поклонной горе Конкурс 1986',
-        newRaasnBuilding: 'Новое здание РААСН на Волхонке Конкурс 1997',
-        residentialComplex: 'Крестьянская застава Конкурс 1998',
-        zaradye: 'Зарядье Конкурс 2012',
+        diploma1951: 'Диплом МАРХИ 1951. Дом Советов в Воронеже',
+        volgograd: 'Волгоград 1951-1958',
+        tolyatti: 'Тольятти 1966-1977',
+        naberezhnyeChelny: 'Набережные Челны 1968-1975',
+        memorialComplex: 'Мемориальный комплекс на Поклонной горе. Конкурс 1986/87',
+        astana: 'Астана. Международный конкурс 1998',
+        cdh: 'Центральный Дом Художника. Конкурс 2001',
+        federationSquare: 'Площадь Федерации. Эскиз-идея 2005',
+        newRaasnBuilding: 'Новое здание РААСН на Волхонке. Конкурс 1997',
+        residentialComplex: 'Крестьянская застава. Конкурс 1998',
+        zaradye: 'Зарядье. Конкурс 2012',
         miscellaneous: 'Разное'
       },
       watercolorsGraphics: 'Акварели и Графика',
@@ -49,7 +51,7 @@ export const messages = {
         pencilPastelMarker: 'Карандаш / пастель / фломастер',
         sketches: 'Зарисовки'
       },
-      reviews: 'Друзья и Коллеги о Юрии Петровиче',
+      reviews: 'Друзья и Коллеги о Юрии Бочарове',
       reviewsDropdown: {
         kuzmin: 'А.В. Кузьмин',
         shubenkov: 'М.В. Шубенков',
@@ -76,7 +78,7 @@ export const messages = {
       photoAndVariousDropdown: {
         tripsMeetings: 'Поездки и встречи',
         familyChronicle: 'Семейная хроника',
-        congratulations: 'Поздравления, посвящения'
+        congratulations: 'Поздравления, посвящения, разное'
       }
     },
     home: {
@@ -85,7 +87,7 @@ export const messages = {
       born: '4.05.1926, Харьков -',
       died: '1.09.2023, Москва',
       bio:
-        'Советский и российский архитектор, урбанист, академик РААСН, один из крупнейших учёных в области градостроительной науки. Основоположник теории гибкой планировочной структуры новых промышленных городов. Автор генпланов Тольятти и Набережные Челны',
+        'Советский и российский архитектор, урбанист, эксперт. Один из крупнейших учёных в области градостроительной науки, доктор архитектуры, академик РААСН. Основоположник теории гибкой планировочной структуры новых промышленных городов. Автор генпланов Тольятти и Набережные Челны в сост. колл. ЦНИИЭП жилища и ЦНИИП градостроительства',
       alt: 'Юрий Петрович Бочаров'
     },
     imageBox: {
@@ -267,7 +269,7 @@ export const messages = {
       biography: 'Biography',
       biographyDropdown: {
         mainDates: 'Key Dates',
-        biographicalNotes: 'Biographical Notes',
+        briefBiography: 'Brief Biography',
         firstSteps: 'Early Life',
         family: 'Family',
         letters: 'Letters',
