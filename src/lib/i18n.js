@@ -15,7 +15,7 @@ export const messages = {
         awardsAndDiplomas: 'Награды и дипломы',
         notebooks: 'Из записных книжек'
       },
-      research: 'Исследования',
+      research: 'Наука',
       researchDropdown: {
         majorAims: 'Основные направления научной и проектной деятельности',
         worksList: 'Список печатных трудов',

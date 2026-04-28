@@ -16,13 +16,13 @@
             path: '/biography',
             dropdownGroup: 'biographyDropdown',
             dropdown: [
-                { key: 'mainDates', path: '/biography/main-dates' },
-                { key: 'biographicalNotes', path: '/biography/biographical-notes' },
-                { key: 'firstSteps', path: '/biography/first-steps' },
+                { key: 'mainDates', path: '/biography/mainDates' },
+                { key: 'briefBiography', path: '/biography/briefBiography' },
+                { key: 'firstSteps', path: '/biography/firstSteps' },
                 { key: 'family', path: '/biography/family' },
                 { key: 'letters', path: '/biography/letters' },
-                { key: 'notebooks', path: '/biography/notebooks' },
-                { key: 'awardsAndDiplomas', path: '/biography/awards-and-diplomas' }
+                { key: 'awardsAndDiplomas', path: '/biography/awardsAndDiplomas' },
+                { key: 'notebooks', path: '/biography/notebooks' }
             ]
         },
         {
@@ -31,14 +31,16 @@
             path: '/research',
             dropdownGroup: 'researchDropdown',
             dropdown: [
-                { key: 'majorAims', path: '/research/major-aims' },
-                { key: 'worksList', path: '/research/works-list' },
-                { key: 'sovietUrbanists', path: '/research/soviet-urbanists' },
-                { key: 'aspirantsCandidates', path: '/research/aspirants&candidates' },
-                { key: 'cityDevelopmentModel', path: '/research/city-development-model' },
-                { key: 'interviewsMaterials', path: '/research/interviews&materials' },
-                { key: 'starredArticlesInterviews', path: '/research/starred-articles&interviews' },
-                { key: 'articlesMaterials', path: '/research/articles&materials' }
+                { key: 'majorAims', path: '/research/majorAims' },
+                { key: 'worksList', path: '/research/worksList' },
+                { key: 'sovietUrbanists', path: '/research/sovietUrbanists' },
+                { key: 'aspirantsCandidates', path: '/research/aspirantsCandidates' },
+                { key: 'cityDevelopmentModel', path: '/research/cityDevelopmentModel' },
+                { key: 'interviewsMaterials', path: '/research/interviewsMaterials' },
+                { key: 'starredArticlesInterviews', path: '/research/starredArticlesInterviews' },
+                { key: 'articlesMaterials', path: '/research/articlesMaterials' },
+                { key: 'doctoralDissertation', path: '/research/doctoralDissertation' },
+                { key: 'defenseAnnouncement', path: '/research/defenseAnnouncement' }
             ]
         },
         {
@@ -47,18 +49,19 @@
             path: '/projects',
             dropdownGroup: 'projectsDropdown',
             dropdown: [
-                { key: 'list', path: '/projects/projects-list' },
-                { key: 'diploma1951', path: '/projects/diploma-1951' },
-                { key: 'volgograd', path: '/projects/volgograd-1952-1955' },
-                { key: 'tolyatti', path: '/projects/tolyatti-1964-1966' },
-                { key: 'naberezhnyeChelny', path: '/projects/naberezhnye-chelny-1965-1968' },
-                { key: 'astana', path: '/projects/astana-international-competition-1998' },
-                { key: 'cdh', path: '/projects/cdh-competition-2001' },
-                { key: 'federationSquare', path: '/projects/federation-square-sketch-idea-2005' },
-                { key: 'memorialComplex', path: '/projects/memorial-complex-poklonnaya-hill-competition-1986' },
-                { key: 'newRaasnBuilding', path: '/projects/new-raasn-building-volkhonka-competition-1997' },
-                { key: 'residentialComplex', path: '/projects/residential-complex-leninsky-avenue-competition-1998' },
-                { key: 'zaradye', path: '/projects/zaradye-competition-2012' },
+                { key: 'list', path: '/projects/list' },
+                { key: 'diploma1951', path: '/projects/diploma1951' },
+                { key: 'volgograd', path: '/projects/volgograd' },
+                { key: 'tolyatti', path: '/projects/tolyatti' },
+                { key: 'naberezhnyeChelny', path: '/projects/naberezhnyeChelny' },
+                { key: 'memorialComplex', path: '/projects/memorialComplex' },
+                { key: 'astana', path: '/projects/astana' },
+                { key: 'cdh', path: '/projects/cdh' },
+                { key: 'federationSquare', path: '/projects/federationSquare' },
+                { key: 'memorialComplex', path: '/projects/memorialComplex' },
+                { key: 'newRaasnBuilding', path: '/projects/newRaasnBuilding' },
+                { key: 'residentialComplex', path: '/projects/residentialComplex' },
+                { key: 'zaradye', path: '/projects/zaradye' },
                 { key: 'miscellaneous', path: '/projects/miscellaneous' }
             ]
         },
@@ -105,12 +108,12 @@
         {
             key: 'photoAndVarious',
             titleKey: 'photoAndVarious',
-            path: '/photo-and-various',
+            path: '/photoAndVarious',
             dropdownGroup: 'photoAndVariousDropdown',
             dropdown: [
-                { key: 'tripsMeetings', path: '/photo-and-various/trips&meetings' },
-                { key: 'familyChronicle', path: '/photo-and-various/family-chronicle' },
-                { key: 'congratulations', path: '/photo-and-various/congratulations' }
+                { key: 'tripsMeetings', path: '/photoAndVarious/trips&meetings' },
+                { key: 'familyChronicle', path: '/photoAndVarious/family-chronicle' },
+                { key: 'congratulations', path: '/photoAndVarious/congratulations' }
             ]
         }
     ];
