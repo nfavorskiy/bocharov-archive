@@ -82,6 +82,10 @@
         transition: background-color 0.3s, color 0.3s;
     }
 
+    .text-column p { 
+        white-space: pre-wrap; 
+    }
+
     @media (min-aspect-ratio: 4/3) {
         .text-column {
             padding-right: 1rem;

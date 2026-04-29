@@ -18,15 +18,15 @@ export const messages = {
       research: 'Наука',
       researchDropdown: {
         majorAims: 'Основные направления научной и проектной деятельности',
-        worksList: 'Список печатных трудов',
+        worksList: 'Список печатных работ',
         sovietUrbanists: 'Советское общество урбанистов 1987-1992',
         aspirantsCandidates: 'Список аспирантов и соискателей',
         cityDevelopmentModel: 'Имитационная модель долгосрочного развития города',
-        interviewsMaterials: 'Список интервью и материалов о Ю.П. Бочарове',
-        starredArticlesInterviews: 'Избранные интервью и статьи Юрия Бочарова',
-        articlesMaterials: 'Материалы о Ю.П. Бочарове',
         doctoralDissertation: 'Автореферат докторской диссертации 1967',
-        defenseAnnouncement: 'Объявление о защите 1967'
+        defenseAnnouncement: 'Объявление о защите 1967',
+        interviewsMaterials: 'Список интервью Ю.П. Бочарова и материалов о нём',
+        starredArticlesInterviews: 'Избранные статьи и интервью Юрия Бочарова',
+        articlesMaterials: 'Материалы о Ю.П. Бочарове'
       },
       projects: 'Проекты',
       projectsDropdown: {
@@ -61,10 +61,12 @@ export const messages = {
         rappaport: 'А.Г. Рапппапорт',
         vuchik: 'Вукан Р. Вучик',
         grigoryeva: 'Н.Ю. Григорьева',
+        nashchokina: 'М.В. Нащокина',
+        gurari: 'М.Н. Гурари',
         merzhanov: 'С.Б. Мержанов',
         lebedinskaya: 'Г.А. Лебединская',
         bezchastnov: 'М.И. Безчастнов',
-        gurari: 'М.Н. Гурари',
+        mescheryakova: 'Н.А. Мещерякова',
         belonogova: 'М.А. Белоногова',
         tolstikhina: 'А.О. Толстихина',
         zheblyenok: 'Н.Н. Жеблиенок',
@@ -87,7 +89,7 @@ export const messages = {
       born: '4.05.1926, Харьков -',
       died: '1.09.2023, Москва',
       bio:
-        'Советский и российский архитектор, урбанист, эксперт. Один из крупнейших учёных в области градостроительной науки, доктор архитектуры, академик РААСН. Основоположник теории гибкой планировочной структуры новых промышленных городов. Автор генпланов Тольятти и Набережные Челны в сост. колл. ЦНИИЭП жилища и ЦНИИП градостроительства',
+        'Советский и российский архитектор, урбанист, эксперт.\nОдин из крупнейших учёных в области градостроительной\nнауки, доктор архитектуры, академик РААСН.\nОсновоположник теории гибкой планировочной\nструктуры новых промышленных городов.\nАвтор генпланов Тольятти и Набережные Челны\nв сост. колл. ЦНИИЭП жилища и ЦНИИП градостроительства',
       alt: 'Юрий Петрович Бочаров'
     },
     imageBox: {
@@ -280,12 +282,14 @@ export const messages = {
       researchDropdown: {
         majorAims: 'Main Areas of Scientific and Design Work',
         worksList: 'List of Published Works',
-        sovietUrbanists: 'Soviet Urbanists Society (1987-1992)',
+        sovietUrbanists: 'Soviet Urbanists Society 1987-1992',
         aspirantsCandidates: 'List of Postgraduate Students and Applicants',
-        cityDevelopmentModel: 'City Development Simulation Model',
-        interviewsMaterials: 'Interviews and Materials about Yury Petrovich',
-        starredArticlesInterviews: 'Selected Articles and Interviews by Yury Petrovich',
-        articlesMaterials: 'Articles and Materials about Yury Petrovich'
+        cityDevelopmentModel: 'Model of City Development',
+        doctoralDissertation: 'Doctoral Dissertation 1967',
+        defenseAnnouncement: 'Defense Announcement 1967',
+        interviewsMaterials: 'List of Interviews and Materials about Yury Bocharov',
+        starredArticlesInterviews: 'Selected Articles and Interviews by Yury Bocharov',
+        articlesMaterials: 'Articles and Materials about Yury Bocharov'
       },
       projects: 'Projects',
       projectsDropdown: {
@@ -320,10 +324,12 @@ export const messages = {
         rappaport: 'A.G. Rappaport',
         vuchik: 'Vukan R. Vuchic',
         grigoryeva: 'N.Yu. Grigoryeva',
+        nashchokina: 'M.V. Nashchokina',
+        gurari: 'M.N. Gurari',
         merzhanov: 'S.B. Merzhanov',
         lebedinskaya: 'G.A. Lebedinskaya',
         bezchastnov: 'M.I. Bezchastnov',
-        gurari: 'M.N. Gurari',
+        mescheryakova: 'N.A. Mescheryakova',
         belonogova: 'M.A. Belonogova',
         tolstikhina: 'A.O. Tolstikhina',
         zheblyenok: 'N.N. Zheblienok',
