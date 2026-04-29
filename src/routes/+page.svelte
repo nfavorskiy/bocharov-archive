@@ -60,7 +60,7 @@
     </div>
     <div class="text-column">
         <h1 style="margin: 0;" use:retype={{ text: $t.messages.home.firstName, speed: 16 }}></h1>
-        <h1 style="letter-spacing: 4px; margin: 0 0 1rem 0; font-size: 3.5rem;"
+        <h1 style="letter-spacing: 4px; margin: 0 0 1rem 0; font-size: 3rem;"
             use:retype={{ text: $t.messages.home.lastName, speed: 20, step: 2 }}></h1>
         <h3 style="margin: 0;" use:retype={{ text: $t.messages.home.born, speed: 14 }}></h3>
         <h3 style="margin: 0;" use:retype={{ text: $t.messages.home.died, speed: 14 }}></h3>
