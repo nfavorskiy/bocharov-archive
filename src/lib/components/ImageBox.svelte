@@ -1,5 +1,5 @@
 <script>
-  import { onDestroy } from 'svelte';
+  import { onMount, onDestroy, tick } from 'svelte';
   import { browser } from '$app/environment';
 
   export let src = '';
@@ -16,15 +16,32 @@
 
   let isOpen = false;
   let previousOverflow = '';
-
   let currentIndex = 0;
+
+  let thumbLoaded = false;
+  let fullLoaded = false;
+
+  let thumbImageEl;
+  let fullImageEl;
 
   $: hasGallery = Array.isArray(gallery) && gallery.length > 0;
   $: currentItem = hasGallery
     ? gallery[currentIndex] ?? gallery[0]
     : { src, thumbSrc, alt, caption };
 
-  function open() {
+  // Source refs
+  $: thumbImageSrc = thumbSrc || src;
+  $: fullImageSrc = currentItem?.src || src;
+
+  function markThumbLoaded() {
+    thumbLoaded = true;
+  }
+
+  function markFullLoaded() {
+    fullLoaded = true;
+  }
+
+  async function open() {
     if (browser) {
       previousOverflow = document.body.style.overflow;
       document.body.style.overflow = 'hidden';
@@ -32,17 +49,31 @@
     if (hasGallery) {
       currentIndex = Math.min(Math.max(initialIndex, 0), gallery.length - 1);
     }
+    // reset full image loaded state for the lightbox
+    fullLoaded = false;
     isOpen = true;
+
+    // wait for DOM to render the full image and then check if already loaded (cache)
+    await tick();
+    if (fullImageEl?.complete && fullImageEl.naturalWidth > 0) {
+      fullLoaded = true;
+    }
   }
 
-  function showPrev() {
+  async function showPrev() {
     if (!hasGallery || gallery.length < 2) return;
     currentIndex = (currentIndex - 1 + gallery.length) % gallery.length;
+    fullLoaded = false;
+    await tick();
+    if (fullImageEl?.complete && fullImageEl.naturalWidth > 0) fullLoaded = true;
   }
 
-  function showNext() {
+  async function showNext() {
     if (!hasGallery || gallery.length < 2) return;
     currentIndex = (currentIndex + 1) % gallery.length;
+    fullLoaded = false;
+    await tick();
+    if (fullImageEl?.complete && fullImageEl.naturalWidth > 0) fullLoaded = true;
   }
 
   function close() {
@@ -64,6 +95,20 @@
     if (closeOnBackdrop) close();
   }
 
+  onMount(() => {
+    // If the thumbnail is already cached/loaded before handlers attach, clear the throbber.
+    if (thumbImageEl?.complete && thumbImageEl.naturalWidth > 0) {
+      thumbLoaded = true;
+    }
+
+    // If component was rendered with lightbox open (unlikely), check full image too.
+    if (isOpen && fullImageEl?.complete && fullImageEl.naturalWidth > 0) {
+      fullLoaded = true;
+    }
+
+    // Note: we keep onDestroy behavior for body overflow
+  });
+
   onDestroy(() => {
     if (browser) {
       document.body.style.overflow = previousOverflow;
@@ -72,7 +117,24 @@
 </script>
 
 <button class="thumb-button {thumbClass}" type="button" on:click={open} aria-label="Open image">
-  <img class="thumb-image" class:thumb-square={squareThumb} src={thumbSrc || src} {alt} loading="lazy" decoding="async" />
+  <span class="thumb-frame">
+    {#if !thumbLoaded}
+      <span class="throbber" aria-hidden="true"></span>
+    {/if}
+
+    <img
+      bind:this={thumbImageEl}
+      class="thumb-image"
+      class:thumb-square={squareThumb}
+      class:thumb-hidden={!thumbLoaded}
+      src={thumbImageSrc}
+      {alt}
+      loading="lazy"
+      decoding="async"
+      on:load={markThumbLoaded}
+      on:error={markThumbLoaded}
+    />
+  </span>
 </button>
 
 {#if isOpen}
@@ -89,7 +151,21 @@
     {/if}
 
     <div class="lightbox-content" on:click|stopPropagation>
-      <img class="full-image {fullClass}" src={currentItem.src} alt={currentItem.alt || alt} />
+      <div class="full-frame">
+        {#if !fullLoaded}
+          <span class="throbber throbber-lightbox" aria-hidden="true"></span>
+        {/if}
+
+        <img
+          bind:this={fullImageEl}
+          class="full-image {fullClass}"
+          class:full-hidden={!fullLoaded}
+          src={fullImageSrc}
+          alt={currentItem.alt || alt}
+          on:load={markFullLoaded}
+          on:error={markFullLoaded}
+        />
+      </div>
       <div class="image-caption">{currentItem.caption || currentItem.alt || alt}</div>
     </div>
   </div>
@@ -104,10 +180,21 @@
     width: 100%;
   }
 
+  .thumb-frame {
+    position: relative;
+    display: block;
+    width: 100%;
+  }
+
   .thumb-image {
     display: block;
     max-width: 100%;
     height: auto;
+    transition: opacity 0.2s ease;
+  }
+
+  .thumb-hidden {
+    opacity: 0;
   }
 
   .thumb-square {
@@ -115,6 +202,25 @@
     aspect-ratio: 1 / 1;
     object-fit: cover;
     object-position: center;
+  }
+
+  .throbber {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    z-index: 1;
+  }
+
+  .throbber::before {
+    content: '';
+    width: 2rem;
+    height: 2rem;
+    border-radius: 999px;
+    border: 3px solid rgba(255, 255, 255, 0.28);
+    border-top-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.18);
+    animation: spin 0.8s linear infinite;
   }
 
   .lightbox {
@@ -126,12 +232,26 @@
     place-items: center;
     cursor: zoom-out;
   }
+
   .lightbox-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.75rem;
     max-width: min(92vw, 1500px);
+  }
+
+  .full-frame {
+    position: relative;
+    display: grid;
+    place-items: center;
+    min-width: min(92vw, 1500px);
+    min-height: 40vh;
+  }
+
+  .throbber-lightbox::before {
+    border-color: rgba(255, 255, 255, 0.22);
+    border-top-color: rgba(255, 255, 255, 0.98);
   }
 
   .image-caption {
@@ -155,6 +275,11 @@
     border-radius: 6px;
     box-shadow: 0 16px 48px rgba(0, 0, 0, 0.45);
     cursor: default;
+    transition: opacity 0.2s ease;
+  }
+
+  .full-hidden {
+    opacity: 0;
   }
 
   .close-button {
@@ -202,5 +327,11 @@
 
   .nav-arrow:hover {
     background: rgba(0, 0, 0, 0.85);
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
   }
 </style>

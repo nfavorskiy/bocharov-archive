@@ -254,6 +254,7 @@
     nav {
         position: sticky;
         top: 0;
+        z-index: 1100;
         padding: 1rem;
         background-color: var(--bg-color);
         transition: background-color 0.3s, color 0.3s;
@@ -302,6 +303,7 @@
         position: absolute;
         top: 100%;
         left: 0;
+        z-index: 1100;
         background-color: var(--bg-color);
         border: 1px solid var(--text-color);
         border-radius: 4px;
