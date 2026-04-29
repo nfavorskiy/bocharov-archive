@@ -10,7 +10,6 @@
   let visibleCount = pageSize;
   let sentinel;
   let observer;
-  let galleryEl;
 
   function fallbackCaption(filename = '') {
     return filename.replace(/\.[^.]+$/, '');
@@ -46,7 +45,7 @@
         if (entry?.isIntersecting) loadMore();
       },
       {
-        root: galleryEl,
+        root: null,
         rootMargin: '300px 0px',
         threshold: 0
       }
@@ -58,7 +57,7 @@
   });
 </script>
 
-<section class="gallery" bind:this={galleryEl}>
+<section class="gallery">
   {#each visibleItems as image}
     <ImageBox
       src={image.src}
@@ -77,20 +76,11 @@
 </section>
 
 <style>
-  :root {
-    --nav-h: 5rem;
-  }
-
   .gallery {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1rem;
     align-items: start;
-    height: calc(100dvh - var(--nav-h));
-    overflow-y: auto;
-    overflow-x: hidden;
-    scrollbar-gutter: stable;
-    -webkit-overflow-scrolling: touch;
   }
 
   .sentinel {
