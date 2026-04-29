@@ -58,7 +58,6 @@
                 { key: 'astana', path: '/projects/astana' },
                 { key: 'cdh', path: '/projects/cdh' },
                 { key: 'federationSquare', path: '/projects/federationSquare' },
-                { key: 'memorialComplex', path: '/projects/memorialComplex' },
                 { key: 'newRaasnBuilding', path: '/projects/newRaasnBuilding' },
                 { key: 'residentialComplex', path: '/projects/residentialComplex' },
                 { key: 'zaradye', path: '/projects/zaradye' },
@@ -313,7 +312,6 @@
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
-        z-index: 100;
         min-width: 200px;
         max-width: 1100px;
     }
