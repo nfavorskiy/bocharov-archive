@@ -10,7 +10,8 @@
       <ReviewImageBox 
         src={data.review.image} 
         thumbSrc={data.review.thumbnail} 
-        alt={data.review.author} 
+        alt={data.review.author}
+        caption={data.review.imageCaption} 
       />
     </div>
     <div class="info-column">
