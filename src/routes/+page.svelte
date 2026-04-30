@@ -64,7 +64,12 @@
             use:retype={{ text: $t.messages.home.lastName, speed: 20, step: 2 }}></h1>
         <h3 style="margin: 0;" use:retype={{ text: $t.messages.home.born, speed: 14 }}></h3>
         <h3 style="margin: 0;" use:retype={{ text: $t.messages.home.died, speed: 14 }}></h3>
-        <p use:retype={{ text: $t.messages.home.bio, speed: 8, step: 2 }}></p>
+        <p use:retype={{ text: $t.messages.home.bio1, speed: 8, step: 2 }}></p>
+        <p use:retype={{ text: $t.messages.home.bio2, speed: 8, step: 2 }}></p>
+        <p style="margin: 2rem auto 0 auto; font-style: italic; font-size: 0.85rem; width: fit-content;" 
+            use:retype={{ text: $t.messages.home.poem, speed: 12, step: 1 }}></p>        
+        <p style="margin: 0; text-align: right; font-size: 0.8rem;" 
+            use:retype={{ text: `— ${$t.messages.home.poemAuthor}`, speed: 12, step: 1 }}></p>
     </div>
 </div>
 
@@ -83,7 +88,8 @@
     }
 
     .text-column p { 
-        white-space: pre-wrap; 
+        white-space: pre-wrap;
+        margin-bottom: 1rem; 
     }
 
     @media (min-aspect-ratio: 4/3) {
