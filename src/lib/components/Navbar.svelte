@@ -112,6 +112,7 @@
             path: '/photoAndVarious',
             dropdownGroup: 'photoAndVariousDropdown',
             dropdown: [
+                { key: 'photos', path: '/photoAndVarious/photos' },
                 { key: 'tripsMeetings', path: '/photoAndVarious/trips&meetings' },
                 { key: 'familyChronicle', path: '/photoAndVarious/family-chronicle' },
                 { key: 'congratulations', path: '/photoAndVarious/congratulations' }
@@ -349,7 +350,7 @@
 
     .dropdown-item {
         display: inline-block;
-        padding: 0.5rem 1rem;
+        padding: 0.2rem 0.2rem;
         color: var(--text-color);
         text-decoration: none;
         white-space: nowrap;

@@ -27,15 +27,15 @@ export const navbarMessages = {
         projects: 'Проекты',
         projectsDropdown: {
             list: 'Список проектных работ',
-            diploma1951: 'Диплом МАРХИ 1951. Дом Советов в Воронеже',
+            diploma1951: 'Диплом МАРХИ 1951.',
             volgograd: 'Волгоград 1951-1958',
             tolyatti: 'Тольятти 1966-1977',
             naberezhnyeChelny: 'Набережные Челны 1968-1975',
-            memorialComplex: 'Мемориальный комплекс на Поклонной горе. Конкурс 1986/87',
+            memorialComplex: 'Мемориал на Поклонной горе. Конкурс 1986',
             astana: 'Астана. Международный конкурс 1998',
             cdh: 'Центральный Дом Художника. Конкурс 2001',
             federationSquare: 'Площадь Федерации. Эскиз-идея 2005',
-            newRaasnBuilding: 'Новое здание РААСН на Волхонке. Конкурс 1997',
+            newRaasnBuilding: 'Здание РААСН на Волхонке. Конкурс 1997',
             residentialComplex: 'Крестьянская застава. Конкурс 1998',
             zaradye: 'Зарядье. Конкурс 2012',
             miscellaneous: 'Разное'
@@ -74,6 +74,7 @@ export const navbarMessages = {
         },
         photoAndVarious: 'Фото и Разное',
         photoAndVariousDropdown: {
+            photos: 'Фото 1920-1950-х',
             tripsMeetings: 'Поездки и встречи',
             familyChronicle: 'Семейная хроника',
             congratulations: 'Поздравления, посвящения, разное'
@@ -107,15 +108,15 @@ export const navbarMessages = {
         projects: 'Projects',
         projectsDropdown: {
             list: 'List of Project Works',
-            diploma1951: '1951 Diploma, House of Soviets in Voronezh',
+            diploma1951: 'MARCHI Diploma 1951',
             volgograd: 'Volgograd 1952-1955',
             tolyatti: 'Tolyatti 1964-1966',
             naberezhnyeChelny: 'Naberezhnye Chelny 1965-1968',
+            memorialComplex: 'Memorial on Poklonnaya Hill Competition 1986',
             astana: 'Astana International Competition 1998',
             cdh: 'Central House of Artists Competition 2001',
             federationSquare: 'Federation Square Sketch Idea 2005',
-            memorialComplex: 'Memorial Complex on Poklonnaya Hill Competition 1986',
-            newRaasnBuilding: 'New RAAHN Building on Volkhonka Competition 1997',
+            newRaasnBuilding: 'RAAHN Building on Volkhonka Competition 1997',
             residentialComplex: 'Krestyanskaya Zastava Competition 1998',
             zaradye: 'Zaryadye Competition 2012',
             miscellaneous: 'Miscellaneous'
@@ -154,6 +155,7 @@ export const navbarMessages = {
         },
         photoAndVarious: 'Photos and Miscellaneous',
         photoAndVariousDropdown: {
+            photos: 'Photos 1920s-1950s',
             tripsMeetings: 'Trips and Meetings',
             familyChronicle: 'Family Chronicle',
             congratulations: 'Greetings and Dedications'
