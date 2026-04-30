@@ -1,6 +1,7 @@
 <script>
     import { onMount } from 'svelte';
     import Navbar from '$lib/components/Navbar.svelte';
+    import { page } from '$app/stores';
 
     onMount(() => {
         document.body.classList.add('transitions-enabled');
@@ -9,8 +10,8 @@
 
 <Navbar />
 
-<main>
-    <slot />
+<main class={$page.url.pathname.startsWith('/reviews') ? 'reviews-layout' : ''}>
+  <slot />
 </main>
 
 
@@ -79,6 +80,10 @@
         background-color: var(--bg-color);
         min-height: 10vh;
         box-sizing: border-box;
+    }
+
+    :global(main.reviews-layout) {
+        min-width: 80vw;
     }
 
     :global(body.transitions-enabled) main {

@@ -27,9 +27,9 @@
 </article>
 
 <style>
+
   .review {
-    margin: 2rem auto;
-    padding: 2rem;
+    padding: 0rem 2rem 1rem 2rem;
     line-height: 1.8;
   }
   
@@ -44,6 +44,7 @@
   .image-column {
     display: flex;
     justify-content: center;
+    min-width: 20vw;
   }
 
   .info-column {
@@ -66,7 +67,7 @@
     font-style: italic;
     color: var(--text-color);
     opacity: 0.95;
-    margin: 0.5rem 0 0 0;
+    margin: 1.5rem 0 0 0;
     white-space: pre-wrap;
   }
   
