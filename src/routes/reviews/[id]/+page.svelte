@@ -15,7 +15,7 @@
       />
     </div>
     <div class="info-column">
-      <h1>{data.review.title}</h1>
+      <h3>{data.review.title}</h3>
       <p class="authorInfo">{data.review.authorInfo}</p>
       <p class="textSource">{data.review.textSource}</p>
     </div>
@@ -62,7 +62,7 @@
     opacity: 0.8;
     margin: 0;
     white-space: pre-wrap;
-    font-size: 1.2rem;
+    font-size: 0.85rem;
   }
 
   .textSource {
@@ -71,6 +71,7 @@
     opacity: 0.95;
     margin: 1.5rem 0 0 0;
     white-space: pre-wrap;
+    font-size: 0.85rem;
   }
   
   .content {
