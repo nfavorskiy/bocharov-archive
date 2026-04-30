@@ -7,11 +7,11 @@ const i18nPath = path.join(root, 'src/lib/i18n.js');
 const galleries = [
   {
     key: 'watercolors1940_1970',
-    dir: path.join(root, 'static/watercolorsGraphics/watercolors/watercolors1940_1970')
+    dir: path.join(root, 'static/images/watercolors1940_1970')
   },
   {
     key: 'watercolors1980_2010',
-    dir: path.join(root, 'static/watercolorsGraphics/watercolors/watercolors1980_2010')
+    dir: path.join(root, 'static/images/watercolors1980_2010')
   }
 ];
 

@@ -1,8 +1,8 @@
 import { buildGalleryImages } from '$lib/galleryServer';
 
-const DIR = 'static/watercolorsGraphics/sketches';
-const THUMB_URL_BASE = '/thumbnails/sketches';
-const FULL_URL_BASE = '/watercolorsGraphics/sketches';
+const DIR = 'static/images/sketches';
+const THUMB_URL_BASE = '/imagesThumbs/sketches';
+const FULL_URL_BASE = '/images/sketches';
 
 /** @type {import('./$types').PageServerLoad} */
 export async function load() {

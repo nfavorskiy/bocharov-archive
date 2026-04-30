@@ -1,8 +1,8 @@
 import { buildGalleryImages } from '$lib/galleryServer';
 
-const DIR = 'static/watercolorsGraphics/pencilPastelMarker';
-const THUMB_URL_BASE = '/thumbnails/pencilPastelMarker';
-const FULL_URL_BASE = '/watercolorsGraphics/pencilPastelMarker';
+const DIR = 'static/images/pencilPastelMarker';
+const THUMB_URL_BASE = '/imagesThumbs/pencilPastelMarker';
+const FULL_URL_BASE = '/images/pencilPastelMarker';
 
 /** @type {import('./$types').PageServerLoad} */
 export async function load() {

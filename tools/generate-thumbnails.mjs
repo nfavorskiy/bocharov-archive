@@ -3,8 +3,8 @@ import { join } from 'node:path';
 import sharp from 'sharp';
 
 const collection = process.argv[2] ?? 'watercolors1940_1970';
-const inputDir = `static/watercolorsGraphics/${collection}`;
-const outputDir = `static/thumbnails/${collection}`;
+const inputDir = `static/images/${collection}`;
+const outputDir = `static/imagesThumbs/${collection}`;
 const maxWidth = 420;
 
 await mkdir(outputDir, { recursive: true });
