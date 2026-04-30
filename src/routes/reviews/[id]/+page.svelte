@@ -44,7 +44,9 @@
   .image-column {
     display: flex;
     justify-content: center;
-    min-width: 20vw;
+    align-items: center;
+    align-self: center;
+    min-width: 30vw;
   }
 
   .info-column {
