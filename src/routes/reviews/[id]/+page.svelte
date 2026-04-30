@@ -10,13 +10,14 @@
       <ReviewImageBox 
         src={data.review.image} 
         thumbSrc={data.review.thumbnail} 
-        alt={data.review.author}
+        alt={data.review.id}
         caption={data.review.imageCaption} 
       />
     </div>
     <div class="info-column">
       <h1>{data.review.title}</h1>
-      <p class="author">— {data.review.author}</p>
+      <p class="authorInfo">{data.review.authorInfo}</p>
+      <p class="textSource">{data.review.textSource}</p>
     </div>
   </div>
   
@@ -44,16 +45,29 @@
     display: flex;
     justify-content: center;
   }
+
+  .info-column {
+    text-align: right;
+  }
   
   .info-column h1 {
     margin: 0 0 1rem 0;
   }
   
-  .author {
-    font-style: italic;
+  .authorInfo {
     color: var(--text-color);
     opacity: 0.8;
     margin: 0;
+    white-space: pre-wrap;
+    font-size: 1.2rem;
+  }
+
+  .textSource {
+    font-style: italic;
+    color: var(--text-color);
+    opacity: 0.95;
+    margin: 0.5rem 0 0 0;
+    white-space: pre-wrap;
   }
   
   .content {
