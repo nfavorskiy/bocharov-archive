@@ -18,7 +18,8 @@
 <style>
 
     :global(html) {
-        font-size: 16px;
+        /* scales with viewport, with sane min/max limits */
+        font-size: 2.1vmin;
         -webkit-text-size-adjust: 100%;
         text-size-adjust: 100%;
     }

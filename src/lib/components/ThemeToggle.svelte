@@ -14,8 +14,8 @@
     button {
         border: none;
         cursor: pointer;
-        padding: 8px; 
-        border-radius: 4px;
+        padding: 0.5rem; 
+        border-radius: 0.25rem;
         background-color: var(--button-bg);
         font-family: "Segoe UI", "Noto Sans", -apple-system, BlinkMacSystemFont, sans-serif;
         font-size: 1rem;
