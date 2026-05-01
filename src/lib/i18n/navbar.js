@@ -77,7 +77,7 @@ export const navbarMessages = {
             photos: 'Фото 1920-1950-х',
             tripsMeetings: 'Поездки и встречи',
             familyChronicle: 'Семейная хроника',
-            congratulations: 'Поздравления, посвящения, разное'
+            congratulations: 'Поздравления и посвящения'
         }
     },
     en: {
