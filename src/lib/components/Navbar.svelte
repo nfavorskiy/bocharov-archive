@@ -257,7 +257,7 @@
         position: sticky;
         top: 0;
         z-index: 1100;
-        padding: 0.5rem;
+        padding: 1rem;
         background-color: var(--bg-color);
         transition: background-color 0.3s, color 0.3s;
         display: flex;
