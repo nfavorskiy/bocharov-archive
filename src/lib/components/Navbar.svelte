@@ -271,7 +271,7 @@
         display: flex;
         gap: 2rem;
         justify-content: center;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     ul.toggles {
