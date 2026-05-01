@@ -153,7 +153,7 @@ export const navbarMessages = {
             samaraAcademy: 'Samara Academy of Architecture',
             samaraUnion: 'Samara branch of the Union of Architects'
         },
-        photoAndVarious: 'Photos and Miscellaneous',
+        photoAndVarious: 'Photos & Miscellaneous',
         photoAndVariousDropdown: {
             photos: 'Photos 1920s-1950s',
             tripsMeetings: 'Trips and Meetings',
