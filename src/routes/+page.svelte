@@ -126,7 +126,7 @@
         align-items: center;
         justify-content: center;
         border-radius: 0.25rem;
-        height: 80vh;
+        height: 85vh;
         
     }
 </style>
