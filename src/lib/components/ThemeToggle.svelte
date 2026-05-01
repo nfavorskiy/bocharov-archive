@@ -14,11 +14,11 @@
     button {
         border: none;
         cursor: pointer;
-        padding: 0.5rem; 
+        padding: 0.35rem;
         border-radius: 0.25rem;
         background-color: var(--button-bg);
         font-family: "Segoe UI", "Noto Sans", -apple-system, BlinkMacSystemFont, sans-serif;
-        font-size: 1rem;
+        font-size: 0.875rem;
         line-height: 1.5;
     }
     button:hover {

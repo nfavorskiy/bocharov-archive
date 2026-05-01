@@ -19,7 +19,7 @@
 
     :global(html) {
         /* scales with viewport, with sane min/max limits */
-        font-size: 2.1vmin;
+        font-size: 2.18vmin;
         -webkit-text-size-adjust: 100%;
         text-size-adjust: 100%;
     }

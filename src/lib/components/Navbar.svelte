@@ -257,7 +257,7 @@
         position: sticky;
         top: 0;
         z-index: 1100;
-        padding: 1rem;
+        padding: 0.5rem;
         background-color: var(--bg-color);
         transition: background-color 0.3s, color 0.3s;
         display: flex;
@@ -271,6 +271,7 @@
         display: flex;
         gap: 2rem;
         justify-content: center;
+        font-size: 0.875rem;
     }
 
     ul.toggles {
@@ -307,14 +308,14 @@
         left: 0;
         z-index: 1100;
         background-color: var(--bg-color);
-        border: 1px solid var(--text-color);
-        border-radius: 4px;
+        border: 0.075rem solid var(--text-color);
+        border-radius: 0.25rem;
         padding: 0.5rem;
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
-        min-width: 200px;
-        max-width: 1100px;
+        min-width: 10rem;
+        max-width: 20rem;
     }
 
     .dropdown.multi-column {
@@ -322,7 +323,7 @@
         flex-wrap: wrap;
         gap: 0.5rem 1.5rem;
         padding: 1rem;
-        max-width: 900px;
+        max-width: 56rem;
         align-content: flex-start;
     }
 
@@ -331,7 +332,7 @@
         flex-direction: column;
         gap: 1rem;
         padding: 1rem;
-        max-width: 900px;
+        max-width: 56rem;
     }
 
     .reviews-columns {
@@ -360,6 +361,6 @@
     .dropdown-item:hover {
         text-decoration: none;
         background-color: var(--button-bg);
-        border-radius: 2px;
+        border-radius: 0.125rem;
     }
 </style>

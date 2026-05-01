@@ -14,15 +14,15 @@
     button {
         border: none;
         cursor: pointer;
-        padding: 0.5rem; 
+        padding: 0.35rem; 
         border-radius: 0.25rem;
         background-color: var(--button-bg);
         font-family: "Segoe UI", "Noto Sans", -apple-system, BlinkMacSystemFont, sans-serif;
-        font-size: 1rem;
+        font-size: 0.875rem;
         line-height: 1.5;
         color: var(--text-color);
 
-        min-width: 2.37rem;   /* keeps RU/EN from changing layout width */
+        min-width: 2rem;   /* keeps RU/EN from changing layout width */
         display: inline-flex;
         justify-content: center;
         align-items: center;

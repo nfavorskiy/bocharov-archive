@@ -125,7 +125,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        border-radius: 4px;
+        border-radius: 0.25rem;
         height: 80vh;
         
     }
