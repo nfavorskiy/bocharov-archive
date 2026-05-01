@@ -351,7 +351,7 @@
 
     .dropdown-item {
         display: inline-block;
-        padding: 0.2rem 0.2rem;
+        padding: 0.3rem 0.2rem;
         color: var(--text-color);
         text-decoration: none;
         white-space: nowrap;
