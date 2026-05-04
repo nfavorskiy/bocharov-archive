@@ -1,33 +1,53 @@
 <script>
   import ReviewImageBox from '$lib/components/ReviewImageBox.svelte';
+  import { language } from '$lib/stores/language';
 
   export let data;
+  
+  let review = data.review;
+
+  // Reactively load the correct language whenever review ID or language changes
+  $: if (data.review.id && $language) {
+    (async () => {
+      try {
+        const module = await import(`$lib/data/reviews/${data.review.id}${$language.toUpperCase()}.json`);
+        review = module.default;
+      } catch (err) {
+        // Fallback to Russian if the language version doesn't exist
+        try {
+          const fallbackModule = await import(`$lib/data/reviews/${data.review.id}RU.json`);
+          review = fallbackModule.default;
+        } catch (fallbackErr) {
+          console.error(`Review not found for either language: ${$language} or RU`);
+        }
+      }
+    })();
+  }
 </script>
 
 <article class="review">
   <div class="header">
     <div class="image-column">
       <ReviewImageBox 
-        src={data.review.image} 
-        thumbSrc={data.review.thumbnail} 
-        alt={data.review.id}
-        caption={data.review.imageCaption} 
+        src={review.image} 
+        thumbSrc={review.thumbnail} 
+        alt={review.id}
+        caption={review.imageCaption} 
       />
     </div>
     <div class="info-column">
-      <h3>{data.review.title}</h3>
-      <p class="authorInfo">{data.review.authorInfo}</p>
-      <p class="textSource">{data.review.textSource}</p>
+      <h3>{review.title}</h3>
+      <p class="authorInfo">{review.authorInfo}</p>
+      <p class="textSource">{review.textSource}</p>
     </div>
   </div>
   
   <p class="content">
-    {data.review.text}
+    {review.text}
   </p>
 </article>
 
 <style>
-
   .review {
     padding: 0rem 2rem 1rem 2rem;
     line-height: 1.8;
