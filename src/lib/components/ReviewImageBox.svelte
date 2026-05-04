@@ -191,16 +191,17 @@
     flex-direction: column;
     align-items: center;
     gap: 0.75rem;
-    max-width: min(92vw, 1500px);
-  }
+    width: fit-content;
+    max-width: 92vw;
+}
 
   .full-frame {
     position: relative;
     display: grid;
     place-items: center;
-    min-width: min(92vw, 1500px);
-    min-height: 40vh;
-  }
+    width: fit-content;
+    max-width: 92vw;
+}
 
   .throbber-lightbox::before {
     border-color: rgba(255, 255, 255, 0.22);
