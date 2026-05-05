@@ -106,13 +106,13 @@
   }
 
   .info-column h3 {
-    margin: 2rem 0 0.5rem 0;
+    margin: 0rem 0 0.5rem 0;
   }
   
   .authorInfo {
     color: var(--text-color);
     opacity: 0.8;
-    margin: 0;
+    margin: 0rem 0 2rem 0;
     white-space: pre-wrap;
     font-size: 0.85rem;
   }
