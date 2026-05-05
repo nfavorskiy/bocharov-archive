@@ -1,7 +1,11 @@
 {
   "id": "zheblyenok",
-  "title": "Наталия Николаевна Жеблиенок (Шестернёва)",
-  "authorInfo": "кандидат архитектуры, доцент,\nпрофессор МАРХИ, советник РААСН",
+  "title": [
+    {
+      "authorName": "Наталия Николаевна Жеблиенок (Шестернёва)",
+      "authorInfo": "кандидат архитектуры, доцент,\nпрофессор МАРХИ, советник РААСН"
+    }
+  ],
   "textSource": "Письмо Юрию Петровичу, март 2019",
   "image": "/images/reviews/zheblyenok.jpg",
   "thumbnail": "/imagesThumbs/reviews/zheblyenok.jpg",

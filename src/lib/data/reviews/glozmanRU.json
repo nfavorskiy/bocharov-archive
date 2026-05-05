@@ -1,7 +1,11 @@
 {
   "id": "glozman",
-  "title": "Ольга Сергеевна Глозман (Семёнова)",
-  "authorInfo": "кандидат технических наук,\nдоцент Российского университета транспорта (МИИТ)",
+  "title": [
+    {
+      "authorName": "Ольга Сергеевна Глозман (Семёнова)",
+      "authorInfo": "кандидат технических наук,\nдоцент Российского университета транспорта (МИИТ)"
+    }
+  ],
   "textSource": "",
   "image": "/images/reviews/glozman.jpg",
   "thumbnail": "/imagesThumbs/reviews/glozman.jpg",

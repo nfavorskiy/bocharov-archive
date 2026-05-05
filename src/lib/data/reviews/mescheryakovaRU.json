@@ -1,7 +1,11 @@
 {
   "id": "",
-  "title": "",
-  "authorInfo": "",
+  "title": [
+    {
+      "authorName": "",
+      "authorInfo": ""
+    }
+  ],
   "textSource": "",
   "image": "/images/reviews/.jpg",
   "thumbnail": "/imagesThumbs/reviews/.jpg",

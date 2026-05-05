@@ -23,29 +23,61 @@
       }
     })();
   }
+
+  $: authors = Array.isArray(review.title)
+    ? review.title
+    : review.authorName
+      ? [{ authorName: review.authorName, authorInfo: review.authorInfo }]
+      : [];
+
+  $: linkedReviewText = (review?.text || '').replace(
+    /\[(\d+)\]/g,
+    '<a class="fn-link" href="#footnote-$1">[$1]</a>'
+  );
 </script>
 
 <article class="review">
   <div class="header">
+
     <div class="image-column">
-      <ReviewImageBox 
-        src={review.image} 
-        thumbSrc={review.thumbnail} 
-        alt={review.id}
-        caption={review.imageCaption} 
-      />
+      {#if review.image}
+        <ReviewImageBox
+          src={review.image}
+          thumbSrc={review.thumbnail}
+          alt={review.id}
+          caption={review.imageCaption}
+        />
+      {/if}
     </div>
+
     <div class="info-column">
-      <h3>{review.title}</h3>
-      <p class="authorInfo">{review.authorInfo}</p>
+      {#each authors as author}
+        <h3>{author.authorName}</h3>
+        <p class="authorInfo">{author.authorInfo}</p>
+      {/each}
       <p class="textSource">{review.textSource}</p>
     </div>
+
   </div>
   
   <p class="content">
-    {review.text}
+    {@html linkedReviewText}
   </p>
+
+  {#if review.footnotes && review.footnotes.length}
+    <hr/>
+    <section class="footnotes">
+      <h3>Примечания</h3>
+      <ol>
+        {#each review.footnotes as fn, i}
+          <li id={"footnote-" + (i + 1)}>{fn.text}</li>
+        {/each}
+      </ol>
+    </section>
+  {/if}
 </article>
+
+
 
 <style>
   .review {
@@ -57,7 +89,7 @@
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     align-items: start;
   }
 
@@ -72,9 +104,9 @@
   .info-column {
     text-align: right;
   }
-  
-  .info-column h1 {
-    margin: 0 0 1rem 0;
+
+  .info-column h3 {
+    margin: 2rem 0 0.5rem 0;
   }
   
   .authorInfo {
@@ -98,6 +130,14 @@
     white-space: pre-wrap;
     word-wrap: break-word;
     text-indent: 2em each-line;
+  }
+
+  :global(.fn-link) {
+    vertical-align: super;
+    font-size: 0.75em;
+    line-height: 0;
+    text-decoration: underline;
+    margin-left: 0.08em;
   }
 
   @media (max-width: 768px) {

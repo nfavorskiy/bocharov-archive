@@ -1,7 +1,11 @@
 {
   "id": "bezchastnov",
-  "title": "Михаил Игоревич Безчастнов",
-  "authorInfo": "архитектор, художник-постановщик, поэт",
+  "title": [
+    {
+      "authorName": "Михаил Игоревич Безчастнов",
+      "authorInfo": "архитектор, художник-постановщик, поэт"
+    }
+  ],
   "textSource": "",
   "image": "/images/reviews/bezchastnov.jpg",
   "thumbnail": "/imagesThumbs/reviews/bezchastnov.jpg",

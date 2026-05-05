@@ -1,7 +1,11 @@
 {
   "id": "grigoryeva",
-  "title": "Наталия Юрьевна Григорьева",
-  "authorInfo": "кандидат архитектуры, Почётный архитектор РФ",
+  "title": [
+    {
+      "authorName": "Наталия Юрьевна Григорьева",
+      "authorInfo": "кандидат архитектуры, Почётный архитектор РФ"
+    }
+  ],
   "textSource": "",
   "image": "/images/reviews/grigoryeva.jpg",
   "thumbnail": "/imagesThumbs/reviews/grigoryeva.jpg",

@@ -1,7 +1,11 @@
 {
   "id": "vuchik",
-  "title": "Vukan R. Vuchic",
-  "authorInfo": "Emer. UPS Prof. of Transportation Engineering\nEmer. Prof. of City & Regional Planning\nUniversity of Pennsylvania\nPhiladelphia, PA, 19104 USA",
+  "title": [
+    {
+      "authorName": "Vukan R. Vuchic",
+      "authorInfo": "Emer. UPS Prof. of Transportation Engineering\nEmer. Prof. of City & Regional Planning\nUniversity of Pennsylvania\nPhiladelphia, PA, 19104 USA"
+    }
+  ],
   "textSource": "ACADEMICIAN YURI PETROVICH BOCHAROV\nIn Memoriam",
   "image": "/images/reviews/vuchik.jpg",
   "thumbnail": "/imagesThumbs/reviews/vuchik.jpg",

@@ -1,7 +1,11 @@
 {
   "id": "tolstikhina",
-  "title": "Александра Октавиевна Толстихина",
-  "authorInfo": "журналист",
+  "title": [
+    {
+      "authorName": "Александра Октавиевна Толстихина",
+      "authorInfo": "журналист"
+    }
+  ],
   "textSource": "",
   "image": "/images/reviews/tolstikhina.jpg",
   "thumbnail": "/imagesThumbs/reviews/tolstikhina.jpg",
