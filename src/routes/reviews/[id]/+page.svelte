@@ -64,6 +64,18 @@
     {@html linkedReviewText}
   </p>
 
+  {#if review.poem}
+    <section class="poem">
+      <h4>{review.poem.poemTitle}</h4>
+      {#if review.poem.poemDate}
+        <p class="poem-date">{review.poem.poemDate}</p>
+      {/if}
+      <p class="poem-text">
+        {review.poem.poemText}
+      </p>
+    </section>
+  {/if}
+
   {#if review.footnotes && review.footnotes.length}
     <hr/>
     <section class="footnotes">
@@ -138,6 +150,33 @@
     line-height: 0;
     text-decoration: underline;
     margin-left: 0.08em;
+  }
+
+  .poem {
+    margin-bottom: 2rem;
+    padding-left: 1.5rem;
+    border-left: 0.2rem solid var(--text-color);
+    opacity: 0.9;
+  }
+
+  .poem h4 {
+    font-weight: 600;
+  }
+
+  .poem-date {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    margin: 0 0 1rem 0;
+    font-style: italic;
+  }
+
+  .poem-text {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    margin: 0;
+    line-height: 1.6;
+    columns: 1;
+    column-gap: 2rem;
   }
 
   @media (max-width: 768px) {
