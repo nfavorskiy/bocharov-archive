@@ -79,7 +79,7 @@
         {
             key: 'reviews',
             titleKey: 'reviews',
-            path: '/reviews',
+            path: '',
             dropdownGroup: 'reviewsDropdown',
             dropdown: [
                 { key: 'kuzmin', path: '/reviews/kuzmin' },
