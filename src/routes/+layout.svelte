@@ -10,8 +10,11 @@
 
 <Navbar />
 
-<main class={$page.url.pathname.startsWith('/reviews') ? 'reviews-layout' : ''}>
-  <slot />
+<main
+  class:reviews-layout={$page.url.pathname.startsWith('/reviews')}
+  class:biography-layout={$page.url.pathname.startsWith('/biography')}
+>
+  <slot/>
 </main>
 
 
@@ -84,6 +87,10 @@
     }
 
     :global(main.reviews-layout) {
+        min-width: 80vw;
+    }
+
+    :global(main.biography-layout) {
         min-width: 80vw;
     }
 

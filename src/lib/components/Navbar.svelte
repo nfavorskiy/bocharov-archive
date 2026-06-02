@@ -18,9 +18,9 @@
             dropdown: [
                 { key: 'mainDates', path: '/biography/mainDates' },
                 { key: 'briefBiography', path: '/biography/briefBiography' },
-                { key: 'firstSteps', path: '/biography/firstSteps' },
                 { key: 'family', path: '/biography/family' },
                 { key: 'letters', path: '/biography/letters' },
+                { key: 'congratulations', path: '/biography/congratulations' },
                 { key: 'awardsAndDiplomas', path: '/biography/awardsAndDiplomas' },
                 { key: 'notebooks', path: '/biography/notebooks' }
             ]
@@ -114,8 +114,7 @@
             dropdown: [
                 { key: 'photos', path: '/photoAndVarious/photos' },
                 { key: 'tripsMeetings', path: '/photoAndVarious/trips&meetings' },
-                { key: 'familyChronicle', path: '/photoAndVarious/family-chronicle' },
-                { key: 'congratulations', path: '/photoAndVarious/congratulations' }
+                { key: 'familyChronicle', path: '/photoAndVarious/family-chronicle' }
             ]
         }
     ];

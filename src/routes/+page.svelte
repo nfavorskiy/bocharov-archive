@@ -68,7 +68,7 @@
         <p use:retype={{ text: $t.messages.home.bio2, speed: 8, step: 2 }}></p>
         <p style="margin: 2rem auto 0 auto; font-style: italic; font-size: 0.85rem; width: fit-content;" 
             use:retype={{ text: $t.messages.home.poem, speed: 12, step: 1 }}></p>        
-        <p style="margin: 0; text-align: right; font-size: 0.8rem;" 
+        <p style="margin: 0; margin-right: 4rem; text-align: right; font-size: 0.8rem;" 
             use:retype={{ text: `— ${$t.messages.home.poemAuthor}`, speed: 12, step: 1 }}></p>
     </div>
 </div>

@@ -5,9 +5,9 @@ export const navbarMessages = {
         biographyDropdown: {
             mainDates: "Основные даты",
             briefBiography: "Краткая биография",
-            firstSteps: "Начало жизненного пути",
             family: "Семья",
             letters: "Письма 1955-1957",
+            congratulations: "Поздравления, посвящения, разное",
             awardsAndDiplomas: "Награды и дипломы",
             notebooks: "Из записных книжек"
         },
@@ -72,12 +72,11 @@ export const navbarMessages = {
             samaraAcademy: "Самарская академия архитектуры",
             samaraUnion: "Самарское отделение Союза архитекторов"
         },
-        photoAndVarious: "Фото и Разное",
+        photoAndVarious: "Фотохроника",
         photoAndVariousDropdown: {
             photos: "Фото 1920-1950-х",
             tripsMeetings: "Поездки и встречи",
-            familyChronicle: "Семейная хроника",
-            congratulations: "Поздравления, посвящения"
+            familyChronicle: "Семейная хроника"
         }
     },
     en: {
@@ -86,9 +85,9 @@ export const navbarMessages = {
         biographyDropdown: {
             mainDates: "Key Dates",
             briefBiography: "Brief Biography",
-            firstSteps: "Early Life",
             family: "Family",
             letters: "Letters 1955-1957",
+            congratulations: "Greetings, Dedications & Miscellaneous",
             awardsAndDiplomas: "Awards & Diplomas",
             notebooks: "From Notebooks"
         },
@@ -153,12 +152,11 @@ export const navbarMessages = {
             samaraAcademy: "Samara Academy of Architecture",
             samaraUnion: "Samara Branch of the Union of Architects"
         },
-        photoAndVarious: "Photos & Miscellaneous",
+        photoAndVarious: "Photo Gallery",
         photoAndVariousDropdown: {
             photos: "Photos 1920s-1950s",
             tripsMeetings: "Trips & Meetings",
-            familyChronicle: "Family Chronicle",
-            congratulations: "Greetings & Dedications"
+            familyChronicle: "Family Chronicle"
         }
     }
 };
