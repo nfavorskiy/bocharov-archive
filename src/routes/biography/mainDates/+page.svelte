@@ -82,22 +82,6 @@
         })
         .filter(Boolean);
 
-      const nextSinceArrows = data
-        .map((entry, idx) => {
-          if (!entry.dateStart || entry.dateEnd) return null;
-
-          const startEl = elMap.get(String(entry.dateStart));
-          const startY = startEl ? startEl.getBoundingClientRect().y + window.scrollY : null;
-          if (startY == null) return null;
-
-          return {
-            id: idx,
-            side: entry.side || 'left',
-            top: startY / rootFontSize + 0.9
-          };
-        })
-        .filter(Boolean);
-
       const rangeByIdx = new Map(nextRanges.map((r) => [r.idx, r]));
 
       const nextLabels = data
@@ -128,8 +112,48 @@
         })
         .filter(Boolean);
 
+      // First publish ranges & labels so Svelte renders their DOM
       ranges = nextRanges;
       labels = nextLabels;
+
+      // wait for DOM update so label elements exist
+      await tick();
+
+      // Now measure labels and compute arrows (query document, not stackEl)
+      const nextSinceArrows = data
+        .map((entry, idx) => {
+          if (!entry.dateStart || entry.dateEnd) return null;
+
+          const startEl = elMap.get(String(entry.dateStart));
+          const startY = startEl ? startEl.getBoundingClientRect().y + window.scrollY : null;
+          if (startY == null) return null;
+
+          const side = entry.side || 'left';
+
+          let leftRem = null;
+          const labelEl = document.querySelector(`.label[data-id="${idx}"]`);
+          if (labelEl instanceof Element) {
+            const rect = labelEl.getBoundingClientRect();
+            const gapPx = -1 * rootFontSize;
+            const arrowWidthPx = 1.5 * rootFontSize; // .since-arrow width
+
+            if (side === 'right') {
+              leftRem = (rect.right + gapPx) / rootFontSize;
+            } else {
+              leftRem = (rect.left - gapPx - arrowWidthPx) / rootFontSize;
+            }
+          }
+
+          return {
+            id: idx,
+            side,
+            top: startY / rootFontSize + 0.9,
+            left: leftRem
+          };
+        })
+        .filter(Boolean);
+
+      // finally publish arrows
       sinceArrows = nextSinceArrows;
     })();
   }
@@ -142,6 +166,11 @@
 </script>
 
 <article>
+  <h2 style="text-align: center; margin: 0;">Основные даты</h2>
+  <div class="timelineSidesTitles"> 
+    <h3>Проффесиональная деятельность</h3>
+    <h3>Научная, экспертная и общественная деятельность</h3>
+  </div>
   <div class="stack" bind:this={stackEl}>
     {#each dates as date}
       <div
@@ -166,6 +195,7 @@
   {#each labels as l (l.id)}
     <div
       class="label {l.side === 'right' ? 'label--right' : 'label--left'}"
+      data-id={l.id}
       style={`top:${l.top - 2}rem;`}
     >
       <p>{l.text}</p>
@@ -175,7 +205,7 @@
   {#each sinceArrows as arrow (arrow.id)}
     <div
       class="since-arrow {arrow.side === 'right' ? 'since-arrow--right' : 'since-arrow--left'}"
-      style={`top:${arrow.top}rem;`}
+      style={`top:${arrow.top}rem; ${arrow.left != null ? `left:${arrow.left}rem;` : ''}`}
     ></div>
   {/each}
 </article>
@@ -185,13 +215,28 @@
     content: "";
     position: absolute;
     left: 50%;
-    top: 0rem;
+    top: 12rem;
     bottom: 0rem;
     width: 0.2rem;
     background: var(--text-color);
     transform: translateX(-50%);
     opacity: 0.2;
     z-index: 0;
+  }
+
+  .timelineSidesTitles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 0 0 0.5rem 0;
+    padding: 0 1rem;
+  }
+
+  .timelineSidesTitles h3 {
+    margin: 1rem;
+    font-weight: normal;
+    font-size: 1rem;
+    text-align: center;
   }
 
   .stack {
@@ -236,13 +281,14 @@
   }
 
   .since-arrow {
-    width: 1.5rem;
+    width: 3rem;
     height: 3rem;
     border-top: 0.3rem solid var(--text-color);
     border-right: 0.3rem solid var(--text-color);
     border-radius: 0 5rem 0 0;
     position: absolute;
     left: 52.35%;
+    z-index: 1;
   }
 
   .since-arrow::after {
@@ -263,6 +309,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    z-index: 2;
   }
 
   .label p {
@@ -272,6 +319,8 @@
     border: 0.2rem solid var(--text-color);
     border-radius: 1rem;
     padding: 0.2rem 1rem;
+    background: var(--bg-color);
+    z-index: 2;
   }
 
   .label--left {
