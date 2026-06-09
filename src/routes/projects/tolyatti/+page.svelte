@@ -21,7 +21,7 @@
     gap: 1rem;
     list-style: none;
     padding: 0;
-    margin: 1.5rem 0;
+    margin: 0;
   }
 
   .section-button {

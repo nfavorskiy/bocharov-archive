@@ -1,6 +1,7 @@
 <script>
     import { onMount } from 'svelte';
     import Navbar from '$lib/components/Navbar.svelte';
+    import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
     import { page } from '$app/stores';
 
     onMount(() => {
@@ -15,6 +16,9 @@
   class:biography-layout={$page.url.pathname.startsWith('/biography')}
 >
   <div class="content">
+    {#if $page.url.pathname !== '/'}
+        <Breadcrumbs />
+    {/if}
     <slot/>
   </div>
 </main>
