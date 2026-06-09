@@ -14,7 +14,9 @@
   class:reviews-layout={$page.url.pathname.startsWith('/reviews')}
   class:biography-layout={$page.url.pathname.startsWith('/biography')}
 >
-  <slot/>
+  <div class="content">
+    <slot/>
+  </div>
 </main>
 
 
@@ -33,7 +35,10 @@
         padding: 0;
         position: relative;
         font-family: "Segoe UI", "Noto Sans", -apple-system, BlinkMacSystemFont, sans-serif;
-
+        display: flex;
+        flex-direction: column;
+        height: 100dvh;
+        overflow: hidden;
     }
 
     :global(body.transitions-enabled) {
@@ -78,23 +83,36 @@
     }
     
     main {
-        max-width: 60vw;
-        min-width: 50vh;
-        margin: 0 auto;
-        background-color: var(--bg-color);
-        min-height: 10vh;
+        width: 100%;
+        flex: 1 1 auto;
+        min-height: 0;
         box-sizing: border-box;
+        overflow-y: auto;
     }
 
-    :global(main.reviews-layout) {
-        min-width: 80vw;
+    .content {
+        width: 60vw;
+        background-color: var(--bg-color);
+        margin: 0 auto;
     }
 
-    :global(main.biography-layout) {
-        min-width: 80vw;
+    :global(main.reviews-layout) .content {
+        width: 70vw;
     }
 
-    :global(body.transitions-enabled) main {
-        transition: background-color 0.3s, color 0.3s;
+    :global(body.transitions-enabled) main,
+    :global(body.transitions-enabled) .content,
+    :global(body.transitions-enabled) nav,
+    :global(body.transitions-enabled) .text-column,
+    :global(body.transitions-enabled) .portrait-column,
+    :global(body.transitions-enabled) .dropdown,
+    :global(body.transitions-enabled) .dropdown-item,
+    :global(body.transitions-enabled) button,
+    :global(body.transitions-enabled) a {
+        transition:
+            background-color 0.3s,
+            color 0.3s,
+            border-color 0.3s,
+            opacity 0.3s;
     }
 </style>

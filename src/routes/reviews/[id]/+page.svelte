@@ -30,10 +30,16 @@
       ? [{ authorName: review.authorName, authorInfo: review.authorInfo }]
       : [];
 
-  $: linkedReviewText = (review?.text || '').replace(
-    /\[(\d+)\]/g,
-    '<a class="fn-link" href="#footnote-$1">[$1]</a>'
-  );
+  $: linkedReviewText = (review?.text || '')
+    .split(/\n+/)                      // split on one or more newlines
+    .map(p => p.trim())                // trim whitespace
+    .filter(Boolean)                   // remove empty segments
+    .map(p =>
+      p
+        .replace(/\[(\d+)\]/g, '<a class="fn-link" href="#footnote-$1">[$1]</a>')
+    )
+    .map(p => `<p>${p}</p>`)
+    .join('');
 </script>
 
 <article class="review">
@@ -60,9 +66,9 @@
 
   </div>
   
-  <p class="content">
+  <div class="review-text">
     {@html linkedReviewText}
-  </p>
+  </div>
 
   {#if review.poem}
     <section class="poem">
@@ -138,10 +144,14 @@
     font-size: 0.85rem;
   }
   
-  .content {
+  .review-text {
     white-space: pre-wrap;
     word-wrap: break-word;
     text-indent: 2em each-line;
+  }
+
+  :global(.review-text p) {
+    margin: 0.7rem 0;
   }
 
   :global(.fn-link) {

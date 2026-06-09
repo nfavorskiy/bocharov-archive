@@ -256,34 +256,38 @@
         position: sticky;
         top: 0;
         z-index: 1100;
-        padding: 1rem;
+        padding: 1rem 0;
         background-color: var(--bg-color);
         transition: background-color 0.3s, color 0.3s;
-        display: flex;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        width: 100%;
     }
-    
+
     ul.nav-list {
+        grid-column: 2;
         list-style: none;
         margin: 0;
         padding: 0;
         display: flex;
-        gap: 2rem;
         justify-content: center;
+        gap: 2rem;
         font-size: 1.1rem;
     }
 
     ul.toggles {
+        grid-column: 3;
+        justify-self: end;
         list-style: none;
-        margin: 0 0 0 2rem;
+        margin: 0 2rem 0 0;
         padding: 0;
         display: flex;
         gap: 0.5rem;
-        justify-content: center;
     }
 
     li {
-        align-items: center; 
+        align-items: center;
         display: flex;
     }
     
