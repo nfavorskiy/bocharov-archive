@@ -168,16 +168,16 @@
 <article>
   <h2 style="text-align: center; margin: 0;">Основные даты</h2>
   <div class="timelineSidesTitles"> 
-    <h3>Проффесиональная деятельность</h3>
-    <h3>Научная, экспертная и общественная деятельность</h3>
+    <h3><b>Проффесиональная деятельность</b></h3>
+    <h3><b>Научная, экспертная и общественная деятельность</b></h3>
   </div>
   <div class="stack" bind:this={stackEl}>
     {#each dates as date}
       <div
         class="bullet"
         style={bulletMargins[date] != null
-          ? `margin: calc(0.5rem + ${bulletMargins[date]});`
-          : 'margin: 0.5rem;'}
+          ? `margin: ${bulletMargins[date]});`
+          : 'margin: 3.7rem;'}
       >
         {date}
       </div>
@@ -221,7 +221,7 @@
     background: var(--text-color);
     transform: translateX(-50%);
     opacity: 0.2;
-    z-index: 0;
+    z-index: 8;
   }
 
   .timelineSidesTitles {
@@ -244,7 +244,6 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    z-index: 2;
   }
 
   .bullet {
@@ -258,26 +257,29 @@
     font-weight: 600;
     padding: 0 1rem;
     box-sizing: border-box;
-    margin: 0.5rem;
-    z-index: 2;
+    z-index: 10;
   }
 
   .arc {
     position: absolute;
-    width: 3rem;
+    width: 10rem;
     border: 0.3rem solid var(--text-color);
+    outline: 0.5rem solid var(--bg-color);
     border-radius: 40%;
-    z-index: 1;
+    z-index: 4;
+    background: var(--bg-color);
   }
 
   .arc--left {
-    right: 50.35%;
     clip-path: inset(0 50% 0 0);
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .arc--right {
-    left: 50.35%;
     clip-path: inset(0 0 0 50%);
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .since-arrow {
@@ -288,7 +290,7 @@
     border-radius: 0 5rem 0 0;
     position: absolute;
     left: 52.35%;
-    z-index: 1;
+    z-index: 2;
   }
 
   .since-arrow::after {
@@ -309,7 +311,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    z-index: 2;
+    z-index: 3;
   }
 
   .label p {
@@ -320,16 +322,34 @@
     border-radius: 1rem;
     padding: 0.2rem 1rem;
     background: var(--bg-color);
-    z-index: 2;
+    z-index: 3;
   }
 
   .label--left {
-    right: calc(50% + 5rem);
+    right: calc(50% + 15rem);
     text-align: right;
   }
 
   .label--right {
-    left: calc(50% + 5rem);
+    left: calc(50% + 15rem);
     text-align: left;
+  }
+
+  .label--left::after {
+    content: "";
+    height: 0.2rem;
+    width: 15rem;
+    background: var(--text-color);
+    position: absolute;
+    right: -15rem;
+  }
+
+  .label--right::after {
+    content: "";
+    height: 0.2rem;
+    width: 15rem;
+    background: var(--text-color);
+    position: absolute;
+    left: -15rem;
   }
 </style>

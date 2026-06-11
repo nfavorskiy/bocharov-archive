@@ -113,8 +113,8 @@
             dropdownGroup: 'photoAndVariousDropdown',
             dropdown: [
                 { key: 'photos', path: '/photoAndVarious/photos' },
-                { key: 'tripsMeetings', path: '/photoAndVarious/trips&meetings' },
-                { key: 'familyChronicle', path: '/photoAndVarious/family-chronicle' }
+                { key: 'tripsMeetings', path: '/photoAndVarious/tripsMeetings' },
+                { key: 'familyChronicle', path: '/photoAndVarious/familyChronicle' }
             ]
         }
     ];

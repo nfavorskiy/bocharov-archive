@@ -89,13 +89,13 @@
     main {
         width: 100%;
         flex: 1 1 auto;
-        min-height: 0;
         box-sizing: border-box;
         overflow-y: auto;
     }
 
     .content {
         width: 60vw;
+        height: fit-content;
         background-color: var(--bg-color);
         margin: 0 auto;
     }

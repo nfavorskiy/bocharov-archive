@@ -1,18 +1,10 @@
 <script>
   import { page } from '$app/stores';   // ← was $app/state
-  import { t } from '$lib/i18n';
+  import { routeLabels } from '$lib/i18n/routes';
+  import { language } from '$lib/stores/language';
 
-  $: labels = Object.entries($t.messages.nav).reduce((acc, [key, value]) => {
-    if (typeof value === 'string') {
-      acc[key] = value;
-    } else if (typeof value === 'object') {
-      Object.assign(acc, value);
-    }
-    return acc;
-  }, {});
-
-  $: segments = $page.url.pathname.split('/').filter(Boolean);  // ← $page
-
+  $: labels = routeLabels[$language] ?? routeLabels.ru;
+  $: segments = $page.url.pathname.split('/').filter(Boolean);
   $: crumbs = segments.map((segment, index) => ({
     label: labels[segment] ?? decodeURIComponent(segment),
     href: '/' + segments.slice(0, index + 1).join('/')
@@ -27,7 +19,7 @@
           {#if index < crumbs.length - 1}
             <a href={crumb.href}>{crumb.label}</a>
           {:else}
-            <span aria-current="page">{crumb.label}</span>
+            <span aria-current="page"><b>{crumb.label}</b></span>
           {/if}
         </li>
       {/each}
@@ -60,7 +52,9 @@
   }
 
   .breadcrumbs a {
-    color: var(--link-color);
+    /* color: var(--link-color); */
+    opacity: 0.8;
+    color: var(--text-primary);
     text-decoration: none;
   }
 
