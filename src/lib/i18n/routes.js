@@ -35,10 +35,8 @@ export const routeLabels = {
     list:                           "Список проектных работ",
     diploma1951:                    "Диплом МАРХИ 1951",
     volgograd:                      "Волгоград 1951-1958",
-
     tolyatti:                       "Тольятти 1964-1977",
-    booklet:                        "Буклет 1967. Город ТОЛЬЯТТИ Генеральный план новой части города",
-
+      booklet:                      "Буклет 1967. Город ТОЛЬЯТТИ Генеральный план новой части города",
     naberezhnyeChelny:              "Набережные Челны 1968-1975",
     memorialComplex:                "Мемориал на Поклонной горе. Конкурс 1986",
     astana:                         "Астана. Международный конкурс 1998",
@@ -119,10 +117,8 @@ export const routeLabels = {
     list:                           "List of Projects",
     diploma1951:                    "MARHI Diploma 1951",
     volgograd:                      "Volgograd 1951-1958",
-
     tolyatti:                       "Tolyatti 1964-1977",
-    booklet:                        "Booklet 1967. City of TOLYATTI General Plan of the New Part of the City",
-    
+      booklet:                      "Booklet 1967. City of TOLYATTI General Plan of the New Part of the City",
     naberezhnyeChelny:              "Naberezhnye Chelny 1968-1975",
     memorialComplex:                "Memorial on Poklonnaya Hill Competition 1986",
     astana:                         "Astana International Competition 1998",
