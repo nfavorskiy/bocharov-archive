@@ -168,7 +168,7 @@
 <article>
   <h2 style="text-align: center; margin: 0;">Основные даты</h2>
   <div class="timelineSidesTitles"> 
-    <h3><b>Проффесиональная деятельность</b></h3>
+    <h3><b>Профессиональная деятельность</b></h3>
     <h3><b>Научная, экспертная и общественная деятельность</b></h3>
   </div>
   <div class="stack" bind:this={stackEl}>
