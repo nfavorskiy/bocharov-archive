@@ -1,9 +1,5 @@
 <script>
-  const sections = [
-    { href: '', label: 'Архивные материалы' },
-    { href: '', label: 'Поиск решения генерального плана Тольятти. Альбом' },
-    { href: '/projects/tolyatti/booklet', label: 'Буклет 1967. Город ТОЛЬЯТТИ Генеральный план новой части города' }
-  ];
+  export let sections = [];
 </script>
 
 <ul class="section-list">

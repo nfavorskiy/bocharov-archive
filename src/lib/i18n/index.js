@@ -3,10 +3,21 @@ import { language } from '$lib/stores/language';
 import { navbarMessages } from './navbar';
 import { homeMessages } from './home';
 import { galleriesMessages } from './galleries';
+import { projectMessages } from './projects';
 
 const messages = {
-  ru: { nav: navbarMessages.ru, home: homeMessages.ru, galleries: galleriesMessages.ru },
-  en: { nav: navbarMessages.en, home: homeMessages.en, galleries: galleriesMessages.en }
+  ru: {
+    nav: navbarMessages.ru,
+    home: homeMessages.ru,
+    galleries: galleriesMessages.ru,
+    projects: projectMessages.ru
+  },
+  en: {
+    nav: navbarMessages.en,
+    home: homeMessages.en,
+    galleries: galleriesMessages.en,
+    projects: projectMessages.en
+  }
 };
 
 function format(template, values = {}) {
