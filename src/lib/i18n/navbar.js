@@ -5,7 +5,7 @@ export const navbarMessages = {
         biographyDropdown: {
             mainDates: "Основные даты",
             briefBiography: "Краткая биография",
-            family: "Семья",
+            familyHistory: "История семьи",
             letters: "Письма 1955-1957",
             congratulations: "Поздравления, посвящения, разное",
             awardsAndDiplomas: "Награды и дипломы",
@@ -85,7 +85,7 @@ export const navbarMessages = {
         biographyDropdown: {
             mainDates: "Key Dates",
             briefBiography: "Brief Biography",
-            family: "Family",
+            familyHistory: "Family History",
             letters: "Letters 1955-1957",
             congratulations: "Greetings, Dedications & Miscellaneous",
             awardsAndDiplomas: "Awards & Diplomas",

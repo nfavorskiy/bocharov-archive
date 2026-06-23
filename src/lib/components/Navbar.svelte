@@ -18,7 +18,7 @@
             dropdown: [
                 { key: 'mainDates', path: '/biography/mainDates' },
                 { key: 'briefBiography', path: '/biography/briefBiography' },
-                { key: 'family', path: '/biography/family' },
+                { key: 'familyHistory', path: '/biography/familyHistory' },
                 { key: 'letters', path: '/biography/letters' },
                 { key: 'congratulations', path: '/biography/congratulations' },
                 { key: 'awardsAndDiplomas', path: '/biography/awardsAndDiplomas' },
