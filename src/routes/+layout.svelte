@@ -13,7 +13,7 @@
 
 <main
   class:reviews-layout={$page.url.pathname.startsWith('/reviews')}
-  class:biography-layout={$page.url.pathname.startsWith('/biography')}
+  class:main-dates-layout={$page.url.pathname.startsWith('/biography/mainDates')}
 >
   <div class="content">
     {#if $page.url.pathname !== '/'}
@@ -101,6 +101,10 @@
     }
 
     :global(main.reviews-layout) .content {
+        width: 70vw;
+    }
+
+    :global(main.main-dates-layout) .content {
         width: 70vw;
     }
 

@@ -8,7 +8,7 @@ export const routeLabels = {
     projects:                       "Проекты",
     watercolorsGraphics:            "Акварели и Графика",
     reviews:                        "Коллеги и Друзья о Юрии Бочарове",
-    photoAndVarious:                "Фотохроника",
+    photoAndVarious:                "Фотогалерея",
 
     // ── biography ──────────────────────────────────────────────────────────
     mainDates:                      "Основные даты",

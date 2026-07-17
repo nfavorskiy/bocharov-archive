@@ -72,7 +72,7 @@ export const navbarMessages = {
             samaraAcademy: "Самарская академия архитектуры",
             samaraUnion: "Самарское отделение Союза архитекторов"
         },
-        photoAndVarious: "Фотохроника",
+        photoAndVarious: "Фотогалерея",
         photoAndVariousDropdown: {
             photos: "Фото 1920-1950-х",
             tripsMeetings: "Поездки и встречи",
