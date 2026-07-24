@@ -19,7 +19,7 @@ const messages = {
     home: homeMessages.en,
     galleries: galleriesMessages.en,
     projects: projectMessages.en,
-    photoAndVarious: photoAndVariousMessages.ru
+    photoAndVarious: photoAndVariousMessages.en
   }
 };
 
