@@ -23,6 +23,7 @@ for (const filename of files) {
       withoutEnlargement: true,
       fit: 'inside'
     })
+    .withMetadata()
     .jpeg({ quality: 78, mozjpeg: true })
     .toFile(outputPath);
 
