@@ -74,7 +74,7 @@ export const navbarMessages = {
         },
         photoAndVarious: "Фотогалерея",
         photoAndVariousDropdown: {
-            photos: "Фото 1920-1950-х",
+            photos1920_1950: "Фото 1920-1950-х",
             tripsMeetings: "Поездки и встречи",
             familyChronicle: "Семейная хроника"
         }
@@ -154,7 +154,7 @@ export const navbarMessages = {
         },
         photoAndVarious: "Photo Gallery",
         photoAndVariousDropdown: {
-            photos: "Photos 1920s-1950s",
+            photos1920_1950: "Photos 1920s-1950s",
             tripsMeetings: "Trips & Meetings",
             familyChronicle: "Family Chronicle"
         }

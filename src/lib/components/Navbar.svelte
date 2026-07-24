@@ -112,7 +112,7 @@
             path: '/photoAndVarious',
             dropdownGroup: 'photoAndVariousDropdown',
             dropdown: [
-                { key: 'photos', path: '/photoAndVarious/photos' },
+                { key: 'photos1920_1950', path: '/photoAndVarious/photos1920_1950' },
                 { key: 'tripsMeetings', path: '/photoAndVarious/tripsMeetings' },
                 { key: 'familyChronicle', path: '/photoAndVarious/familyChronicle' }
             ]
