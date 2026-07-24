@@ -1,8 +1,8 @@
 import { buildGalleryImages } from '$lib/galleryServer';
 
-const DIR = 'static/images/photos1920_1950';
-const THUMB_URL_BASE = '/imagesThumbs/photos1920_1950';
-const FULL_URL_BASE = '/images/photos1920_1950';
+const DIR = 'static/images/familyChronicle';
+const THUMB_URL_BASE = '/imagesThumbs/familyChronicle';
+const FULL_URL_BASE = '/images/familyChronicle';
 
 /** @type {import('./$types').PageServerLoad} */
 export async function load() {
