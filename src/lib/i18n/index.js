@@ -4,19 +4,22 @@ import { navbarMessages } from './navbar';
 import { homeMessages } from './home';
 import { galleriesMessages } from './galleries';
 import { projectMessages } from './projects';
+import { photoAndVariousMessages } from './photoAndVarious';
 
 const messages = {
   ru: {
     nav: navbarMessages.ru,
     home: homeMessages.ru,
     galleries: galleriesMessages.ru,
-    projects: projectMessages.ru
+    projects: projectMessages.ru,
+    photoAndVarious: photoAndVariousMessages.ru
   },
   en: {
     nav: navbarMessages.en,
     home: homeMessages.en,
     galleries: galleriesMessages.en,
-    projects: projectMessages.en
+    projects: projectMessages.en,
+    photoAndVarious: photoAndVariousMessages.ru
   }
 };
 
