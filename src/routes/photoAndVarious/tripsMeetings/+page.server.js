@@ -1,8 +1,8 @@
 import { buildGalleryImages } from '$lib/galleryServer';
 
-const DIR = 'static/images/tripsAndMeetings';
-const THUMB_URL_BASE = '/imagesThumbs/tripsAndMeetings';
-const FULL_URL_BASE = '/images/tripsAndMeetings';
+const DIR = 'static/images/tripsMeetings';
+const THUMB_URL_BASE = '/imagesThumbs/tripsMeetings';
+const FULL_URL_BASE = '/images/tripsMeetings';
 
 /** @type {import('./$types').PageServerLoad} */
 export async function load() {

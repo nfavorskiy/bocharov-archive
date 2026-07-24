@@ -4,7 +4,7 @@
 
   export let data;
 
-  $: captions = $t.messages.galleries?.tripsAndMeetings?.captions ?? {};
+  $: captions = $t.messages.galleries?.tripsMeetings?.captions ?? {};
 </script>
 
 <GalleryGrid images={data.images} {captions} />
