@@ -3,8 +3,8 @@
   import Directory from '$lib/components/Directory.svelte';
 
   $: sections = [
-    { href: '', label: $t.messages.projects.tolyatti.archiveMaterials },
-    { href: '', label: $t.messages.projects.tolyatti.generalPlanAlbum },
+    { href: '/projects/tolyatti/materials', label: $t.messages.projects.tolyatti.materials },
+    { href: '/projects/tolyatti/search', label: $t.messages.projects.tolyatti.search },
     { href: '/projects/tolyatti/booklet', label: $t.messages.projects.tolyatti.booklet }
   ];
 </script>
