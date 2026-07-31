@@ -34,13 +34,12 @@
                 { key: 'majorAims', path: '/research/majorAims' },
                 { key: 'worksList', path: '/research/worksList' },
                 { key: 'sovietUrbanists', path: '/research/sovietUrbanists' },
-                { key: 'aspirantsCandidates', path: '/research/aspirantsCandidates' },
+                { key: 'publicationsInterviews', path: '/research/publicationsInterviews' },
+                { key: 'articlesMaterials', path: '/research/articlesMaterials' },
+                { key: 'starredArticlesInterviews', path: '/research/starredArticlesInterviews' },
                 { key: 'cityDevelopmentModel', path: '/research/cityDevelopmentModel' },
                 { key: 'doctoralDissertation', path: '/research/doctoralDissertation' },
-                { key: 'defenseAnnouncement', path: '/research/defenseAnnouncement' },
-                { key: 'interviewsMaterials', path: '/research/interviewsMaterials' },
-                { key: 'starredArticlesInterviews', path: '/research/starredArticlesInterviews' },
-                { key: 'articlesMaterials', path: '/research/articlesMaterials' }
+                { key: 'defenseAnnouncement', path: '/research/defenseAnnouncement' }
             ]
         },
         {
