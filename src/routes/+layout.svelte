@@ -7,20 +7,25 @@
     onMount(() => {
         document.body.classList.add('transitions-enabled');
     });
+
+    $: if (typeof document !== 'undefined') {
+        document.body.classList.toggle('works-list-page', $page.url.pathname.startsWith('/research/worksList'));
+    }
 </script>
 
 <Navbar />
 
 <main
-  class:reviews-layout={$page.url.pathname.startsWith('/reviews')}
-  class:main-dates-layout={$page.url.pathname.startsWith('/biography/mainDates')}
+    class:reviews-layout={$page.url.pathname.startsWith('/reviews')}
+    class:main-dates-layout={$page.url.pathname.startsWith('/biography/mainDates')}
+    class:works-list-layout={$page.url.pathname.startsWith('/research/worksList')}
 >
-  <div class="content">
-    {#if $page.url.pathname !== '/'}
-        <Breadcrumbs />
-    {/if}
-    <slot/>
-  </div>
+    <div class="content">
+        {#if $page.url.pathname !== '/'}
+            <Breadcrumbs />
+        {/if}
+        <slot/>
+    </div>
 </main>
 
 
@@ -77,6 +82,14 @@
         background-image: url('/background-dark.jpg');
         opacity: 0;
     }
+
+    :global(body.works-list-page::before) {
+        background-image: url('/books.jpg');
+    }
+
+    :global(body.works-list-page::after) {
+        background-image: url('/books.jpg');
+    }
     
     :global(body[data-theme='dark']::before) {
         opacity: 0;
@@ -84,6 +97,13 @@
     
     :global(body[data-theme='dark']::after) {
         opacity: 1;
+    }
+
+    :global(body.works-list-page[data-theme='dark']::before) {
+    opacity: 1;
+    }
+    :global(body.works-list-page[data-theme='dark']::after) {
+        opacity: 0;
     }
     
     main {
