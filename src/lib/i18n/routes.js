@@ -24,12 +24,12 @@ export const routeLabels = {
     worksList:                      "Список печатных работ",
     sovietUrbanists:                "Советское общество урбанистов 1987-1992",
     aspirantsCandidates:            "Список аспирантов и соискателей",
-    publicationsInterviews:         "Список публикаций о Ю.П. Бочарове и интервью с ним",
-    articlesMaterials:              "Материалы о Ю.П. Бочарове",
-    starredArticlesInterviews:      "Избранные статьи / интервью Юрия Бочарова",
-    cityDevelopmentModel:           "Имитационная модель развития города",
+    cityDevelopmentModel:           "Имитационная модель долгосрочного развития города",
     doctoralDissertation:           "Автореферат докторской диссертации 1967",
     defenseAnnouncement:            "Объявление о защите 1967",
+    interviewsMaterials:            "Список интервью Ю.П. Бочарова и материалов о нём",
+    starredArticlesInterviews:      "Избранные статьи и интервью Юрия Бочарова",
+    articlesMaterials:              "Материалы о Ю.П. Бочарове",
 
     // ── projects ───────────────────────────────────────────────────────────
     list:                           "Список проектных работ",
@@ -111,12 +111,12 @@ export const routeLabels = {
     worksList:                      "List of Published Works",
     sovietUrbanists:                "Soviet Urbanists Society 1987-1992",
     aspirantsCandidates:            "List of Postgraduate Students & Applicants",
-    publicationsInterviews:         "List of publications about Yuri Bocharov & Interviews with him",
-    articlesMaterials:              "Materials about Yuri Bocharov",
-    starredArticlesInterviews:      "Yuri Bocharov's Starred Articles & Interviews",
-    cityDevelopmentModel:           "Simulation Model of City Development",
+    cityDevelopmentModel:           "Simulation Model of Long-term City Development",
     doctoralDissertation:           "Abstract of the Doctoral Dissertation 1967",
     defenseAnnouncement:            "Announcement of the Doctoral Dissertation Defense 1967",
+    interviewsMaterials:            "List of Yuri Bocharov's Interviews & Materials about him",
+    starredArticlesInterviews:      "Yuri Bocharov's Selected Articles & Interviews",
+    articlesMaterials:              "Materials about Yuri Bocharov",
 
     // ── projects ───────────────────────────────────────────────────────────
     list:                           "List of Projects",
