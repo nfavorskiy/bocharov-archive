@@ -38,7 +38,7 @@
                 { key: 'cityDevelopmentModel', path: '/research/cityDevelopmentModel' },
                 { key: 'doctoralDissertation', path: '/research/doctoralDissertation' },
                 { key: 'defenseAnnouncement', path: '/research/defenseAnnouncement' },
-                { key: 'interviewsMaterials', path: '/research/interviewsMaterials' },
+                { key: 'publicationsInterviews', path: '/research/publicationsInterviews' },
                 { key: 'starredArticlesInterviews', path: '/research/starredArticlesInterviews' },
                 { key: 'articlesMaterials', path: '/research/articlesMaterials' }
             ]
