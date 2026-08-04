@@ -9,7 +9,6 @@
     <iframe
       {title}
       src={src}
-      type="application/pdf"
       width="100%"
       height="100%"
       frameborder="0"
