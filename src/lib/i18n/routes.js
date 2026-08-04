@@ -30,6 +30,14 @@ export const routeLabels = {
     publicationsInterviews:         "Список публикаций о Ю.П. Бочарове и интервью с ним",
     starredArticlesInterviews:      "Избранные статьи и интервью Юрия Бочарова",
     articlesMaterials:              "Материалы о Ю.П. Бочарове",
+      years100:                     "К 100-летию со дня рождения Юрия Петровича Бочарова",
+      creator:                      "Творец городов. Форум плюс, 2026-3",
+      years95:                      "К 95-летию академика Юрия Петровича Бочарова",
+      diverseWorld:                 "Я узнал, насколько разнообразен мир. Форум плюс 2021-3",
+      samaraSchool:                 "Е.А. Ахмедова. Ю.П. Бочаров и Самарская школа",
+      collection:                   "Сборник Ю.П. БОЧАРОВ. 2016",
+      architecture:                 "Архитектура Строительство Дизайн 2002-4",
+      drawings:                     "Рисунки Ю.П. Бочарова",
 
     // ── projects ───────────────────────────────────────────────────────────
     list:                           "Список проектных работ",
@@ -117,6 +125,14 @@ export const routeLabels = {
     publicationsInterviews:         "List of publications about Yuri Bocharov & Interviews with him",
     starredArticlesInterviews:      "Yuri Bocharov's Selected Articles & Interviews",
     articlesMaterials:              "Materials about Yuri Bocharov",
+      years100:                     "To the 100th anniversary of the birth of Yuri Petrovich Bocharov",
+      creator:                      "Творец городов. Форум плюс, 2026-3",
+      years95:                      "К 95-летию академика Юрия Петровича Бочарова",
+      diverseWorld:                 "Я узнал, насколько разнообразен мир. Форум плюс 2021-3",
+      samaraSchool:                 "Е.А. Ахмедова. Ю.П. Бочаров и Самарская школа",
+      collection:                   "Сборник Ю.П. БОЧАРОВ. 2016",
+      architecture:                 "Архитектура Строительство Дизайн 2002-4",
+      drawings:                     "Рисунки Ю.П. Бочарова",
 
     // ── projects ───────────────────────────────────────────────────────────
     list:                           "List of Projects",
