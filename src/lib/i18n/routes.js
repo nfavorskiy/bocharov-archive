@@ -13,7 +13,9 @@ export const routeLabels = {
     // ── biography ──────────────────────────────────────────────────────────
     mainDates:                      "Основные даты",
     briefBiography:                 "Краткая биография",
-    family:                         "Семья",
+    familyHistory:                  "История Семьи",
+      familyHistoryText:            "Рассказ о семье",
+      familyHistoryGallery:         "Фотохроника к рассказу о семье",
     letters:                        "Письма 1955-1957",
     congratulations:                "Поздравления, посвящения, разное",
     awardsAndDiplomas:              "Награды и дипломы",
@@ -108,7 +110,9 @@ export const routeLabels = {
     // ── biography ──────────────────────────────────────────────────────────
     mainDates:                      "Key Dates",
     briefBiography:                 "Brief Biography",
-    family:                         "Family",
+    familyHistory:                  "Family History",
+      familyHistoryText:            "Story of the Family",
+      familyHistoryGallery:         "Photo Gallery to the Story of the Family",
     letters:                        "Letters 1955-1957",
     congratulations:                "Greetings, Dedications & Miscellaneous",
     awardsAndDiplomas:              "Awards & Diplomas",
