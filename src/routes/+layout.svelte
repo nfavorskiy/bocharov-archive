@@ -11,6 +11,10 @@
     $: if (typeof document !== 'undefined') {
         document.body.classList.toggle('works-list-page', $page.url.pathname.startsWith('/research/worksList'));
     }
+
+    $: if (typeof document !== 'undefined') {
+        document.body.classList.toggle('letters-page', $page.url.pathname.startsWith('/biography/letters'));
+    }
 </script>
 
 <Navbar />
@@ -18,6 +22,7 @@
 <main
     class:reviews-layout={$page.url.pathname.startsWith('/reviews')}
     class:main-dates-layout={$page.url.pathname.startsWith('/biography/mainDates')}
+    class:letters-layout={$page.url.pathname.startsWith('/biography/letters')}
     class:works-list-layout={$page.url.pathname.startsWith('/research/worksList')}
 >
     <div class="content">
@@ -90,6 +95,14 @@
     :global(body.works-list-page::after) {
         background-image: url('/books.jpg');
     }
+
+    :global(body.letters-page::before) {
+        background-image: url('/Письма 1955-1957.jpg');
+    }
+
+    :global(body.letters-page::after) {
+        background-image: url('/Письма 1955-1957.jpg');
+    }
     
     :global(body[data-theme='dark']::before) {
         opacity: 0;
@@ -100,9 +113,16 @@
     }
 
     :global(body.works-list-page[data-theme='dark']::before) {
-    opacity: 1;
+        opacity: 1;
     }
     :global(body.works-list-page[data-theme='dark']::after) {
+        opacity: 0;
+    }
+
+    :global(body.letters-page[data-theme='dark']::before) {
+        opacity: 1;
+    }
+    :global(body.letters-page[data-theme='dark']::after) {
         opacity: 0;
     }
     
