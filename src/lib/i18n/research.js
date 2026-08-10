@@ -9,6 +9,14 @@ export const researchMessages = {
             collection: 'Сборник Ю.П. БОЧАРОВ. 2016',
             architecture: 'Архитектура Строительство Дизайн 2002-4',
             drawings: 'Рисунки Ю.П. Бочарова в журнале Архитектура СССР и Строительной газете'
+        },
+
+        starredArticlesInterviews: {
+            interviewsSpeeches: 'Интервью и выступления',
+            moscowDevelopment: 'Статьи по проблемам развития Москвы',
+            urbanPlanning: 'Статьи по градостроительству и подготовке дипломированных урбанистов',
+            urbanStudies: 'Статьи по градостроительному науковедению',
+            variousArticles: 'Статьи на разные темы / Рецензии'
         }
     },
     en: {
@@ -21,6 +29,14 @@ export const researchMessages = {
             collection: 'Сборник Ю.П. БОЧАРОВ. 2016',
             architecture: 'Архитектура Строительство Дизайн 2002-4',
             drawings: 'Рисунки Ю.П. Бочарова в журнале Архитектура СССР и Строительной газете'
+        },
+
+        starredArticlesInterviews: {
+            interviewsSpeeches: 'Интервью и выступления',
+            moscowDevelopment: 'Статьи по проблемам развития Москвы',
+            urbanPlanning: 'Статьи по градостроительству и подготовке дипломированных урбанистов',
+            urbanStudies: 'Статьи по градостроительному науковедению',
+            variousArticles: 'Статьи на разные темы / Рецензии'
         }
     }
 };
