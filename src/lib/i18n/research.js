@@ -13,10 +13,10 @@ export const researchMessages = {
 
         starredArticlesInterviews: {
             interviewsSpeeches: 'Интервью и выступления',
-            moscowDevelopment: 'Статьи по проблемам развития Москвы',
-            urbanPlanning: 'Статьи по градостроительству и подготовке дипломированных урбанистов',
-            urbanStudies: 'Статьи по градостроительному науковедению',
-            variousArticles: 'Статьи на разные темы / Рецензии'
+            moscowDevelopment: 'Проблемы развития Москвы',
+            urbanPlanning: 'Градостроительство и подготовка урбанистов',
+            urbanStudies: 'Градостроительное науковедение',
+            variousArticles: 'Разные темы / Рецензии'
         }
     },
     en: {
@@ -33,10 +33,10 @@ export const researchMessages = {
 
         starredArticlesInterviews: {
             interviewsSpeeches: 'Интервью и выступления',
-            moscowDevelopment: 'Статьи по проблемам развития Москвы',
-            urbanPlanning: 'Статьи по градостроительству и подготовке дипломированных урбанистов',
-            urbanStudies: 'Статьи по градостроительному науковедению',
-            variousArticles: 'Статьи на разные темы / Рецензии'
+            moscowDevelopment: 'Проблемы развития Москвы',
+            urbanPlanning: 'Градостроительство и подготовка урбанистов',
+            urbanStudies: 'Градостроительное науковедение',
+            variousArticles: 'Разные темы / Рецензии'
         }
     }
 };

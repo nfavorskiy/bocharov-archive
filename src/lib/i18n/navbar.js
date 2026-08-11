@@ -21,7 +21,7 @@ export const navbarMessages = {
             doctoralDissertation: "Автореферат докторской диссертации 1967",
             defenseAnnouncement: "Объявление о защите 1967",
             publicationsInterviews: "Список публикаций о Ю.П. Бочарове и интервью с ним",
-            starredArticlesInterviews: "Избранные статьи и интервью Юрия Бочарова",
+            starredArticlesInterviews: "Избранные статьи и интервью",
             articlesMaterials: "Материалы о Ю.П. Бочарове"
         },
         projects: "Проекты",
@@ -101,7 +101,7 @@ export const navbarMessages = {
             doctoralDissertation: "Abstract of the Doctoral Dissertation",
             defenseAnnouncement: "Announcement of the Doctoral Dissertation Defense 1967",
             publicationsInterviews: "List of Publications about Yuri Bocharov & Interviews with him",
-            starredArticlesInterviews: "Yuri Bocharov's Selected Articles & Interviews",
+            starredArticlesInterviews: "Starred Articles & Interviews",
             articlesMaterials: "Materials about Yuri Bocharov"
         },
         projects: "Projects",
