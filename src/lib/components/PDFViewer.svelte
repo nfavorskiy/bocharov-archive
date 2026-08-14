@@ -5,10 +5,10 @@
 </script>
 
 {#if src}
-  <div class="pdf-viewer" style="height: {height}">
+  <div class="pdf-viewer" data-pdf-viewer style="height: {height}">
     <iframe
       {title}
-      src={src}
+      src="{src}#navpanes=0&view=FitH&zoom=page-width"
       width="100%"
       height="100%"
       frameborder="0"

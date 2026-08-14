@@ -2,7 +2,7 @@
   export let sections = [];
 </script>
 
-<ul class="section-list">
+<ul class="section-list" data-directory>
   {#each sections as section}
     <li>
       <a class="section-button" href={section.href}>{section.label}</a>

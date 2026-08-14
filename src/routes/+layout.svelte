@@ -148,6 +148,10 @@
         width: 70vw;
     }
 
+    :global(body:has([data-pdf-viewer], [data-directory])) .content {
+        width: 75vw;
+    }
+
     :global(body.transitions-enabled) main,
     :global(body.transitions-enabled) .content,
     :global(body.transitions-enabled) nav,
