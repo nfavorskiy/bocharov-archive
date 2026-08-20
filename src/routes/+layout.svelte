@@ -24,6 +24,7 @@
     class:main-dates-layout={$page.url.pathname.startsWith('/biography/mainDates')}
     class:letters-layout={$page.url.pathname.startsWith('/biography/letters')}
     class:works-list-layout={$page.url.pathname.startsWith('/research/worksList')}
+    class:opinions11-layout={$page.url.pathname.startsWith('/research/starredArticlesInterviews/interviewsSpeeches/opinions11')}
 >
     <div class="content">
         {#if $page.url.pathname !== '/'}
@@ -145,6 +146,10 @@
     }
 
     :global(main.main-dates-layout) .content {
+        width: 70vw;
+    }
+
+    :global(main.opinions11-layout) .content {
         width: 70vw;
     }
 

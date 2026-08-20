@@ -39,6 +39,10 @@
       href: '/research/starredArticlesInterviews/interviewsSpeeches/karpovka2013', 
       label: $t.messages.research.interviewsSpeeches.karpovka2013 
     },
+    { 
+      href: '/research/starredArticlesInterviews/interviewsSpeeches/opinions11', 
+      label: $t.messages.research.interviewsSpeeches.opinions11
+    },
   ];
 </script>
 
