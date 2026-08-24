@@ -11,6 +11,10 @@
       href: '/biography/acclaims/meerovich', 
       label: $t.messages.biography.acclaims.meerovich
     },
+    {
+      href: '/biography/acclaims/bezchastnovPoem', 
+      label: $t.messages.biography.acclaims.bezchastnovPoem
+    },
     { 
       href: '/biography/acclaims/britishResponseLetters', 
       label: $t.messages.biography.acclaims.britishResponseLetters
