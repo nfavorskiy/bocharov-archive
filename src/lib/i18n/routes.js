@@ -21,6 +21,7 @@ export const routeLabels = {
     letters:                        "Письма 1955-1957",
     acclaims:                       "Поздравления, посвящения, разное",
       congratulationsAndVarious:    "Поздравления / разное",
+      britishResponseLetters:       "Письма из Англии в ответ на рецензию на книгу Принца Чарльза 1991", 
     awardsAndDiplomas:              "Награды и дипломы",
     notebooks:                      "Из записных книжек",
 
@@ -162,6 +163,7 @@ export const routeLabels = {
     letters:                        "Letters 1955-1957",
     acclaims:                       "Acclaims, Conferments & Miscellaneous",
       congratulationsAndVarious:    "Congratulations & Various",
+      britishResponseLetters:       "Letters from England in response to the review of Prince Charles's book 1991",
     awardsAndDiplomas:              "Awards & Diplomas",
     notebooks:                      "From Notebooks",
 

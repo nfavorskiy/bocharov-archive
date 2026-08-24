@@ -9,7 +9,8 @@ export const biographyMessages = {
             briefBiographyText: 'Биография'
         },
         acclaims: {
-            congratulationsAndVarious: 'Поздравления / разное'
+            congratulationsAndVarious: 'Поздравления / разное',
+            britishResponseLetters: 'Письма из Англии в ответ на рецензию на книгу Принца Чарльза 1991'
         }
     },
     en: {
@@ -22,7 +23,8 @@ export const biographyMessages = {
             briefBiographyText: 'Biography'
         },
         acclaims: {
-            congratulationsAndVarious: 'Congratulations & Various'
+            congratulationsAndVarious: 'Congratulations & Various',
+            britishResponseLetters: 'Letters from England in response to the review of Prince Charles\'s book 1991'
         }
     }
 };

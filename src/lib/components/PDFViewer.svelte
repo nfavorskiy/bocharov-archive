@@ -8,7 +8,7 @@
   <div class="pdf-viewer" data-pdf-viewer style="height: {height}">
     <iframe
       {title}
-      src="{src}#navpanes=0&view=FitH&zoom=page-width"
+      src="{src}#navpanes=0&zoom=100"
       width="100%"
       height="100%"
       frameborder="0"
