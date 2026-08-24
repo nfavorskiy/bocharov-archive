@@ -20,7 +20,7 @@
                 { key: 'briefBiography', path: '/biography/briefBiography' },
                 { key: 'familyHistory', path: '/biography/familyHistory' },
                 { key: 'letters', path: '/biography/letters' },
-                { key: 'congratulations', path: '/biography/congratulations' },
+                { key: 'acclaims', path: '/biography/acclaims' },
                 { key: 'awardsAndDiplomas', path: '/biography/awardsAndDiplomas' },
                 { key: 'notebooks', path: '/biography/notebooks' }
             ]

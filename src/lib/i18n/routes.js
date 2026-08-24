@@ -19,7 +19,8 @@ export const routeLabels = {
       familyHistoryText:            "Рассказ о семье",
       familyHistoryGallery:         "Фотохроника к рассказу о семье",
     letters:                        "Письма 1955-1957",
-    congratulations:                "Поздравления, посвящения, разное",
+    acclaims:                       "Поздравления, посвящения, разное",
+      congratulationsAndVarious:    "Поздравления / разное",
     awardsAndDiplomas:              "Награды и дипломы",
     notebooks:                      "Из записных книжек",
 
@@ -159,7 +160,8 @@ export const routeLabels = {
       familyHistoryText:            "Story of the Family",
       familyHistoryGallery:         "Photo Gallery to the Story of the Family",
     letters:                        "Letters 1955-1957",
-    congratulations:                "Greetings, Dedications & Miscellaneous",
+    acclaims:                       "Acclaims, Conferments & Miscellaneous",
+      congratulationsAndVarious:    "Congratulations & Various",
     awardsAndDiplomas:              "Awards & Diplomas",
     notebooks:                      "From Notebooks",
 

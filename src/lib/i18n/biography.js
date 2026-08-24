@@ -7,6 +7,9 @@ export const biographyMessages = {
         briefBiography: {
             briefBiographyGallery: 'Фотохроника к биографии',
             briefBiographyText: 'Биография'
+        },
+        acclaims: {
+            congratulationsAndVarious: 'Поздравления / разное'
         }
     },
     en: {
@@ -17,6 +20,9 @@ export const biographyMessages = {
         briefBiography: {
             briefBiographyGallery: 'Photo Gallery to the Biography',
             briefBiographyText: 'Biography'
+        },
+        acclaims: {
+            congratulationsAndVarious: 'Congratulations & Various'
         }
     }
 };

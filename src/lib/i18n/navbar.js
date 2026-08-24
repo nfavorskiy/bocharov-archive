@@ -7,7 +7,7 @@ export const navbarMessages = {
             briefBiography: "Краткая биография",
             familyHistory: "История семьи",
             letters: "Письма 1955-1957",
-            congratulations: "Поздравления, посвящения, разное",
+            acclaims: "Поздравления, посвящения, разное",
             awardsAndDiplomas: "Награды и дипломы",
             notebooks: "Из записных книжек"
         },
@@ -86,7 +86,7 @@ export const navbarMessages = {
             briefBiography: "Brief Biography",
             familyHistory: "Family History",
             letters: "Letters 1955-1957",
-            congratulations: "Greetings, Dedications & Miscellaneous",
+            acclaims: "Acclaims, Conferments & Miscellaneous",
             awardsAndDiplomas: "Awards & Diplomas",
             notebooks: "From Notebooks"
         },
