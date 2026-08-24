@@ -8,6 +8,10 @@
       label: $t.messages.biography.acclaims.congratulationsAndVarious 
     },
     { 
+      href: '/biography/acclaims/meerovich', 
+      label: $t.messages.biography.acclaims.meerovich
+    },
+    { 
       href: '/biography/acclaims/britishResponseLetters', 
       label: $t.messages.biography.acclaims.britishResponseLetters
     },

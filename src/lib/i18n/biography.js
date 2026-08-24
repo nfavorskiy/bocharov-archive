@@ -10,6 +10,7 @@ export const biographyMessages = {
         },
         acclaims: {
             congratulationsAndVarious: 'Поздравления / разное',
+            meerovich: 'М.Г. Меерович Поздравление с 90-летием. 2016',
             britishResponseLetters: 'Письма из Англии в ответ на рецензию на книгу Принца Чарльза 1991'
         }
     },
@@ -24,6 +25,7 @@ export const biographyMessages = {
         },
         acclaims: {
             congratulationsAndVarious: 'Congratulations & Various',
+            meerovich: 'M.G. Meerovich Congratulations on the 90th Jubilee. 2016',
             britishResponseLetters: 'Letters from England in response to the review of Prince Charles\'s book 1991'
         }
     }
