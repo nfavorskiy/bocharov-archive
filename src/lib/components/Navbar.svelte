@@ -59,7 +59,6 @@
                 { key: 'cdh', path: '/projects/cdh' },
                 { key: 'federationSquare', path: '/projects/federationSquare' },
                 { key: 'newRaasnBuilding', path: '/projects/newRaasnBuilding' },
-                { key: 'residentialComplex', path: '/projects/residentialComplex' },
                 { key: 'zaradye', path: '/projects/zaradye' },
                 { key: 'miscellaneous', path: '/projects/miscellaneous' }
             ]

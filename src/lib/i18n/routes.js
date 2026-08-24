@@ -100,7 +100,6 @@ export const routeLabels = {
       images:                         "Изображения",
       article:                        "Газета_ру О проекте площади на месте гостиницы Москва. 2008",
     newRaasnBuilding:               "Здание РААСН на Волхонке. Конкурс 1997",
-    residentialComplex:             "Крестьянская застава. Конкурс 1998",
     zaradye:                        "Зарядье. Конкурс 2012",
     miscellaneous:                  "Разное",
 
@@ -239,7 +238,6 @@ export const routeLabels = {
       images:                         "Images",
       article:                        "Gazeta_ru About the project of the square on the site of the Moscow hotel. 2008",
     newRaasnBuilding:               "RAASN Building on Volkhonka Street Competition 1997",
-    residentialComplex:             "Krestyanskaya Zastava Competition 1998",
     zaradye:                        "Zaryadye Competition 2012",
     miscellaneous:                  "Miscellaneous",
 
