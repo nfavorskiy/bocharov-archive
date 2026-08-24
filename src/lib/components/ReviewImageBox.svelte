@@ -142,6 +142,7 @@
   .thumb-image {
     display: block;
     max-width: 100%;
+    max-height: 33vh;
     height: auto;
     transition: opacity 0.2s ease;
   }
