@@ -1,6 +1,7 @@
 <script>
   import { onMount, onDestroy, tick } from 'svelte';
   import { browser } from '$app/environment';
+  import { resolveMediaUrl } from '$lib/mediaConfig.js';
 
   export let src = '';
   export let thumbSrc = '';
@@ -20,8 +21,8 @@
   let thumbImageEl;
   let fullImageEl;
 
-  $: thumbImageSrc = thumbSrc || src;
-  $: fullImageSrc = src;
+  $: thumbImageSrc = resolveMediaUrl(thumbSrc || src);
+  $: fullImageSrc = resolveMediaUrl(src);
 
   function markThumbLoaded() {
     thumbLoaded = true;

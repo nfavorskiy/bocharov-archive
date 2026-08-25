@@ -11,6 +11,6 @@ RUN npm run coverage
 
 RUN npm run build
 
-EXPOSE 10000
+EXPOSE 3000
 
-# CMD ["npm", "run", "preview"]
+CMD ["node", "build"]

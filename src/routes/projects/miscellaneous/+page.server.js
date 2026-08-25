@@ -1,13 +1,13 @@
 import { buildGalleryImages } from '$lib/galleryServer';
 
-const DIR = 'static/images/miscellaneous';
+const PREFIX = 'images/miscellaneous/';
 const THUMB_URL_BASE = '/imagesThumbs/miscellaneous';
 const FULL_URL_BASE = '/images/miscellaneous';
 
 /** @type {import('./$types').PageServerLoad} */
 export async function load() {
   const images = await buildGalleryImages({
-    dir: DIR,
+    prefix: PREFIX,
     thumbBase: THUMB_URL_BASE,
     fullBase: FULL_URL_BASE
   });
