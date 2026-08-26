@@ -8,11 +8,11 @@ let client;
 function getClient() {
   if (!client) {
     client = new S3Client({
-      region: env.SCW_REGION,
-      endpoint: env.SCW_ENDPOINT,
+      region: env.BUCKET_REGION,
+      endpoint: env.BUCKET_ENDPOINT,
       credentials: {
-        accessKeyId: env.SCW_ACCESS_KEY,
-        secretAccessKey: env.SCW_SECRET_KEY
+        accessKeyId: env.BUCKET_ACCESS_KEY,
+        secretAccessKey: env.BUCKET_SECRET_KEY
       }
     });
   }
@@ -21,7 +21,7 @@ function getClient() {
 
 export async function buildGalleryImages({ prefix, thumbBase, fullBase }) {
   const { Contents = [] } = await getClient().send(
-    new ListObjectsV2Command({ Bucket: env.SCW_BUCKET, Prefix: prefix })
+    new ListObjectsV2Command({ Bucket: env.BUCKET_NAME, Prefix: prefix })
   );
 
   return Contents
