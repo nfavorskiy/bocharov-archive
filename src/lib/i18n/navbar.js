@@ -13,7 +13,7 @@ export const navbarMessages = {
         },
         research: "Наука",
         researchDropdown: {
-            majorAims: "Основные направления научной и проектной деятельности",
+            majorAims: "Основные результаты научной и проектной деятельности",
             worksList: "Список печатных работ",
             sovietUrbanists: "Советское общество урбанистов 1987-1992",
             aspirantsCandidates: "Список аспирантов и соискателей",
@@ -92,7 +92,7 @@ export const navbarMessages = {
         },
         research: "Science",
         researchDropdown: {
-            majorAims: "Main Areas of Scientific & Design Work",
+            majorAims: "Major Results of Scientific & Design Work",
             worksList: "List of Published Works",
             sovietUrbanists: "Soviet Urbanists Society 1987-1992",
             aspirantsCandidates: "List of Postgraduate Students & Applicants",
