@@ -1,6 +1,7 @@
 <script>
   import { onMount, onDestroy, tick } from 'svelte';
   import { browser } from '$app/environment';
+  import { resolveMediaUrl } from '$lib/mediaConfig.js';
 
   export let src = '';
   export let thumbSrc = '';
@@ -29,9 +30,9 @@
     ? gallery[currentIndex] ?? gallery[0]
     : { src, thumbSrc, alt, caption };
 
-  // Source refs
-  $: thumbImageSrc = thumbSrc || src;
-  $: fullImageSrc = currentItem?.src || src;
+  // resolveMediaUrl is idempotent, so already-absolute gallery URLs pass through unchanged
+  $: thumbImageSrc = resolveMediaUrl(thumbSrc || src);
+  $: fullImageSrc = resolveMediaUrl(currentItem?.src || src);
 
   function markThumbLoaded() {
     thumbLoaded = true;

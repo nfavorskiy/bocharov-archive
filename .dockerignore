@@ -7,3 +7,9 @@ coverage
 playwright-report
 test-results
 .env*
+
+static/coverage
+
+static/images
+static/imagesThumbs
+static/documents

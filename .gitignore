@@ -27,3 +27,7 @@ vite.config.ts.timestamp-*
 /playwright/.cache/
 
 static/coverage
+
+static/images
+static/imagesThumbs
+static/documents
