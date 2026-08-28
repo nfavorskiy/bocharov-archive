@@ -121,7 +121,7 @@ export const routeLabels = {
     blinkin:                        "М.Я. Блинкин",
     bondarenko:                     "И.А. Бондаренко",
     frezinskaya:                    "Н.Р. Фрезинская",
-    rappaport:                      "А.Г. Рапппапорт",
+    rappaport:                      "А.Г. Раппапорт",
     vuchik:                         "Вукан Р. Вучик",
     grigoryeva:                     "Н.Ю. Григорьева",
     nashchokina:                    "М.В. Нащокина",
