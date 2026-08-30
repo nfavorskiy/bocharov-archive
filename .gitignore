@@ -28,8 +28,4 @@ vite.config.ts.timestamp-*
 
 static/coverage
 
-static/images
-static/imagesThumbs
-static/documents
-
 media/
