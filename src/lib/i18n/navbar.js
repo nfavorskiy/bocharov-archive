@@ -9,7 +9,7 @@ export const navbarMessages = {
             letters: "Письма 1955-1957",
             acclaims: "Поздравления, посвящения, разное",
             awardsAndDiplomas: "Награды и дипломы",
-            notebooks: "Из записных книжек"
+            notebooks: "Архивные фото и Записные книжки"
         },
         research: "Наука",
         researchDropdown: {
@@ -88,7 +88,7 @@ export const navbarMessages = {
             letters: "Letters 1955-1957",
             acclaims: "Acclaims, Conferments & Miscellaneous",
             awardsAndDiplomas: "Awards & Diplomas",
-            notebooks: "From Notebooks"
+            notebooks: "Archive photos & Notebooks"
         },
         research: "Science",
         researchDropdown: {

@@ -25,7 +25,10 @@ export const routeLabels = {
       bezchastnovPoem:              "М.И. Безчастнов Посвящение Ю.П. Бочарову 2016",
       britishResponseLetters:       "Письма из Англии в ответ на рецензию на книгу Принца Чарльза 1991", 
     awardsAndDiplomas:              "Награды и дипломы",
-    notebooks:                      "Из записных книжек",
+    notebooks:                      "Архивные фото и Записные книжки",
+      africa:                       "Фотохроника круиза 1961. Северная и Западная Африка",
+      greeceItaly:                  "Фотохроника круиза 1961. Греция - Италия",
+      tripNotes:                    "Путевые заметки о поездке в Африку 1961",
 
     // ── research ───────────────────────────────────────────────────────────
     majorAims:                      "Основные результаты научной и проектной деятельности",
@@ -169,7 +172,10 @@ export const routeLabels = {
       bezchastnovPoem:              "M.I. Bezchastnov Poem Dedicated to Y.P. Bocharov 2016",
       britishResponseLetters:       "Letters from England in response to the review of Prince Charles's book 1991",
     awardsAndDiplomas:              "Awards & Diplomas",
-    notebooks:                      "From Notebooks",
+    notebooks:                      "Archive photos & Notebooks",
+      africa:                       "Photo Gallery of the 1961 Cruise. North and West Africa",
+      greeceItaly:                  "Photo Gallery of the 1961 Cruise. Greece - Italy",
+      tripNotes:                    "Travel Notes on the 1961 Trip to Africa",
 
     // ── research ───────────────────────────────────────────────────────────
     majorAims:                      "Major Results of Scientific & Design Work",

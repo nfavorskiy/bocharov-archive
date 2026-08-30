@@ -1,11 +1,19 @@
 import { readdir, readFile } from 'node:fs/promises';
-import { join, relative } from 'node:path';
+import { join, relative, extname } from 'node:path';
 import { PutObjectCommand, paginateListObjectsV2, DeleteObjectCommand } from '@aws-sdk/client-s3';
 import { getClient, BUCKET_NAME } from './lib/scwClient.mjs';
 
 const mediaDir = 'media';
 const client = getClient();
 const prune = process.argv.includes('--prune');
+
+const CONTENT_TYPES = {
+  '.pdf': 'application/pdf',
+  '.jpg': 'image/jpeg',
+  '.jpeg': 'image/jpeg',
+  '.png': 'image/png',
+  '.webp': 'image/webp'
+};
 
 async function* walk(dir) {
   for (const entry of await readdir(dir, { withFileTypes: true })) {
@@ -25,7 +33,8 @@ for await (const filePath of walk(mediaDir)) {
     new PutObjectCommand({
       Bucket: BUCKET_NAME,
       Key: key,
-      Body: await readFile(filePath)
+      Body: await readFile(filePath),
+      ContentType: CONTENT_TYPES[extname(filePath).toLowerCase()] ?? 'application/octet-stream'
     })
   );
   console.log(`Pushed ${key}`);
