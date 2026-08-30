@@ -2,6 +2,7 @@
     import { onMount } from 'svelte';
     import Navbar from '$lib/components/Navbar.svelte';
     import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
+    import Footer from '$lib/components/Footer.svelte';
     import { page } from '$app/stores';
 
     onMount(() => {
@@ -32,6 +33,8 @@
         {/if}
         <slot/>
     </div>
+    
+    <Footer />
 </main>
 
 
