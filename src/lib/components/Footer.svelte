@@ -1,3 +1,7 @@
+<div class="bottom-bar">
+    
+</div>
+
 <footer>
 <table>
     <thead>
@@ -40,12 +44,15 @@
 
 <style>
     footer {
+        
+        bottom: 0;
         width: 100%;
         text-align: left;
         font-size: 0.6rem;
         line-height: 1.2;
         margin: 0 auto;
-        
+        z-index: 1000;
+
         background-color: var(--bg-color);
         transition: background-color 0.3s, color 0.3s;
 
@@ -55,12 +62,25 @@
         width: 100%;
     }
     table {
-        width: 70%;
+        width: 65%;
     }
     td {
         padding: 0;
     }
     p {
         margin: 0;
+    }
+
+    .bottom-bar {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+
+        width: 100vw;
+        height: 60px;
+
+        background-color: var(--bg-color);
+        transition: background-color 0.3s, color 0.3s;
     }
 </style>

@@ -74,7 +74,7 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        z-index: -1;
+        z-index: -2;
     }
 
     :global(body.transitions-enabled::before),
@@ -135,6 +135,7 @@
         flex: 1 1 auto;
         box-sizing: border-box;
         overflow-y: auto;
+        transition: background-color 0.3s, color 0.3s;
     }
 
     .content {
