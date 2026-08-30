@@ -62,7 +62,7 @@
         width: 100%;
     }
     table {
-        width: 65%;
+        width: 55%;
     }
     td {
         padding: 0;
