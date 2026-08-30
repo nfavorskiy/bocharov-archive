@@ -10,6 +10,4 @@ test-results
 
 static/coverage
 
-static/images
-static/imagesThumbs
-static/documents
+media
