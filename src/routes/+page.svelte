@@ -1,6 +1,21 @@
 <script>
+    import { onMount } from 'svelte';
     import { browser } from '$app/environment';
     import { t } from '$lib/i18n';
+
+    let portraitLoaded = false;
+    let portraitImageEl;
+
+    function markPortraitLoaded() {
+        portraitLoaded = true;
+    }
+
+    onMount(() => {
+        // catch images that finished loading before hydration attached the listener
+        if (portraitImageEl?.complete && portraitImageEl.naturalWidth > 0) {
+            portraitLoaded = true;
+        }
+    });
 
     function retype(node, params) {
         let timer;
@@ -52,12 +67,21 @@
 
 <div class="container">
     <div class="portrait-column">
+    <span class="portrait-frame">
+        {#if !portraitLoaded}
+            <span class="portrait-throbber" aria-hidden="true"></span>
+        {/if}
         <img
+            bind:this={portraitImageEl}
             src="/photo_2025-05-22_21-27-56.jpg"
             alt={$t.messages.home.alt}
             class="portrait-image"
+            class:portrait-hidden={!portraitLoaded}
+            on:load={markPortraitLoaded}
+            on:error={markPortraitLoaded}
         />
-    </div>
+    </span>
+</div>
     <div class="text-column">
         <h1 style="margin: 0;" use:retype={{ text: $t.messages.home.firstName, speed: 16 }}></h1>
         <h1 style="letter-spacing: 0.31rem; margin: 0 0 1rem 0; font-size: 2.8rem;"
@@ -128,5 +152,36 @@
         border-radius: 0.25rem;
         height: 85vh;
         
+        transition: opacity 0.2s ease;
+    }
+
+    .portrait-frame {
+        position: relative;
+        display: block;
+    }
+
+    .portrait-hidden {
+        opacity: 0;
+    }
+
+    .portrait-throbber {
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-items: center;
+    }
+
+    .portrait-throbber::before {
+        content: '';
+        width: 2rem;
+        height: 2rem;
+        border-radius: 999px;
+        border: 3px solid rgba(0, 0, 0, 0.2);
+        border-top-color: rgba(0, 0, 0, 0.7);
+        animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+        to { transform: rotate(360deg); }
     }
 </style>

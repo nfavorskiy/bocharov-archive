@@ -5,9 +5,27 @@
     import Footer from '$lib/components/Footer.svelte';
     import { page } from '$app/stores';
 
+    let backgroundsLoaded = false;
+
     onMount(() => {
         document.body.classList.add('transitions-enabled');
+
+        // preload all background variants so the fade-in class only applies once cached
+        const urls = ['/background.jpg', '/background-dark.jpg', '/books.jpg', '/Письма 1955-1957.jpg'];
+        let remaining = urls.length;
+        urls.forEach((url) => {
+            const img = new Image();
+            img.onload = img.onerror = () => {
+                remaining -= 1;
+                if (remaining === 0) backgroundsLoaded = true;
+            };
+            img.src = url;
+        });
     });
+
+    $: if (typeof document !== 'undefined') {
+        document.body.classList.toggle('backgrounds-loaded', backgroundsLoaded);
+    }
 
     $: if (typeof document !== 'undefined') {
         document.body.classList.toggle('works-list-page', $page.url.pathname.startsWith('/research/worksList'));
@@ -75,60 +93,54 @@
         background-position: center;
         background-repeat: no-repeat;
         z-index: -2;
+        opacity: 0;
+        transition: opacity 0.3s;
     }
 
     :global(body.transitions-enabled::before),
     :global(body.transitions-enabled::after) {
         transition: opacity 0.3s;
     }
+
+    :global(body.backgrounds-loaded::before) {
+        opacity: 1;
+    }
     
     :global(body::before) {
         background-image: url('/background.jpg');
-        opacity: 1;
     }
     
     :global(body::after) {
         background-image: url('/background-dark.jpg');
+    }
+
+    :global(body.backgrounds-loaded[data-theme='dark']::after) {
+        opacity: 1;
+    }
+    :global(body.backgrounds-loaded[data-theme='dark']::before) {
         opacity: 0;
     }
 
-    :global(body.works-list-page::before) {
-        background-image: url('/books.jpg');
-    }
-
+    :global(body.works-list-page::before),
     :global(body.works-list-page::after) {
         background-image: url('/books.jpg');
     }
 
-    :global(body.letters-page::before) {
-        background-image: url('/Письма 1955-1957.jpg');
-    }
-
+    :global(body.letters-page::before),
     :global(body.letters-page::after) {
         background-image: url('/Письма 1955-1957.jpg');
     }
     
-    :global(body[data-theme='dark']::before) {
+    :global(body.backgrounds-loaded::before) {
+        opacity: 1;
+    }
+    :global(body.backgrounds-loaded[data-theme='dark']::before) {
         opacity: 0;
     }
-    
-    :global(body[data-theme='dark']::after) {
+    :global(body.backgrounds-loaded[data-theme='dark']::after) {
         opacity: 1;
     }
 
-    :global(body.works-list-page[data-theme='dark']::before) {
-        opacity: 1;
-    }
-    :global(body.works-list-page[data-theme='dark']::after) {
-        opacity: 0;
-    }
-
-    :global(body.letters-page[data-theme='dark']::before) {
-        opacity: 1;
-    }
-    :global(body.letters-page[data-theme='dark']::after) {
-        opacity: 0;
-    }
     
     main {
         width: 100%;
