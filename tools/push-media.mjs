@@ -5,7 +5,12 @@ import { getClient, BUCKET_NAME } from './lib/scwClient.mjs';
 
 const mediaDir = 'media';
 const client = getClient();
-const prune = process.argv.includes('--prune');
+const noPrune = process.argv.includes('--no-prune');
+
+// first arg that isn't a flag = optional subfolder to scope the push to
+const target = process.argv.slice(2).find((a) => !a.startsWith('--'));
+const scopedDir = target ? join(mediaDir, target) : mediaDir;
+const keyPrefix = target ? relative(mediaDir, scopedDir).replace(/\\/g, '/') : undefined;
 
 const CONTENT_TYPES = {
   '.pdf': 'application/pdf',
@@ -25,23 +30,22 @@ async function* walk(dir) {
 
 const localKeys = new Set();
 
-for await (const filePath of walk(mediaDir)) {
+for await (const filePath of walk(scopedDir)) {
   const key = relative(mediaDir, filePath).replace(/\\/g, '/');
   localKeys.add(key);
 
-  await client.send(
-    new PutObjectCommand({
-      Bucket: BUCKET_NAME,
-      Key: key,
-      Body: await readFile(filePath),
-      ContentType: CONTENT_TYPES[extname(filePath).toLowerCase()] ?? 'application/octet-stream'
-    })
-  );
+  await client.send(new PutObjectCommand({
+    Bucket: BUCKET_NAME,
+    Key: key,
+    Body: await readFile(filePath),
+    ContentType: CONTENT_TYPES[extname(filePath).toLowerCase()] ?? 'application/octet-stream'
+  }));
   console.log(`Pushed ${key}`);
 }
 
-if (prune) {
-  for await (const page of paginateListObjectsV2({ client }, { Bucket: BUCKET_NAME })) {
+if (!noPrune) {
+  // restrict listing to the scoped prefix so a partial push can't wipe unrelated remote files
+  for await (const page of paginateListObjectsV2({ client }, { Bucket: BUCKET_NAME, Prefix: keyPrefix })) {
     for (const obj of page.Contents ?? []) {
       if (!localKeys.has(obj.Key)) {
         await client.send(new DeleteObjectCommand({ Bucket: BUCKET_NAME, Key: obj.Key }));
