@@ -23,6 +23,14 @@
       href: '/research/starredArticlesInterviews/urbanPlanning/tolyattiPlanning', 
       label: $t.messages.research.urbanPlanning.tolyattiPlanning
     },
+    {
+      href: '/research/starredArticlesInterviews/urbanPlanning/plannersTraining2002', 
+      label: $t.messages.research.urbanPlanning.plannersTraining2002
+    },
+    {
+      href: '/research/starredArticlesInterviews/urbanPlanning/plannersTraining2003', 
+      label: $t.messages.research.urbanPlanning.plannersTraining2003
+    }
   ];
 </script>
 
