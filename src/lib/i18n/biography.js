@@ -12,7 +12,8 @@ export const biographyMessages = {
             congratulationsAndVarious: 'Поздравления / разное',
             meerovich: 'М.Г. Меерович Поздравление с 90-летием. 2016',
             bezchastnovPoem: 'М.И. Безчастнов Посвящение Ю.П. Бочарову 2016',
-            britishResponseLetters: 'Письма из Англии в ответ на рецензию на книгу Принца Чарльза 1991'
+            britishResponseLetters: 'Письма из Англии в ответ на рецензию на книгу Принца Чарльза 1991',
+            lastDay: 'Н.Ю. Бочарова Последний день. Посвящение отцу',
         },
         notebooks: {
             africa: 'Фотохроника круиза 1961. Северная и Западная Африка',
@@ -33,7 +34,8 @@ export const biographyMessages = {
             congratulationsAndVarious: 'Congratulations & Various',
             meerovich: 'M.G. Meerovich Congratulations on the 90th Jubilee. 2016',
             bezchastnovPoem: 'M.I. Bezchastnov Poem Dedicated to Y.P. Bocharov 2016',
-            britishResponseLetters: 'Letters from England in response to the review of Prince Charles\'s book 1991'
+            britishResponseLetters: 'Letters from England in response to the review of Prince Charles\'s book 1991',
+            lastDay: 'N.Yu. Bocharova Last Day. Dedication to Father',
         },
         notebooks: {
             africa: 'Photo Gallery of the 1961 Cruise. North and West Africa',

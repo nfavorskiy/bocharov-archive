@@ -36,7 +36,7 @@ export const navbarMessages = {
             cdh: "Центральный Дом Художника. Конкурс 2001",
             federationSquare: "Площадь Федерации. Эскиз-идея 2005",
             newRaasnBuilding: "Здание РААСН на Волхонке. Конкурс 1997",
-            zaradye: "Зарядье. Конкурс 2012",
+            zaryadye: "Зарядье. Конкурс 2012",
             miscellaneous: "Разное"
         },
         watercolorsGraphics: "Акварели и Графика",
@@ -115,7 +115,7 @@ export const navbarMessages = {
             cdh: "Central House of Artists Competition 2001",
             federationSquare: "Federation Square Sketch Idea 2005",
             newRaasnBuilding: "RAASN Building on Volkhonka street Competition 1997",
-            zaradye: "Zaryadye Competition 2012",
+            zaryadye: "Zaryadye Competition 2012",
             miscellaneous: "Miscellaneous"
         },
         watercolorsGraphics: "Watercolors & Graphics",

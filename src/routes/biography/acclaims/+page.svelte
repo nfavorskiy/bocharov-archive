@@ -19,6 +19,10 @@
       href: '/biography/acclaims/britishResponseLetters', 
       label: $t.messages.biography.acclaims.britishResponseLetters
     },
+    {
+      href: '/biography/acclaims/lastDay', 
+      label: $t.messages.biography.acclaims.lastDay
+    }
   ];
 </script>
 

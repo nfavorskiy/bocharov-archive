@@ -24,6 +24,7 @@ export const routeLabels = {
       meerovich:                    "М.Г. Меерович Поздравление с 90-летием. 2016",
       bezchastnovPoem:              "М.И. Безчастнов Посвящение Ю.П. Бочарову 2016",
       britishResponseLetters:       "Письма из Англии в ответ на рецензию на книгу Принца Чарльза 1991", 
+      lastDay:                      "Н.Ю. Бочарова Последний день. Посвящение отцу",
     awardsAndDiplomas:              "Награды и дипломы",
     notebooks:                      "Архивные фото и Записные книжки",
       africa:                       "Фотохроника круиза 1961. Северная и Западная Африка",
@@ -109,7 +110,7 @@ export const routeLabels = {
       images:                         "Изображения",
       article:                        "Газета_ру О проекте площади на месте гостиницы Москва. 2008",
     newRaasnBuilding:               "Здание РААСН на Волхонке. Конкурс 1997",
-    zaradye:                        "Зарядье. Конкурс 2012",
+    zaryadye:                       "Зарядье. Конкурс 2012",
     miscellaneous:                  "Разное",
 
     // ── watercolors & graphics ─────────────────────────────────────────────
@@ -171,6 +172,7 @@ export const routeLabels = {
       meerovich:                    "M.G. Meerovich Congratulations on the 90th Jubilee. 2016",
       bezchastnovPoem:              "M.I. Bezchastnov Poem Dedicated to Y.P. Bocharov 2016",
       britishResponseLetters:       "Letters from England in response to the review of Prince Charles's book 1991",
+      lastDay:                      "N.Yu. Bocharova Last Day. Dedication to Father",
     awardsAndDiplomas:              "Awards & Diplomas",
     notebooks:                      "Archive photos & Notebooks",
       africa:                       "Photo Gallery of the 1961 Cruise. North and West Africa",
@@ -256,7 +258,7 @@ export const routeLabels = {
       images:                         "Images",
       article:                        "Gazeta_ru About the project of the square on the site of the Moscow hotel. 2008",
     newRaasnBuilding:               "RAASN Building on Volkhonka Street Competition 1997",
-    zaradye:                        "Zaryadye Competition 2012",
+    zaryadye:                       "Zaryadye Competition 2012",
     miscellaneous:                  "Miscellaneous",
 
     // ── watercolors & graphics ─────────────────────────────────────────────
