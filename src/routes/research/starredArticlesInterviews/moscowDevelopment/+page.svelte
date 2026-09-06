@@ -38,7 +38,15 @@
     { 
       href: '/research/starredArticlesInterviews/moscowDevelopment/problems', 
       label: $t.messages.research.moscowDevelopment.problems 
-    }
+    },
+    { 
+      href: '/research/starredArticlesInterviews/moscowDevelopment/cityHallCapital', 
+      label: $t.messages.research.moscowDevelopment.cityHallCapital 
+    },
+    { 
+      href: '/research/starredArticlesInterviews/moscowDevelopment/plan1935', 
+      label: $t.messages.research.moscowDevelopment.plan1935 
+    },
   ];
 </script>
 
