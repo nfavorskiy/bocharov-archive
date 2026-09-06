@@ -120,6 +120,9 @@ export const routeLabels = {
       article:                        "Газета_ру О проекте площади на месте гостиницы Москва. 2008",
     newRaasnBuilding:               "Здание РААСН на Волхонке. Конкурс 1997",
     zaryadye:                       "Зарядье. Конкурс 2012",
+      concept:                        "Концепция развития территории Зарядья. Ю. Бочаров, Э. Сиренко",
+      zaryadyeDetails:                "Концепция развития территории Зарядья. Детали проекта",
+      contestResults:                 "Статья  об итогах конкурса Mk.ru 26.03.2012",
     miscellaneous:                  "Разное",
 
     // ── watercolors & graphics ─────────────────────────────────────────────
@@ -277,6 +280,9 @@ export const routeLabels = {
       article:                        "Gazeta_ru About the project of the square on the site of the Moscow hotel. 2008",
     newRaasnBuilding:               "RAASN Building on Volkhonka Street Competition 1997",
     zaryadye:                       "Zaryadye Competition 2012",
+      concept:                        "Концепция развития территории Зарядья. Ю. Бочаров, Э. Сиренко",
+      zaryadyeDetails:                "Концепция развития территории Зарядья. Детали проекта",
+      contestResults:                 "Статья  об итогах конкурса Mk.ru 26.03.2012",
     miscellaneous:                  "Miscellaneous",
 
     // ── watercolors & graphics ─────────────────────────────────────────────

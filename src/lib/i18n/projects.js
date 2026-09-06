@@ -9,6 +9,11 @@ export const projectMessages = {
             idea: 'Об идее проекта новой площади',
             images: 'Изображения',
             article: 'Газета_ру О проекте площади на месте гостиницы Москва. 2008'
+        },
+        zaryadye: {
+            concept: 'Концепция развития территории Зарядья. Ю. Бочаров, Э. Сиренко',
+            zaryadyeDetails: 'Концепция развития территории Зарядья. Ю. Бочаров, Э. Сиренко. Детали проекта',
+            contestResults: 'Статья  об итогах конкурса Mk.ru 26.03.2012'
         }
     },
     en: {
@@ -21,6 +26,11 @@ export const projectMessages = {
             idea: 'About the idea of the new square project',
             images: 'Images',
             article: 'Gazeta_ru About the project of the square on the site of the Moscow hotel. 2008'
+        },
+        zaryadye: {
+            concept: 'Концепция развития территории Зарядья. Ю. Бочаров, Э. Сиренко',
+            zaryadyeDetails: 'Концепция развития территории Зарядья. Ю. Бочаров, Э. Сиренко. Детали проекта',
+            contestResults: 'Статья  об итогах конкурса Mk.ru 26.03.2012'
         }
     }
 };

@@ -4,6 +4,7 @@
   export let src = '';
   export let title = '';
   export let height = '80vh';
+  export let zoom = 100;
 
   $: resolvedSrc = resolveMediaUrl(src);
 </script>
@@ -12,7 +13,7 @@
   <div class="pdf-viewer" data-pdf-viewer style="height: {height}">
     <iframe
       {title}
-      src="{resolvedSrc}#navpanes=0&zoom=100"
+      src="{resolvedSrc}#navpanes=0&zoom={zoom}"
       width="100%"
       height="100%"
       frameborder="0"
