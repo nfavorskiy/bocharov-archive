@@ -1,3 +1,7 @@
+<script>
+    import { t } from '$lib/i18n';
+</script>
+
 <div class="bottom-bar">
     
 </div>
@@ -7,35 +11,35 @@
     <thead>
         <tr>
             <td>
-                <p>Cсылка на материалы сайта обязательна.</p>
+                <p>{$t.messages.footer.linkRequired}</p>
             </td>
             <td>
-                <p>Александра Бочарова</p>
+                <p>{$t.messages.footer.alexandraBocharova}</p>
             </td>
             <td>
-                <p>Элина Сиренко</p>
+                <p>{$t.messages.footer.elinaSirenko}</p>
             </td>
             <td>
-                <p>Николай Фаворский</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <p>&copy; {new Date().getFullYear()} Сайт урбаниста Юрия Бочарова.</p>
-            </td>
-            <td>
-                <p>Концепция, предоставление и обработка материалов</p>
-            </td>
-            <td>
-                <p>Концепция и обработка материалов</p>
-            </td>
-            <td>
-                <p>Разработка, дизайн и администрирование</p>
+                <p>{$t.messages.footer.nikolayFavorskiy}</p>
             </td>
         </tr>
         <tr>
             <td>
-                <p>Все права защищены.</p>
+                <p>&copy; {new Date().getFullYear()} {$t.messages.footer.copyright}</p>
+            </td>
+            <td>
+                <p>{$t.messages.footer.alexandraBocharovaRole}</p>
+            </td>
+            <td>
+                <p>{$t.messages.footer.elinaSirenkoRole}</p>
+            </td>
+            <td>
+                <p>{$t.messages.footer.nikolayFavorskiyRole}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>{$t.messages.footer.rightsReserved}</p>
             </td>
         </tr>
     </thead>

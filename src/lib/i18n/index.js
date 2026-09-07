@@ -7,6 +7,7 @@ import { researchMessages } from './research';
 import { projectMessages } from './projects';
 import { photoAndVariousMessages } from './photoAndVarious';
 import { biographyMessages } from './biography';
+import { footerMessages } from './footer';
 
 const messages = {
   ru: {
@@ -16,7 +17,8 @@ const messages = {
     projects: projectMessages.ru,
     photoAndVarious: photoAndVariousMessages.ru,
     research: researchMessages.ru,
-    biography: biographyMessages.ru
+    biography: biographyMessages.ru,
+    footer: footerMessages.ru
   },
   en: {
     nav: navbarMessages.en,
@@ -25,7 +27,8 @@ const messages = {
     projects: projectMessages.en,
     photoAndVarious: photoAndVariousMessages.en,
     research: researchMessages.en,
-    biography: biographyMessages.en
+    biography: biographyMessages.en,
+    footer: footerMessages.en
   }
 };
 
