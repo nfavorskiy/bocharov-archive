@@ -12,7 +12,7 @@ export const footerMessages = {
     },
     en: {
         linkRequired: 'A link to the site materials is required.',
-        copyright: 'Website of urbanist Yury Bocharov.',
+        copyright: 'Website of urbanist Yuri Bocharov.',
         rightsReserved: 'All rights reserved.',
         alexandraBocharova: 'Alexandra Bocharova',
         alexandraBocharovaRole: 'Concept, materials provision and processing',

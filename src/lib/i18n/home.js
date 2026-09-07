@@ -14,7 +14,7 @@ export const homeMessages = {
         alt: 'Юрий Петрович Бочаров'
     },
     en: {
-        firstName: 'Yury Petrovich',
+        firstName: 'Yuri Petrovich',
         lastName: 'BOCHAROV',
         born: '4.05.1926, Kharkiv -',
         died: '1.09.2023, Moscow',
